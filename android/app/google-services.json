@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33106762135",
+    "project_id": "tytan-user-a162c",
+    "storage_bucket": "tytan-user-a162c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33106762135:android:71a1216e79550c54268cd2",
+        "android_client_info": {
+          "package_name": "com.tytan.app.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK7Cy04VQLy3013bns7_C2FSgd-HID_Bk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
