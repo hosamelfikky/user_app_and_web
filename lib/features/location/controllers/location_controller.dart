@@ -237,13 +237,14 @@ class LocationController extends GetxController implements GetxService {
   }
 
   void updatePosition(CameraPosition? position, bool fromAddress) async {
+    if (position == null) return;
     if (_updateAddAddressData) {
       _loading = true;
       update();
 
       if (fromAddress) {
         _position = Position(
-          latitude: position!.target.latitude,
+          latitude: position.target.latitude,
           longitude: position.target.longitude,
           timestamp: DateTime.now(),
           heading: 1,
@@ -256,7 +257,7 @@ class LocationController extends GetxController implements GetxService {
         );
       } else {
         _pickPosition = Position(
-          latitude: position!.target.latitude,
+          latitude: position.target.latitude,
           longitude: position.target.longitude,
           timestamp: DateTime.now(),
           heading: 1,
@@ -288,7 +289,7 @@ class LocationController extends GetxController implements GetxService {
     _prepareZoneData(address!, fromSignUp, route, canRoute, isDesktop);
   }
 
-  void _prepareZoneData(AddressModel address, bool fromSignUp, String? route, bool canRoute, bool isDesktop) {
+  void _prepareZoneData(AddressModel address, bool fromSignUp, String? route, bool canRoute, bool isDesktop) async {
     getZone(address.latitude, address.longitude, false).then((response) async {
       if (response.isSuccess) {
         Get.find<CartController>().getCartDataOnline();

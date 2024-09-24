@@ -9,7 +9,15 @@ class CustomImage extends StatelessWidget {
   final BoxFit? fit;
   final bool isNotification;
   final String placeholder;
-  const CustomImage({super.key, required this.image, this.height, this.width, this.fit = BoxFit.cover, this.isNotification = false, this.placeholder = ''});
+  const CustomImage({
+    super.key,
+    required this.image,
+    this.height,
+    this.width,
+    this.fit = BoxFit.cover,
+    this.isNotification = false,
+    this.placeholder = '',
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,23 +27,25 @@ class CustomImage extends StatelessWidget {
       width: width,
       fit: fit,
       placeholder: (context, url) => Image.asset(
-          placeholder.isNotEmpty
-              ? placeholder
-              : isNotification
-                  ? Images.notificationPlaceholder
-                  : Images.placeholder,
-          height: height,
-          width: width,
-          fit: fit),
+        placeholder.isNotEmpty
+            ? placeholder
+            : isNotification
+                ? Images.notificationPlaceholder
+                : Images.placeholder,
+        height: height,
+        width: width,
+        fit: fit,
+      ),
       errorWidget: (context, url, error) => Image.asset(
-          placeholder.isNotEmpty
-              ? placeholder
-              : isNotification
-                  ? Images.notificationPlaceholder
-                  : Images.placeholder,
-          height: height,
-          width: width,
-          fit: fit),
+        placeholder.isNotEmpty
+            ? placeholder
+            : isNotification
+                ? Images.notificationPlaceholder
+                : Images.placeholder,
+        height: height,
+        width: width,
+        fit: fit,
+      ),
     );
   }
 }

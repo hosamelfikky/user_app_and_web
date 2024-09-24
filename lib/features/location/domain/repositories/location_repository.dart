@@ -1,11 +1,11 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:user_app_web/api/api_client.dart';
+import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 import 'package:user_app_web/features/location/domain/models/zone_model.dart';
 import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
 import 'package:user_app_web/features/location/domain/repositories/location_repository_interface.dart';
 import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 
 class LocationRepository implements LocationRepositoryInterface {
   final ApiClient apiClient;
@@ -28,11 +28,9 @@ class LocationRepository implements LocationRepositoryInterface {
   Future<ZoneResponseModel> getZone(String? lat, String? lng, {bool handleError = false}) async {
     Response response = await apiClient.getData('${AppConstants.zoneUri}?lat=$lat&lng=$lng', handleError: handleError);
     if (response.statusCode == 200) {
-      ZoneResponseModel responseModel;
       List<int>? zoneIds = ZoneModel.fromJson(response.body).zoneIds;
       List<ZoneData>? zoneData = ZoneModel.fromJson(response.body).zoneData;
-      responseModel = ZoneResponseModel(true, '', zoneIds ?? [], zoneData ?? [], [], response.statusCode);
-      return responseModel;
+      return ZoneResponseModel(true, '', zoneIds ?? [], zoneData ?? [], [], response.statusCode);
     } else {
       return ZoneResponseModel(false, response.statusText, [], [], [], response.statusCode);
     }

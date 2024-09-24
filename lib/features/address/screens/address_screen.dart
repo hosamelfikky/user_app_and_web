@@ -1,22 +1,22 @@
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/address/widgets/address_confirmation_dialogue.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:user_app_web/common/widgets/address_widget.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:user_app_web/common/widgets/custom_app_bar.dart';
+import 'package:user_app_web/common/widgets/custom_ink_well.dart';
 import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 import 'package:user_app_web/common/widgets/footer_view.dart';
 import 'package:user_app_web/common/widgets/menu_drawer.dart';
 import 'package:user_app_web/common/widgets/no_data_screen.dart';
 import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
 import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:user_app_web/features/address/controllers/address_controller.dart';
+import 'package:user_app_web/features/address/widgets/address_confirmation_dialogue.dart';
+import 'package:user_app_web/helper/auth_helper.dart';
+import 'package:user_app_web/helper/responsive_helper.dart';
+import 'package:user_app_web/helper/route_helper.dart';
+import 'package:user_app_web/util/dimensions.dart';
+import 'package:user_app_web/util/images.dart';
+import 'package:user_app_web/util/styles.dart';
 
 class AddressScreen extends StatefulWidget {
   final bool fromDashboard;
@@ -81,101 +81,105 @@ class _AddressScreenState extends State<AddressScreen> {
                       children: [
                         WebScreenTitleWidget(title: 'address'.tr),
                         Center(
-                            child: FooterView(
-                          minHeight: 0.45,
-                          child: SizedBox(
-                            width: Dimensions.webMaxWidth,
-                            child: Column(
-                              children: [
-                                ResponsiveHelper.isDesktop(context) ? const SizedBox(height: Dimensions.paddingSizeSmall) : const SizedBox(),
-                                addressController.addressList != null
-                                    ? addressController.addressList!.isNotEmpty
-                                        ? Padding(
-                                            padding: ResponsiveHelper.isMobile(context) ? const EdgeInsets.all(Dimensions.paddingSizeSmall) : EdgeInsets.zero,
-                                            child: GridView.builder(
-                                              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                                crossAxisSpacing: Dimensions.paddingSizeLarge,
-                                                mainAxisSpacing: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeLarge : 0.01,
-                                                childAspectRatio: ResponsiveHelper.isDesktop(context) ? 4 : 4.8,
-                                                crossAxisCount: ResponsiveHelper.isMobile(context) ? 1 : 3,
-                                              ),
-                                              physics: const NeverScrollableScrollPhysics(),
-                                              shrinkWrap: true,
-                                              itemCount: ResponsiveHelper.isDesktop(context)
-                                                  ? (addressController.addressList!.length + 1)
-                                                  : addressController.addressList!.length,
-                                              itemBuilder: (context, index) {
-                                                return (ResponsiveHelper.isDesktop(context) && (index == addressController.addressList!.length))
-                                                    ? Container(
-                                                        margin: const EdgeInsets.only(bottom: Dimensions.paddingSizeSmall),
-                                                        decoration: BoxDecoration(
-                                                          color: Theme.of(context).cardColor,
-                                                          borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
-                                                          boxShadow: [
-                                                            BoxShadow(color: Theme.of(context).primaryColor.withOpacity(0.1), blurRadius: 5, spreadRadius: 1)
-                                                          ],
-                                                        ),
-                                                        child: CustomInkWell(
-                                                          onTap: () => Get.toNamed(RouteHelper.getAddAddressRoute(false, false, 0)),
-                                                          padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
-                                                          radius: Dimensions.radiusDefault,
-                                                          child: Column(
-                                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                                            children: [
-                                                              Icon(Icons.add_circle_outline, color: Theme.of(context).primaryColor),
-                                                              const SizedBox(height: Dimensions.paddingSizeSmall),
-                                                              Text('add_new_address'.tr,
-                                                                  style: robotoRegular.copyWith(
-                                                                      color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall)),
+                          child: FooterView(
+                            minHeight: 0.45,
+                            child: SizedBox(
+                              width: Dimensions.webMaxWidth,
+                              child: Column(
+                                children: [
+                                  ResponsiveHelper.isDesktop(context) ? const SizedBox(height: Dimensions.paddingSizeSmall) : const SizedBox(),
+                                  addressController.addressList != null
+                                      ? addressController.addressList!.isNotEmpty
+                                          ? Padding(
+                                              padding: ResponsiveHelper.isMobile(context) ? const EdgeInsets.all(Dimensions.paddingSizeSmall) : EdgeInsets.zero,
+                                              child: GridView.builder(
+                                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                                  crossAxisSpacing: Dimensions.paddingSizeLarge,
+                                                  mainAxisSpacing: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeLarge : 0.01,
+                                                  childAspectRatio: ResponsiveHelper.isDesktop(context) ? 4 : 4.8,
+                                                  crossAxisCount: ResponsiveHelper.isMobile(context) ? 1 : 3,
+                                                ),
+                                                physics: const NeverScrollableScrollPhysics(),
+                                                shrinkWrap: true,
+                                                itemCount: ResponsiveHelper.isDesktop(context)
+                                                    ? (addressController.addressList!.length + 1)
+                                                    : addressController.addressList!.length,
+                                                itemBuilder: (context, index) {
+                                                  return (ResponsiveHelper.isDesktop(context) && (index == addressController.addressList!.length))
+                                                      ? Container(
+                                                          margin: const EdgeInsets.only(bottom: Dimensions.paddingSizeSmall),
+                                                          decoration: BoxDecoration(
+                                                            color: Theme.of(context).cardColor,
+                                                            borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
+                                                            boxShadow: [
+                                                              BoxShadow(color: Theme.of(context).primaryColor.withOpacity(0.1), blurRadius: 5, spreadRadius: 1)
                                                             ],
                                                           ),
-                                                        ))
-                                                    : AddressWidget(
-                                                        address: addressController.addressList![index],
-                                                        fromAddress: true,
-                                                        onTap: () {
-                                                          Get.toNamed(RouteHelper.getMapRoute(addressController.addressList![index], 'address', false));
-                                                        },
-                                                        onEditPressed: () {
-                                                          Get.toNamed(RouteHelper.getEditAddressRoute(addressController.addressList![index]));
-                                                        },
-                                                        onRemovePressed: () {
-                                                          if (Get.isSnackbarOpen) {
-                                                            Get.back();
-                                                          }
-                                                          Get.dialog(
-                                                            AddressConfirmDialogue(
-                                                                icon: Images.locationConfirm,
-                                                                title: 'are_you_sure'.tr,
-                                                                description: 'you_want_to_delete_this_location'.tr,
-                                                                onYesPressed: () {
-                                                                  addressController
-                                                                      .deleteUserAddressByID(addressController.addressList![index].id, index)
-                                                                      .then((response) {
-                                                                    Get.back();
-                                                                    showCustomSnackBar(response.message, isError: !response.isSuccess);
-                                                                  });
-                                                                }),
-                                                          );
-                                                        },
-                                                      );
-                                              },
-                                            ),
-                                          )
-                                        : NoDataScreen(text: 'no_saved_address_found'.tr, fromAddress: true)
-                                    : const Center(child: CircularProgressIndicator()),
-                              ],
+                                                          child: CustomInkWell(
+                                                            onTap: () => Get.toNamed(RouteHelper.getAddAddressRoute(false, false, 0)),
+                                                            padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+                                                            radius: Dimensions.radiusDefault,
+                                                            child: Column(
+                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                              children: [
+                                                                Icon(Icons.add_circle_outline, color: Theme.of(context).primaryColor),
+                                                                const SizedBox(height: Dimensions.paddingSizeSmall),
+                                                                Text('add_new_address'.tr,
+                                                                    style: robotoRegular.copyWith(
+                                                                        color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall)),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        )
+                                                      : AddressWidget(
+                                                          address: addressController.addressList![index],
+                                                          fromAddress: true,
+                                                          onTap: () {
+                                                            Get.toNamed(RouteHelper.getMapRoute(addressController.addressList![index], 'address', false));
+                                                          },
+                                                          onEditPressed: () {
+                                                            Get.toNamed(RouteHelper.getEditAddressRoute(addressController.addressList![index]));
+                                                          },
+                                                          onRemovePressed: () {
+                                                            if (Get.isSnackbarOpen) {
+                                                              Get.back();
+                                                            }
+                                                            Get.dialog(
+                                                              AddressConfirmDialogue(
+                                                                  icon: Images.locationConfirm,
+                                                                  title: 'are_you_sure'.tr,
+                                                                  description: 'you_want_to_delete_this_location'.tr,
+                                                                  onYesPressed: () {
+                                                                    addressController
+                                                                        .deleteUserAddressByID(addressController.addressList![index].id, index)
+                                                                        .then((response) {
+                                                                      Get.back();
+                                                                      showCustomSnackBar(response.message, isError: !response.isSuccess);
+                                                                    });
+                                                                  }),
+                                                            );
+                                                          },
+                                                        );
+                                                },
+                                              ),
+                                            )
+                                          : NoDataScreen(text: 'no_saved_address_found'.tr, fromAddress: true)
+                                      : const Center(child: CircularProgressIndicator()),
+                                ],
+                              ),
                             ),
                           ),
-                        ))
+                        )
                       ],
                     ),
                   ),
                 )
-              : NotLoggedInScreen(callBack: (value) {
-                  initCall();
-                  setState(() {});
-                }),
+              : NotLoggedInScreen(
+                  callBack: (value) {
+                    initCall();
+                    setState(() {});
+                  },
+                ),
         ),
         bottomNavigationBar: widget.fromDashboard ? Container(height: GetPlatform.isIOS ? 80 : 65) : const SizedBox(),
       );

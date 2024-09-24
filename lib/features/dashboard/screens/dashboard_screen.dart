@@ -202,54 +202,62 @@ class DashboardScreenState extends State<DashboardScreen> {
                           ];
                           return Container(
                             width: size.width,
-                            height: GetPlatform.isIOS ? 80 : 65,
+                            height: 65 + MediaQuery.viewPaddingOf(context).bottom,
+                            padding: EdgeInsets.only(
+                              bottom: MediaQuery.viewPaddingOf(context).bottom,
+                            ),
                             decoration: BoxDecoration(
                               color: Theme.of(context).cardColor,
                               borderRadius: const BorderRadius.vertical(top: Radius.circular(Dimensions.radiusLarge)),
                               boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5, spreadRadius: 1)],
                             ),
                             child: Stack(
+                              alignment: Alignment.center,
+                              clipBehavior: Clip.none,
                               children: [
-                                Center(
-                                  heightFactor: 0.6,
-                                  child: ResponsiveHelper.isDesktop(context)
-                                      ? null
-                                      : (widget.fromSplash && Get.find<LocationController>().showLocationSuggestion && active)
-                                          ? null
-                                          : (orderController.showBottomSheet &&
-                                                  orderController.runningOrderModel != null &&
-                                                  orderController.runningOrderModel!.orders!.isNotEmpty &&
-                                                  _isLogin)
-                                              ? const SizedBox()
-                                              : Container(
-                                                  width: 60,
-                                                  height: 60,
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(color: Theme.of(context).cardColor, width: 5),
-                                                    borderRadius: BorderRadius.circular(30),
-                                                    boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5, spreadRadius: 1)],
+                                Positioned(
+                                  top: -15,
+                                  child: Center(
+                                    heightFactor: 0.6,
+                                    child: ResponsiveHelper.isDesktop(context)
+                                        ? null
+                                        : (widget.fromSplash && Get.find<LocationController>().showLocationSuggestion && active)
+                                            ? null
+                                            : (orderController.showBottomSheet &&
+                                                    orderController.runningOrderModel != null &&
+                                                    orderController.runningOrderModel!.orders!.isNotEmpty &&
+                                                    _isLogin)
+                                                ? const SizedBox()
+                                                : Container(
+                                                    width: 60,
+                                                    height: 60,
+                                                    decoration: BoxDecoration(
+                                                      border: Border.all(color: Theme.of(context).cardColor, width: 5),
+                                                      borderRadius: BorderRadius.circular(30),
+                                                      boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5, spreadRadius: 1)],
+                                                    ),
+                                                    child: FloatingActionButton(
+                                                      backgroundColor: Theme.of(context).primaryColor,
+                                                      onPressed: () {
+                                                        if (isParcel) {
+                                                          showModalBottomSheet(
+                                                            context: context,
+                                                            isScrollControlled: true,
+                                                            backgroundColor: Colors.transparent,
+                                                            builder: (con) =>
+                                                                ParcelBottomSheetWidget(parcelCategoryList: Get.find<ParcelController>().parcelCategoryList),
+                                                          );
+                                                        } else {
+                                                          Get.toNamed(RouteHelper.getCartRoute());
+                                                        }
+                                                      },
+                                                      elevation: 0,
+                                                      child: isParcel
+                                                          ? Icon(CupertinoIcons.add, size: 34, color: Theme.of(context).cardColor)
+                                                          : CartWidget(color: Theme.of(context).cardColor, size: 22),
+                                                    ),
                                                   ),
-                                                  child: FloatingActionButton(
-                                                    backgroundColor: Theme.of(context).primaryColor,
-                                                    onPressed: () {
-                                                      if (isParcel) {
-                                                        showModalBottomSheet(
-                                                          context: context,
-                                                          isScrollControlled: true,
-                                                          backgroundColor: Colors.transparent,
-                                                          builder: (con) =>
-                                                              ParcelBottomSheetWidget(parcelCategoryList: Get.find<ParcelController>().parcelCategoryList),
-                                                        );
-                                                      } else {
-                                                        Get.toNamed(RouteHelper.getCartRoute());
-                                                      }
-                                                    },
-                                                    elevation: 0,
-                                                    child: isParcel
-                                                        ? Icon(CupertinoIcons.add, size: 34, color: Theme.of(context).cardColor)
-                                                        : CartWidget(color: Theme.of(context).cardColor, size: 22),
-                                                  ),
-                                                ),
+                                  ),
                                 ),
                                 ResponsiveHelper.isDesktop(context)
                                     ? const SizedBox()
@@ -263,38 +271,40 @@ class DashboardScreenState extends State<DashboardScreen> {
                                             : Center(
                                                 child: SizedBox(
                                                   width: size.width,
-                                                  height: 80,
-                                                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                                                    BottomNavItemWidget(
-                                                      title: 'home'.tr,
-                                                      selectedIcon: Images.homeSelect,
-                                                      unSelectedIcon: Images.homeUnselect,
-                                                      isSelected: _pageIndex == 0,
-                                                      onTap: () => _setPage(0),
-                                                    ),
-                                                    BottomNavItemWidget(
-                                                      title: isParcel ? 'address'.tr : 'favourite'.tr,
-                                                      selectedIcon: isParcel ? Images.addressSelect : Images.favouriteSelect,
-                                                      unSelectedIcon: isParcel ? Images.addressUnselect : Images.favouriteUnselect,
-                                                      isSelected: _pageIndex == 1,
-                                                      onTap: () => _setPage(1),
-                                                    ),
-                                                    Container(width: size.width * 0.2),
-                                                    BottomNavItemWidget(
-                                                      title: 'orders'.tr,
-                                                      selectedIcon: Images.orderSelect,
-                                                      unSelectedIcon: Images.orderUnselect,
-                                                      isSelected: _pageIndex == 3,
-                                                      onTap: () => _setPage(3),
-                                                    ),
-                                                    BottomNavItemWidget(
-                                                      title: 'menu'.tr,
-                                                      selectedIcon: Images.menu,
-                                                      unSelectedIcon: Images.menu,
-                                                      isSelected: _pageIndex == 4,
-                                                      onTap: () => _setPage(4),
-                                                    ),
-                                                  ]),
+                                                  child: Row(
+                                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                    children: [
+                                                      BottomNavItemWidget(
+                                                        title: 'home'.tr,
+                                                        selectedIcon: Images.homeSelect,
+                                                        unSelectedIcon: Images.homeUnselect,
+                                                        isSelected: _pageIndex == 0,
+                                                        onTap: () => _setPage(0),
+                                                      ),
+                                                      BottomNavItemWidget(
+                                                        title: isParcel ? 'address'.tr : 'favourite'.tr,
+                                                        selectedIcon: isParcel ? Images.addressSelect : Images.favouriteSelect,
+                                                        unSelectedIcon: isParcel ? Images.addressUnselect : Images.favouriteUnselect,
+                                                        isSelected: _pageIndex == 1,
+                                                        onTap: () => _setPage(1),
+                                                      ),
+                                                      Container(width: size.width * 0.2),
+                                                      BottomNavItemWidget(
+                                                        title: 'orders'.tr,
+                                                        selectedIcon: Images.orderSelect,
+                                                        unSelectedIcon: Images.orderUnselect,
+                                                        isSelected: _pageIndex == 3,
+                                                        onTap: () => _setPage(3),
+                                                      ),
+                                                      BottomNavItemWidget(
+                                                        title: 'menu'.tr,
+                                                        selectedIcon: Images.menu,
+                                                        unSelectedIcon: Images.menu,
+                                                        isSelected: _pageIndex == 4,
+                                                        onTap: () => _setPage(4),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                               ],

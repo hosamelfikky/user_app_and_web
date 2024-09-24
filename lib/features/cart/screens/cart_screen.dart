@@ -81,6 +81,7 @@ class _CartScreenState extends State<CartScreen> {
 
   void _initialBottomSheetShowHide() {
     Future.delayed(const Duration(milliseconds: 600), () {
+      if (key.currentState == null) return;
       key.currentState!.expand();
       Future.delayed(const Duration(seconds: 3), () {
         setState(() {
@@ -107,214 +108,221 @@ class _CartScreenState extends State<CartScreen> {
       appBar: CustomAppBar(title: 'my_cart'.tr, backButton: (ResponsiveHelper.isDesktop(context) || !widget.fromNav)),
       endDrawer: const MenuDrawer(),
       endDrawerEnableOpenDragGesture: false,
-      body: GetBuilder<StoreController>(builder: (storeController) {
-        return GetBuilder<CartController>(builder: (cartController) {
-          return cartController.cartList.isNotEmpty
-              ? Column(children: [
-                  Expanded(
-                    child: ExpandableBottomSheet(
-                      key: key,
-                      persistentHeader: isDesktop
-                          ? const SizedBox()
-                          : InkWell(
-                              onTap: () {
-                                if (cartController.isExpanded) {
-                                  cartController.setExpanded(false);
-                                  setState(() {
-                                    key.currentState!.contract();
-                                  });
-                                } else {
-                                  cartController.setExpanded(true);
-                                  setState(() {
-                                    key.currentState!.expand();
-                                  });
-                                }
-                              },
-                              child: Container(
-                                color: Theme.of(context).cardColor,
-                                child: Container(
-                                  constraints: const BoxConstraints.expand(height: 30),
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context).disabledColor.withOpacity(0.5),
-                                    borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(Dimensions.radiusDefault), topRight: Radius.circular(Dimensions.radiusDefault)),
+      body: GetBuilder<StoreController>(
+        builder: (storeController) {
+          return GetBuilder<CartController>(
+            builder: (cartController) {
+              return cartController.cartList.isNotEmpty
+                  ? Column(
+                      children: [
+                        Expanded(
+                          child: ExpandableBottomSheet(
+                            key: key,
+                            persistentHeader: isDesktop
+                                ? const SizedBox()
+                                : InkWell(
+                                    onTap: () {
+                                      if (cartController.isExpanded) {
+                                        cartController.setExpanded(false);
+                                        setState(() {
+                                          key.currentState!.contract();
+                                        });
+                                      } else {
+                                        cartController.setExpanded(true);
+                                        setState(() {
+                                          key.currentState!.expand();
+                                        });
+                                      }
+                                    },
+                                    child: Container(
+                                      color: Theme.of(context).cardColor,
+                                      child: Container(
+                                        constraints: const BoxConstraints.expand(height: 30),
+                                        decoration: BoxDecoration(
+                                          color: Theme.of(context).disabledColor.withOpacity(0.5),
+                                          borderRadius: const BorderRadius.only(
+                                              topLeft: Radius.circular(Dimensions.radiusDefault), topRight: Radius.circular(Dimensions.radiusDefault)),
+                                        ),
+                                        child: Icon(Icons.drag_handle, color: Theme.of(context).hintColor, size: 25),
+                                      ),
+                                    ),
                                   ),
-                                  child: Icon(Icons.drag_handle, color: Theme.of(context).hintColor, size: 25),
+                            background: Column(children: [
+                              WebScreenTitleWidget(title: 'cart_list'.tr),
+                              Expanded(
+                                child: SingleChildScrollView(
+                                  controller: scrollController,
+                                  padding: ResponsiveHelper.isDesktop(context)
+                                      ? const EdgeInsets.only(
+                                          top: Dimensions.paddingSizeSmall,
+                                        )
+                                      : EdgeInsets.zero,
+                                  child: FooterView(
+                                    child: SizedBox(
+                                      width: Dimensions.webMaxWidth,
+                                      child: Column(children: [
+                                        Row(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            ResponsiveHelper.isDesktop(context)
+                                                ? WebCardItemsWidget(cartList: cartController.cartList)
+                                                : Expanded(
+                                                    flex: 7,
+                                                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                                                      WebConstrainedBox(
+                                                        dataLength: cartController.cartList.length,
+                                                        minLength: 5,
+                                                        minHeight: 0.6,
+                                                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                                                          ListView.builder(
+                                                            physics: const NeverScrollableScrollPhysics(),
+                                                            shrinkWrap: true,
+                                                            itemCount: cartController.cartList.length,
+                                                            padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+                                                            itemBuilder: (context, index) {
+                                                              return CartItemWidget(
+                                                                  cart: cartController.cartList[index],
+                                                                  cartIndex: index,
+                                                                  addOns: cartController.addOnsList[index],
+                                                                  isAvailable: cartController.availableList[index]);
+                                                            },
+                                                          ),
+                                                          const Divider(thickness: 0.5, height: 5),
+                                                          Padding(
+                                                            padding: const EdgeInsets.only(left: Dimensions.paddingSizeExtraSmall),
+                                                            child: TextButton.icon(
+                                                              onPressed: () {
+                                                                cartController.forcefullySetModule(cartController.cartList[0].item!.moduleId!);
+                                                                Get.toNamed(
+                                                                  RouteHelper.getStoreRoute(id: cartController.cartList[0].item!.storeId, page: 'item'),
+                                                                  arguments: StoreScreen(
+                                                                      store: Store(id: cartController.cartList[0].item!.storeId), fromModule: false),
+                                                                );
+                                                              },
+                                                              icon: Icon(Icons.add_circle_outline_sharp, color: Theme.of(context).primaryColor),
+                                                              label: Text('add_more_items'.tr,
+                                                                  style: robotoMedium.copyWith(
+                                                                      color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault)),
+                                                            ),
+                                                          ),
+                                                          ExtraPackagingWidget(cartController: cartController),
+                                                          !ResponsiveHelper.isDesktop(context) ? suggestedItemView(cartController.cartList) : const SizedBox(),
+                                                        ]),
+                                                      ),
+                                                      const SizedBox(height: Dimensions.paddingSizeSmall),
+                                                      !ResponsiveHelper.isDesktop(context)
+                                                          ? pricingView(cartController, cartController.cartList[0].item!)
+                                                          : const SizedBox(),
+                                                    ]),
+                                                  ),
+                                            ResponsiveHelper.isDesktop(context) ? const SizedBox(width: Dimensions.paddingSizeSmall) : const SizedBox(),
+                                            ResponsiveHelper.isDesktop(context)
+                                                ? Expanded(flex: 4, child: pricingView(cartController, cartController.cartList[0].item!))
+                                                : const SizedBox(),
+                                          ],
+                                        ),
+                                        ResponsiveHelper.isDesktop(context) ? WebSuggestedItemViewWidget(cartList: cartController.cartList) : const SizedBox(),
+                                        const SizedBox(height: Dimensions.paddingSizeExtraOverLarge),
+                                      ]),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                      background: Column(children: [
-                        WebScreenTitleWidget(title: 'cart_list'.tr),
-                        Expanded(
-                          child: SingleChildScrollView(
-                            controller: scrollController,
-                            padding: ResponsiveHelper.isDesktop(context)
-                                ? const EdgeInsets.only(
-                                    top: Dimensions.paddingSizeSmall,
-                                  )
-                                : EdgeInsets.zero,
-                            child: FooterView(
-                              child: SizedBox(
-                                width: Dimensions.webMaxWidth,
-                                child: Column(children: [
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      ResponsiveHelper.isDesktop(context)
-                                          ? WebCardItemsWidget(cartList: cartController.cartList)
-                                          : Expanded(
-                                              flex: 7,
-                                              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                                WebConstrainedBox(
-                                                  dataLength: cartController.cartList.length,
-                                                  minLength: 5,
-                                                  minHeight: 0.6,
-                                                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                                    ListView.builder(
-                                                      physics: const NeverScrollableScrollPhysics(),
-                                                      shrinkWrap: true,
-                                                      itemCount: cartController.cartList.length,
-                                                      padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
-                                                      itemBuilder: (context, index) {
-                                                        return CartItemWidget(
-                                                            cart: cartController.cartList[index],
-                                                            cartIndex: index,
-                                                            addOns: cartController.addOnsList[index],
-                                                            isAvailable: cartController.availableList[index]);
-                                                      },
-                                                    ),
-                                                    const Divider(thickness: 0.5, height: 5),
-                                                    Padding(
-                                                      padding: const EdgeInsets.only(left: Dimensions.paddingSizeExtraSmall),
-                                                      child: TextButton.icon(
-                                                        onPressed: () {
-                                                          cartController.forcefullySetModule(cartController.cartList[0].item!.moduleId!);
-                                                          Get.toNamed(
-                                                            RouteHelper.getStoreRoute(id: cartController.cartList[0].item!.storeId, page: 'item'),
-                                                            arguments:
-                                                                StoreScreen(store: Store(id: cartController.cartList[0].item!.storeId), fromModule: false),
-                                                          );
-                                                        },
-                                                        icon: Icon(Icons.add_circle_outline_sharp, color: Theme.of(context).primaryColor),
-                                                        label: Text('add_more_items'.tr,
-                                                            style: robotoMedium.copyWith(
-                                                                color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault)),
-                                                      ),
-                                                    ),
-                                                    ExtraPackagingWidget(cartController: cartController),
-                                                    !ResponsiveHelper.isDesktop(context) ? suggestedItemView(cartController.cartList) : const SizedBox(),
-                                                  ]),
-                                                ),
-                                                const SizedBox(height: Dimensions.paddingSizeSmall),
-                                                !ResponsiveHelper.isDesktop(context)
-                                                    ? pricingView(cartController, cartController.cartList[0].item!)
-                                                    : const SizedBox(),
-                                              ]),
-                                            ),
-                                      ResponsiveHelper.isDesktop(context) ? const SizedBox(width: Dimensions.paddingSizeSmall) : const SizedBox(),
-                                      ResponsiveHelper.isDesktop(context)
-                                          ? Expanded(flex: 4, child: pricingView(cartController, cartController.cartList[0].item!))
-                                          : const SizedBox(),
-                                    ],
+                              SizedBox(height: _height),
+                            ]),
+                            onIsExtendedCallback: () {
+                              ///Don't remove this print.
+                              log('======= expandableContent open');
+                              _getExpandedBottomSheetHeight();
+                              // setState(() {
+                              //   _height = 100;
+                              // });
+                            },
+                            onIsContractedCallback: () {
+                              ///Don't remove this print.
+                              log('======= expandableContent close');
+                              setState(() {
+                                _height = 0;
+                              });
+                            },
+                            expandableContent: isDesktop
+                                ? const SizedBox()
+                                : Container(
+                                    width: context.width,
+                                    key: _widgetKey,
+                                    decoration: BoxDecoration(
+                                      color: Theme.of(context).cardColor,
+                                      borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(Dimensions.radiusDefault), topRight: Radius.circular(Dimensions.radiusDefault)),
+                                    ),
+                                    child: Column(children: [
+                                      Container(
+                                        padding: const EdgeInsets.only(
+                                          left: Dimensions.paddingSizeSmall,
+                                          right: Dimensions.paddingSizeSmall,
+                                          top: Dimensions.paddingSizeSmall,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: Theme.of(context).cardColor,
+                                          borderRadius: const BorderRadius.only(
+                                              topLeft: Radius.circular(Dimensions.radiusDefault), topRight: Radius.circular(Dimensions.radiusDefault)),
+                                        ),
+                                        child: Column(children: [
+                                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                            Text('item_price'.tr, style: robotoRegular),
+                                            PriceConverter.convertAnimationPrice(cartController.itemPrice, textStyle: robotoRegular),
+                                          ]),
+                                          SizedBox(height: cartController.variationPrice > 0 ? Dimensions.paddingSizeSmall : 0),
+                                          cartController.variationPrice > 0
+                                              ? Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text('variations'.tr, style: robotoRegular),
+                                                    Text('(+) ${PriceConverter.convertPrice(cartController.variationPrice)}',
+                                                        style: robotoRegular, textDirection: TextDirection.ltr),
+                                                  ],
+                                                )
+                                              : const SizedBox(),
+                                          const SizedBox(height: Dimensions.paddingSizeSmall),
+                                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                            Text('discount'.tr, style: robotoRegular),
+                                            storeController.store != null
+                                                ? Row(children: [
+                                                    Text('(-)', style: robotoRegular),
+                                                    PriceConverter.convertAnimationPrice(cartController.itemDiscountPrice, textStyle: robotoRegular),
+                                                  ])
+                                                : Text('calculating'.tr, style: robotoRegular),
+                                          ]),
+                                          SizedBox(
+                                              height: Get.find<SplashController>().configModel!.moduleConfig!.module!.addOn! ? Dimensions.paddingSizeSmall : 0),
+                                          Get.find<SplashController>().configModel!.moduleConfig!.module!.addOn!
+                                              ? Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text('addons'.tr, style: robotoRegular),
+                                                    Row(children: [
+                                                      Text('(+)', style: robotoRegular),
+                                                      PriceConverter.convertAnimationPrice(cartController.addOns, textStyle: robotoRegular),
+                                                    ]),
+                                                  ],
+                                                )
+                                              : const SizedBox(),
+                                        ]),
+                                      ),
+                                    ]),
                                   ),
-                                  ResponsiveHelper.isDesktop(context) ? WebSuggestedItemViewWidget(cartList: cartController.cartList) : const SizedBox(),
-                                  const SizedBox(height: Dimensions.paddingSizeExtraOverLarge),
-                                ]),
-                              ),
-                            ),
                           ),
                         ),
-                        SizedBox(height: _height),
-                      ]),
-                      onIsExtendedCallback: () {
-                        ///Don't remove this print.
-                        log('======= expandableContent open');
-                        _getExpandedBottomSheetHeight();
-                        // setState(() {
-                        //   _height = 100;
-                        // });
-                      },
-                      onIsContractedCallback: () {
-                        ///Don't remove this print.
-                        log('======= expandableContent close');
-                        setState(() {
-                          _height = 0;
-                        });
-                      },
-                      expandableContent: isDesktop
-                          ? const SizedBox()
-                          : Container(
-                              width: context.width,
-                              key: _widgetKey,
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).cardColor,
-                                borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(Dimensions.radiusDefault), topRight: Radius.circular(Dimensions.radiusDefault)),
-                              ),
-                              child: Column(children: [
-                                Container(
-                                  padding: const EdgeInsets.only(
-                                    left: Dimensions.paddingSizeSmall,
-                                    right: Dimensions.paddingSizeSmall,
-                                    top: Dimensions.paddingSizeSmall,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context).cardColor,
-                                    borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(Dimensions.radiusDefault), topRight: Radius.circular(Dimensions.radiusDefault)),
-                                  ),
-                                  child: Column(children: [
-                                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                      Text('item_price'.tr, style: robotoRegular),
-                                      PriceConverter.convertAnimationPrice(cartController.itemPrice, textStyle: robotoRegular),
-                                    ]),
-                                    SizedBox(height: cartController.variationPrice > 0 ? Dimensions.paddingSizeSmall : 0),
-                                    cartController.variationPrice > 0
-                                        ? Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text('variations'.tr, style: robotoRegular),
-                                              Text('(+) ${PriceConverter.convertPrice(cartController.variationPrice)}',
-                                                  style: robotoRegular, textDirection: TextDirection.ltr),
-                                            ],
-                                          )
-                                        : const SizedBox(),
-                                    const SizedBox(height: Dimensions.paddingSizeSmall),
-                                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                      Text('discount'.tr, style: robotoRegular),
-                                      storeController.store != null
-                                          ? Row(children: [
-                                              Text('(-)', style: robotoRegular),
-                                              PriceConverter.convertAnimationPrice(cartController.itemDiscountPrice, textStyle: robotoRegular),
-                                            ])
-                                          : Text('calculating'.tr, style: robotoRegular),
-                                    ]),
-                                    SizedBox(height: Get.find<SplashController>().configModel!.moduleConfig!.module!.addOn! ? Dimensions.paddingSizeSmall : 0),
-                                    Get.find<SplashController>().configModel!.moduleConfig!.module!.addOn!
-                                        ? Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text('addons'.tr, style: robotoRegular),
-                                              Row(children: [
-                                                Text('(+)', style: robotoRegular),
-                                                PriceConverter.convertAnimationPrice(cartController.addOns, textStyle: robotoRegular),
-                                              ]),
-                                            ],
-                                          )
-                                        : const SizedBox(),
-                                  ]),
-                                ),
-                              ]),
-                            ),
-                    ),
-                  ),
-                  ResponsiveHelper.isDesktop(context)
-                      ? const SizedBox.shrink()
-                      : CheckoutButton(cartController: cartController, availableList: cartController.availableList),
-                ])
-              : const NoDataScreen(isCart: true, text: '', showFooter: true);
-        });
-      }),
+                        ResponsiveHelper.isDesktop(context)
+                            ? const SizedBox.shrink()
+                            : CheckoutButton(cartController: cartController, availableList: cartController.availableList),
+                      ],
+                    )
+                  : const NoDataScreen(isCart: true, text: '', showFooter: true);
+            },
+          );
+        },
+      ),
     );
   }
 
