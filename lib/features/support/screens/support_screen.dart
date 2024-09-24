@@ -1,16 +1,17 @@
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/support/widgets/web_help_support_widget.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/features/support/widgets/support_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../widgets/support_button_widget.dart';
+import '../widgets/web_help_support_widget.dart';
 
 class SupportScreen extends StatefulWidget {
   const SupportScreen({super.key});

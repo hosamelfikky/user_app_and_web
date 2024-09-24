@@ -1,6 +1,6 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/auth/domain/models/signup_body_model.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
+import '../../../../common/models/response_model.dart';
+import '../models/signup_body_model.dart';
+import '../models/social_log_in_body.dart';
 
 abstract class AuthServiceInterface {
   bool isSharedPrefNotificationActive();

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class RegistrationCardWidget extends StatelessWidget {
   final bool isStore;

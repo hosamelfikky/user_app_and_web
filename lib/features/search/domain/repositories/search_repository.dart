@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/search/domain/models/popular_categories_model.dart';
-import 'package:user_app_web/features/search/domain/models/search_suggestion_model.dart';
-import 'package:user_app_web/features/search/domain/repositories/search_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../models/popular_categories_model.dart';
+import '../models/search_suggestion_model.dart';
+import 'search_repository_interface.dart';
 
 class SearchRepository implements SearchRepositoryInterface {
   final ApiClient apiClient;

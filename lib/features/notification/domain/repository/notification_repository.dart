@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/notification/domain/models/notification_model.dart';
-import 'package:user_app_web/features/notification/domain/repository/notification_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../models/notification_model.dart';
+import 'notification_repository_interface.dart';
 
 class NotificationRepository implements NotificationRepositoryInterface {
   final ApiClient apiClient;

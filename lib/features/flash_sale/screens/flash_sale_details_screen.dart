@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
-import 'package:user_app_web/features/flash_sale/widgets/flash_product_card_widget.dart';
-import 'package:user_app_web/features/flash_sale/widgets/flash_sale_timer_view_widget.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/paginated_list_view.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/flash_sale_controller.dart';
+import '../widgets/flash_product_card_widget.dart';
+import '../widgets/flash_sale_timer_view_widget.dart';
 
 class FlashSaleDetailsScreen extends StatefulWidget {
   final int id;

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/review/domain/models/review_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/rating_bar.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../domain/models/review_model.dart';
 
 class ReviewDialogWidget extends StatelessWidget {
   final ReviewModel review;

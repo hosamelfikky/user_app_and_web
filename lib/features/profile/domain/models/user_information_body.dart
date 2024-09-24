@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
+import '../../../address/domain/models/address_model.dart';
 
 class UserInformationBody {
   AddressModel? from;

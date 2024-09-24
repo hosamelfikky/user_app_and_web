@@ -1,22 +1,23 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/custom_tool_tip_widget.dart';
-import 'package:user_app_web/common/widgets/organic_tag.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/custom_tool_tip_widget.dart';
+import '../../../common/widgets/organic_tag.dart';
+import '../../../common/widgets/rating_bar.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../favourite/controllers/favourite_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/item_controller.dart';
+import '../domain/models/item_model.dart';
 
 class ItemTitleViewWidget extends StatelessWidget {
   final Item? item;

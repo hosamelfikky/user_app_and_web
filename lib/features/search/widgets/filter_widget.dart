@@ -1,12 +1,13 @@
-import 'package:user_app_web/features/search/controllers/search_controller.dart' as search;
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/features/search/widgets/custom_check_box_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/search_controller.dart' as search;
+import 'custom_check_box_widget.dart';
 
 class FilterWidget extends StatelessWidget {
   final double? maxValue;

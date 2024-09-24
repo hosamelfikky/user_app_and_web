@@ -1,8 +1,9 @@
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/item/domain/models/basic_campaign_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/item/domain/services/campaign_service_interface.dart';
+
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/basic_campaign_model.dart';
+import '../domain/models/item_model.dart';
+import '../domain/services/campaign_service_interface.dart';
 
 class CampaignController extends GetxController implements GetxService {
   final CampaignServiceInterface campaignServiceInterface;

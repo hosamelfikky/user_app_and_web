@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../util/styles.dart';
 
 class CustomToolTip extends StatefulWidget {
   final String message;

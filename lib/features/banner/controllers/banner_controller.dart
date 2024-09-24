@@ -1,9 +1,10 @@
-import 'package:user_app_web/features/banner/domain/models/banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/others_banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/promotional_banner_model.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/features/banner/domain/services/banner_service_interface.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../domain/models/banner_model.dart';
+import '../domain/models/others_banner_model.dart';
+import '../domain/models/promotional_banner_model.dart';
+import '../domain/services/banner_service_interface.dart';
 
 class BannerController extends GetxController implements GetxService {
   final BannerServiceInterface bannerServiceInterface;

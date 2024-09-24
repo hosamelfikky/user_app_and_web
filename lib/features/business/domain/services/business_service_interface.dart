@@ -1,5 +1,5 @@
-import 'package:user_app_web/features/business/domain/models/business_plan_body.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
+import '../models/business_plan_body.dart';
+import '../models/package_model.dart';
 
 abstract class BusinessServiceInterface {
   Future<PackageModel?> getPackageList();

@@ -3,19 +3,20 @@ import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/no_internet_screen.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/notification/domain/models/notification_body_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
+
+import '../../../common/widgets/no_internet_screen.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../auth/controllers/auth_controller.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../../favourite/controllers/favourite_controller.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../notification/domain/models/notification_body_model.dart';
+import '../controllers/splash_controller.dart';
 
 class SplashScreen extends StatefulWidget {
   final NotificationBodyModel? body;
@@ -36,18 +37,21 @@ class SplashScreenState extends State<SplashScreen> {
     bool firstTime = true;
     _onConnectivityChanged = Connectivity().onConnectivityChanged.listen((List<ConnectivityResult> result) {
       if (!firstTime) {
-        bool isNotConnected = result.contains(ConnectivityResult.none);
+        bool isConnected = !result.contains(ConnectivityResult.none);
         if (!context.mounted || !mounted) return;
-        isNotConnected ? const SizedBox() : ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        if (isConnected) {
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          return;
+        }
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          backgroundColor: isNotConnected ? Colors.red : Colors.green,
-          duration: Duration(seconds: isNotConnected ? 6000 : 3),
+          backgroundColor: !isConnected ? Colors.red : Colors.green,
+          duration: Duration(seconds: !isConnected ? 6000 : 3),
           content: Text(
-            isNotConnected ? 'no_connection'.tr : 'connected'.tr,
+            !isConnected ? 'no_connection'.tr : 'connected'.tr,
             textAlign: TextAlign.center,
           ),
         ));
-        if (!isNotConnected) {
+        if (isConnected) {
           _route();
         }
       }

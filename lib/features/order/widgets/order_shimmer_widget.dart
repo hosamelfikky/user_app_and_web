@@ -1,8 +1,9 @@
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../controllers/order_controller.dart';
 
 class OrderShimmerWidget extends StatelessWidget {
   final OrderController orderController;

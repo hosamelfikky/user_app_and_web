@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
+import '../../../address/domain/models/address_model.dart';
+import '../../../parcel/domain/models/parcel_category_model.dart';
+import '../../../store/domain/models/store_model.dart';
 
 class PaginatedOrderModel {
   int? totalSize;

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/controllers/theme_controller.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/checkout_controller.dart';
 
 class PartialPayView extends StatelessWidget {
   final double totalPrice;

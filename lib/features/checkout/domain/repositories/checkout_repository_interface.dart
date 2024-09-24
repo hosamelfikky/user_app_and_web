@@ -1,8 +1,9 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../interfaces/repository_interface.dart';
+import '../models/place_order_body_model.dart';
 
 abstract class CheckoutRepositoryInterface extends RepositoryInterface {
   Future<int> getDmTipMostTapped();

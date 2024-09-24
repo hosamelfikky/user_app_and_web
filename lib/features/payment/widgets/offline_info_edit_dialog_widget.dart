@@ -1,14 +1,16 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/payment/controllers/payment_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../order/domain/models/order_model.dart';
+import '../controllers/payment_controller.dart';
 
 class OfflineInfoEditDialogWidget extends StatefulWidget {
   final OfflinePayment offlinePayment;

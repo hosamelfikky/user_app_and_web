@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/price_converter.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../store/controllers/store_controller.dart';
+import '../controllers/cart_controller.dart';
 
 class ExtraPackagingWidget extends StatelessWidget {
   final CartController cartController;

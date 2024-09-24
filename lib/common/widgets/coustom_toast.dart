@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../helper/responsive_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
 
 class CustomToast extends StatelessWidget {
   final String text;

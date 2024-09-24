@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/coustom_toast.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../util/dimensions.dart';
+import 'coustom_toast.dart';
 
 void showCustomSnackBar(String? message, {bool isError = true, bool getXSnackBar = false}) {
   if (message != null && message.isNotEmpty) {

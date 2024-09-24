@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../helper/responsive_helper.dart';
+import '../../util/dimensions.dart';
+import 'rating_bar.dart';
 
 class ItemShimmer extends StatelessWidget {
   final bool isEnabled;

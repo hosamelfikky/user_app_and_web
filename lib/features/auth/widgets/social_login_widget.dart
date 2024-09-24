@@ -3,13 +3,14 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/auth_controller.dart';
+import '../domain/models/social_log_in_body.dart';
 
 class SocialLoginWidget extends StatelessWidget {
   const SocialLoginWidget({super.key});

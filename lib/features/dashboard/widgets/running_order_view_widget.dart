@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/order/screens/order_details_screen.dart';
+
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../order/controllers/order_controller.dart';
+import '../../order/domain/models/order_model.dart';
+import '../../order/screens/order_details_screen.dart';
 
 class RunningOrderViewWidget extends StatelessWidget {
   final List<OrderModel> reversOrder;

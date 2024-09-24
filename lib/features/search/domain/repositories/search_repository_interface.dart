@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/search/domain/models/popular_categories_model.dart';
-import 'package:user_app_web/features/search/domain/models/search_suggestion_model.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../interfaces/repository_interface.dart';
+import '../models/popular_categories_model.dart';
+import '../models/search_suggestion_model.dart';
 
 abstract class SearchRepositoryInterface extends RepositoryInterface {
   Future<bool> saveSearchHistory(List<String> searchHistories);

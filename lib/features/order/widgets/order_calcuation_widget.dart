@@ -1,15 +1,16 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/order/widgets/order_item_widget.dart';
-import 'package:user_app_web/features/parcel/widgets/details_widget.dart';
+
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../parcel/widgets/details_widget.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/order_controller.dart';
+import '../domain/models/order_model.dart';
+import 'order_item_widget.dart';
 
 class OrderCalculationWidget extends StatelessWidget {
   final OrderController orderController;

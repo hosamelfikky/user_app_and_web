@@ -1,8 +1,9 @@
-import 'package:user_app_web/features/notification/domain/models/notification_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../domain/models/notification_model.dart';
 
 class NotificationDialogWidget extends StatelessWidget {
   final NotificationModel notificationModel;

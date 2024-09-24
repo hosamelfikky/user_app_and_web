@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../util/dimensions.dart';
+import '../../controllers/theme_controller.dart';
 
 class OnHover extends StatefulWidget {
   final Widget child;

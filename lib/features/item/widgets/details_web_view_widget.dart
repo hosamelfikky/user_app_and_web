@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/cart_snackbar.dart';
-import 'package:user_app_web/common/widgets/confirmation_dialog.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/features/checkout/screens/checkout_screen.dart';
-import 'package:user_app_web/features/item/screens/item_details_screen.dart';
-import 'package:user_app_web/features/item/widgets/item_title_view_widget.dart';
+
+import '../../../common/widgets/cart_snackbar.dart';
+import '../../../common/widgets/confirmation_dialog.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../../cart/domain/models/cart_model.dart';
+import '../../checkout/domain/models/place_order_body_model.dart';
+import '../../checkout/screens/checkout_screen.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/item_controller.dart';
+import '../domain/models/item_model.dart';
+import '../screens/item_details_screen.dart';
+import 'item_title_view_widget.dart';
 
 class DetailsWebViewWidget extends StatelessWidget {
   final CartModel? cartModel;

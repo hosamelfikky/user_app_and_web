@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/features/home/widgets/components/review_item_card_widget.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../../common/widgets/custom_ink_well.dart';
+import '../../../../common/widgets/title_widget.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../components/review_item_card_widget.dart';
 
 class BestReviewItemView extends StatefulWidget {
   const BestReviewItemView({super.key});

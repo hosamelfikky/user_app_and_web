@@ -1,7 +1,8 @@
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/features/order/widgets/custom_stepper_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../util/dimensions.dart';
+import 'custom_stepper_widget.dart';
 
 class TrackingStepperWidget extends StatelessWidget {
   final String? status;

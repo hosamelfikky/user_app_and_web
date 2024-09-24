@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/features/payment/domain/models/offline_method_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../checkout/controllers/checkout_controller.dart';
+import '../../parcel/controllers/parcel_controller.dart';
+import '../domain/models/offline_method_model.dart';
 
 class OfflinePaymentButton extends StatelessWidget {
   final bool isSelected;

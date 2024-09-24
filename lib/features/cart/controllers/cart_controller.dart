@@ -1,17 +1,18 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/cart/domain/models/online_cart_model.dart';
-import 'package:user_app_web/features/cart/domain/services/cart_service_interface.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/features/home/screens/home_screen.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/module_helper.dart';
-import 'package:user_app_web/helper/price_converter.dart';
+
+import '../../../common/models/module_model.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/module_helper.dart';
+import '../../../helper/price_converter.dart';
+import '../../checkout/domain/models/place_order_body_model.dart';
+import '../../home/screens/home_screen.dart';
+import '../../item/controllers/item_controller.dart';
+import '../../item/domain/models/item_model.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/cart_model.dart';
+import '../domain/models/online_cart_model.dart';
+import '../domain/services/cart_service_interface.dart';
 
 class CartController extends GetxController implements GetxService {
   final CartServiceInterface cartServiceInterface;

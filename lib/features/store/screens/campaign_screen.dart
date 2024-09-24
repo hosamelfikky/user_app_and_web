@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/web_menu_bar.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
-import 'package:user_app_web/features/item/domain/models/basic_campaign_model.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/item_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/web_menu_bar.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../item/controllers/campaign_controller.dart';
+import '../../item/domain/models/basic_campaign_model.dart';
 
 class CampaignScreen extends StatefulWidget {
   final BasicCampaignModel campaign;

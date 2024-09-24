@@ -3,10 +3,11 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../api/api_client.dart';
+import '../features/address/domain/models/address_model.dart';
+import '../features/splash/controllers/splash_controller.dart';
+import '../util/app_constants.dart';
 
 class AddressHelper {
   static Future<bool> saveUserAddressInSharedPref(AddressModel address) async {

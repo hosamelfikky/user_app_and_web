@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/wallet/controllers/wallet_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/no_data_screen.dart';
+
 import '../../../common/widgets/history_item_widget.dart';
+import '../../../common/widgets/no_data_screen.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/wallet_controller.dart';
 
 class WalletHistoryWidget extends StatelessWidget {
   const WalletHistoryWidget({super.key});

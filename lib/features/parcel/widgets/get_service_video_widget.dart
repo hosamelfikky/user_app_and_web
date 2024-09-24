@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/util/dimensions.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+
+import '../../../util/dimensions.dart';
 
 class GetServiceVideoWidget extends StatefulWidget {
   final String youtubeVideoUrl;

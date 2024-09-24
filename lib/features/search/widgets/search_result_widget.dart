@@ -1,12 +1,13 @@
-import 'package:user_app_web/features/search/controllers/search_controller.dart' as search;
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/search/widgets/filter_widget.dart';
-import 'package:user_app_web/features/search/widgets/item_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/search_controller.dart' as search;
+import 'filter_widget.dart';
+import 'item_view_widget.dart';
 
 class SearchResultWidget extends StatefulWidget {
   final String searchText;

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/hover/on_hover.dart';
-import 'package:user_app_web/features/home/widgets/web/widgets/arrow_icon_button.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/hover/on_hover.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../item/controllers/campaign_controller.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../language/controllers/language_controller.dart';
+import 'widgets/arrow_icon_button.dart';
 
 class WebJustForYouViewWidget extends StatefulWidget {
   const WebJustForYouViewWidget({super.key});

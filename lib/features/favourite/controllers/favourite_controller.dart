@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/favourite/domain/services/favourite_service_interface.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../item/domain/models/item_model.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/domain/models/store_model.dart';
+import '../domain/services/favourite_service_interface.dart';
 
 class FavouriteController extends GetxController implements GetxService {
   final FavouriteServiceInterface favouriteServiceInterface;

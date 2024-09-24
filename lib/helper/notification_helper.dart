@@ -9,17 +9,18 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:user_app_web/common/widgets/demo_reset_dialog_widget.dart';
-import 'package:user_app_web/features/chat/controllers/chat_controller.dart';
-import 'package:user_app_web/features/chat/enums/user_type_enum.dart';
-import 'package:user_app_web/features/dashboard/screens/dashboard_screen.dart';
-import 'package:user_app_web/features/notification/controllers/notification_controller.dart';
-import 'package:user_app_web/features/notification/domain/models/notification_body_model.dart';
-import 'package:user_app_web/features/notification/widgets/notifiation_popup_dialog_widget.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../common/widgets/demo_reset_dialog_widget.dart';
+import '../features/chat/controllers/chat_controller.dart';
+import '../features/chat/enums/user_type_enum.dart';
+import '../features/dashboard/screens/dashboard_screen.dart';
+import '../features/notification/controllers/notification_controller.dart';
+import '../features/notification/domain/models/notification_body_model.dart';
+import '../features/notification/widgets/notifiation_popup_dialog_widget.dart';
+import '../features/order/controllers/order_controller.dart';
+import '../util/app_constants.dart';
+import 'auth_helper.dart';
+import 'route_helper.dart';
 
 class NotificationHelper {
   static Future<void> initialize(FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin) async {

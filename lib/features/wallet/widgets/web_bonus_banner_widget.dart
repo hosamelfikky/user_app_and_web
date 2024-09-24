@@ -1,13 +1,14 @@
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/wallet/controllers/wallet_controller.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
+
+import '../../../helper/date_converter.dart';
+import '../../../helper/price_converter.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/wallet_controller.dart';
 
 class WebBonusBannerWidget extends StatelessWidget {
   const WebBonusBannerWidget({super.key});

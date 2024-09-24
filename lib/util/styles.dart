@@ -1,7 +1,8 @@
-import 'package:get/get.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'app_constants.dart';
+import 'dimensions.dart';
 
 final robotoRegular = TextStyle(
   fontFamily: AppConstants.fontFamily,

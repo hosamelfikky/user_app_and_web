@@ -2,10 +2,11 @@ import 'dart:convert';
 
 import 'package:get/get_connect/connect.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/payment/domain/models/offline_method_model.dart';
-import 'package:user_app_web/features/payment/domain/repositories/payment_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../models/offline_method_model.dart';
+import 'payment_repository_interface.dart';
 
 class PaymentRepository implements PaymentRepositoryInterface {
   final ApiClient apiClient;

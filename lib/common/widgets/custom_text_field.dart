@@ -2,12 +2,13 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/code_picker_widget.dart';
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../helper/responsive_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
+import 'code_picker_widget.dart';
+import 'custom_asset_image_widget.dart';
 
 class CustomTextField extends StatefulWidget {
   final String titleText;

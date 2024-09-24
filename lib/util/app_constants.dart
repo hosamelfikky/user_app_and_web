@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/choose_us_model.dart';
-import 'package:user_app_web/features/language/domain/models/language_model.dart';
-import 'package:user_app_web/util/images.dart';
+
+import '../common/models/choose_us_model.dart';
+import '../features/language/domain/models/language_model.dart';
+import 'images.dart';
 
 class AppConstants {
-  static const String appName = '6amMart';
+  static const String appName = 'Tytan';
   static const double appVersion = 2.9;
 
   ///Flutter Version: 3.22.3

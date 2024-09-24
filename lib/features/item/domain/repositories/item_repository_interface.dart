@@ -1,5 +1,5 @@
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../interfaces/repository_interface.dart';
+import '../models/basic_medicine_model.dart';
 
 abstract class ItemRepositoryInterface implements RepositoryInterface {
   // Future<dynamic> getPopularItemList(String type);

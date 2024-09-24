@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
 
 class CashBackLogoWidget extends StatelessWidget {
   const CashBackLogoWidget({super.key});

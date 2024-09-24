@@ -1,7 +1,7 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/address/domain/repositories/address_repository_interface.dart';
-import 'package:user_app_web/features/address/domain/services/address_service_interface.dart';
+import '../../../../common/models/response_model.dart';
+import '../models/address_model.dart';
+import '../repositories/address_repository_interface.dart';
+import 'address_service_interface.dart';
 
 class AddressService implements AddressServiceInterface {
   final AddressRepositoryInterface addressRepoInterface;

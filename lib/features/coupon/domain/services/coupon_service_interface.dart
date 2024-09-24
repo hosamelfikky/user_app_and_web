@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/coupon/domain/models/coupon_model.dart';
+import '../models/coupon_model.dart';
 
 abstract class CouponServiceInterface {
   Future<List<CouponModel>?> getCouponList();

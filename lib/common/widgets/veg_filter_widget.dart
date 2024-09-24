@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/item/controllers/item_controller.dart';
+import '../../features/language/controllers/language_controller.dart';
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
 
 class VegFilterWidget extends StatelessWidget {
   final String? type;

@@ -1,11 +1,12 @@
 import 'package:get/get_connect/connect.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/payment/domain/models/offline_method_model.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/features/checkout/domain/repositories/checkout_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../../payment/domain/models/offline_method_model.dart';
+import '../models/place_order_body_model.dart';
+import 'checkout_repository_interface.dart';
 
 class CheckoutRepository implements CheckoutRepositoryInterface {
   final ApiClient apiClient;

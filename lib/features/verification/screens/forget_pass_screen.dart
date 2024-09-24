@@ -1,25 +1,26 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
-import 'package:user_app_web/features/verification/controllers/verification_controller.dart';
-import 'package:user_app_web/helper/custom_validator.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/helper/validate_check.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../helper/custom_validator.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../helper/validate_check.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../auth/controllers/auth_controller.dart';
+import '../../auth/domain/models/social_log_in_body.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/verification_controller.dart';
 
 class ForgetPassScreen extends StatefulWidget {
   final bool fromSocialLogin;

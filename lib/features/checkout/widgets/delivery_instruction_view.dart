@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/checkout_controller.dart';
 
 class DeliveryInstructionView extends StatefulWidget {
   const DeliveryInstructionView({super.key});

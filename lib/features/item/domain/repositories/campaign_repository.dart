@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/item/domain/models/basic_campaign_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/item/domain/repositories/campaign_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../models/basic_campaign_model.dart';
+import '../models/item_model.dart';
+import 'campaign_repository_interface.dart';
 
 class CampaignRepository implements CampaignRepositoryInterface {
   final ApiClient apiClient;

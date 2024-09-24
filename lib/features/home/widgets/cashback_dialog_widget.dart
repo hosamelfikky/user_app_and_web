@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/home/widgets/cashback_logo_widget.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/date_converter.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../language/controllers/language_controller.dart';
+import '../controllers/home_controller.dart';
+import 'cashback_logo_widget.dart';
 
 class CashBackDialogWidget extends StatelessWidget {
   const CashBackDialogWidget({super.key});

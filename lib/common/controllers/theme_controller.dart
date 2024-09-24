@@ -1,7 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../util/app_constants.dart';
 
 class ThemeController extends GetxController implements GetxService {
   final SharedPreferences sharedPreferences;

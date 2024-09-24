@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/notification/controllers/notification_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/address_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../notification/controllers/notification_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class ParcelAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final bool? backButton;

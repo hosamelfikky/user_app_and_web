@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/config_model.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/features/checkout/widgets/condition_check_box.dart';
-import 'package:user_app_web/features/checkout/widgets/coupon_section.dart';
-import 'package:user_app_web/features/checkout/widgets/note_prescription_section.dart';
-import 'package:user_app_web/features/checkout/widgets/partial_pay_view.dart';
-import 'package:user_app_web/features/checkout/widgets/prescription_image_picker_widget.dart';
-import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/models/config_model.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../../coupon/controllers/coupon_controller.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/checkout_controller.dart';
+import 'condition_check_box.dart';
+import 'coupon_section.dart';
+import 'note_prescription_section.dart';
+import 'partial_pay_view.dart';
+import 'prescription_image_picker_widget.dart';
 
 class BottomSection extends StatelessWidget {
   final CheckoutController checkoutController;

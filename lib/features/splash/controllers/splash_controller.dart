@@ -1,22 +1,23 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/models/config_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/banner/controllers/banner_controller.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/home/screens/home_screen.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/domain/models/landing_model.dart';
-import 'package:user_app_web/features/splash/domain/services/splash_service_interface.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
+
+import '../../../api/api_client.dart';
+import '../../../common/models/config_model.dart';
+import '../../../common/models/module_model.dart';
+import '../../../common/models/response_model.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../address/controllers/address_controller.dart';
+import '../../banner/controllers/banner_controller.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../../favourite/controllers/favourite_controller.dart';
+import '../../home/controllers/home_controller.dart';
+import '../../home/screens/home_screen.dart';
+import '../../item/controllers/campaign_controller.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../store/controllers/store_controller.dart';
+import '../domain/models/landing_model.dart';
+import '../domain/services/splash_service_interface.dart';
 
 class SplashController extends GetxController implements GetxService {
   final SplashServiceInterface splashServiceInterface;

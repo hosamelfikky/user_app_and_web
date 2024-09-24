@@ -1,12 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/features/home/controllers/advertisement_controller.dart';
-import 'package:user_app_web/features/home/widgets/highlight_widget.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/images.dart';
+import '../../../../util/styles.dart';
+import '../../controllers/advertisement_controller.dart';
+import '../highlight_widget.dart';
 
 class WebHighlightWidget extends StatefulWidget {
   const WebHighlightWidget({super.key});

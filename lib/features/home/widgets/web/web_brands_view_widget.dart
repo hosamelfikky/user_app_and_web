@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/features/brands/controllers/brands_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/title_widget.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../brands/controllers/brands_controller.dart';
+import '../../../language/controllers/language_controller.dart';
 
 class WebBrandsViewWidget extends StatelessWidget {
   const WebBrandsViewWidget({super.key});

@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/business/domain/models/business_plan_body.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
-import 'package:user_app_web/features/business/domain/repositories/business_repo_interface.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
 import 'package:universal_html/html.dart' as html;
+
+import '../../../../api/api_client.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../models/business_plan_body.dart';
+import '../models/package_model.dart';
+import 'business_repo_interface.dart';
 
 class BusinessRepo implements BusinessRepoInterface<dynamic> {
   final ApiClient apiClient;

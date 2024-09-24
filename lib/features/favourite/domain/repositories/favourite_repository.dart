@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/favourite/domain/repositories/favourite_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../util/app_constants.dart';
+import 'favourite_repository_interface.dart';
 
 class FavouriteRepository implements FavouriteRepositoryInterface<ResponseModel> {
   final ApiClient apiClient;

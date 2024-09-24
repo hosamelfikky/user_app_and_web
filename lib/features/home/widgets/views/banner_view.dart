@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/banner/controllers/banner_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/basic_campaign_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/store/screens/store_screen.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../common/models/module_model.dart';
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../banner/controllers/banner_controller.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/basic_campaign_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../splash/controllers/splash_controller.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../../../store/screens/store_screen.dart';
 
 class BannerView extends StatelessWidget {
   final bool isFeatured;

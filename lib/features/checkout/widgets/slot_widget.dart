@@ -1,7 +1,8 @@
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class SlotWidget extends StatelessWidget {
   final String title;

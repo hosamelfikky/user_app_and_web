@@ -1,16 +1,17 @@
-import 'package:user_app_web/common/widgets/card_design/store_card_with_distance.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/home/widgets/web/web_new_on_view_widget.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/card_design/store_card.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:get/get.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
+
+import '../../../../common/widgets/card_design/store_card.dart';
+import '../../../../common/widgets/card_design/store_card_with_distance.dart';
+import '../../../../common/widgets/rating_bar.dart';
+import '../../../../common/widgets/title_widget.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../../util/dimensions.dart';
+import '../../../store/controllers/store_controller.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../web/web_new_on_view_widget.dart';
 
 class NewOnMartView extends StatelessWidget {
   final bool isPharmacy;

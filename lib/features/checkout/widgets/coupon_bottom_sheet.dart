@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/coupon/domain/models/coupon_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/coupon/widgets/coupon_card_widget.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../coupon/controllers/coupon_controller.dart';
+import '../../coupon/domain/models/coupon_model.dart';
+import '../../coupon/widgets/coupon_card_widget.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/checkout_controller.dart';
 
 class CouponBottomSheet extends StatelessWidget {
   final int? storeId;

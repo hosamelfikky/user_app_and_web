@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/confirmation_dialog.dart';
-import 'package:user_app_web/common/widgets/hover/on_hover.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/auth/screens/sign_in_screen.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/auth/controllers/auth_controller.dart';
+import '../../features/auth/screens/sign_in_screen.dart';
+import '../../features/cart/controllers/cart_controller.dart';
+import '../../features/favourite/controllers/favourite_controller.dart';
+import '../../features/language/controllers/language_controller.dart';
+import '../../features/profile/controllers/profile_controller.dart';
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../helper/auth_helper.dart';
+import '../../helper/responsive_helper.dart';
+import '../../helper/route_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/images.dart';
+import '../../util/styles.dart';
+import 'confirmation_dialog.dart';
+import 'hover/on_hover.dart';
 
 class MenuDrawer extends StatefulWidget {
   const MenuDrawer({super.key});

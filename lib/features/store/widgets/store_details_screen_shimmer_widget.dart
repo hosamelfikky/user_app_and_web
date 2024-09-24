@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../common/widgets/title_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
 
 class StoreDetailsScreenShimmerWidget extends StatelessWidget {
   const StoreDetailsScreenShimmerWidget({super.key});

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class DeliverItemCardWidget extends StatelessWidget {
   final String image;

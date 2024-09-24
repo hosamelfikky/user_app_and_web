@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
-import 'package:user_app_web/features/wallet/domain/models/wallet_filter_body_model.dart';
-import 'package:user_app_web/features/wallet/domain/models/fund_bonus_model.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:user_app_web/features/wallet/domain/services/wallet_service_interface.dart';
+
+import '../../../common/models/transaction_model.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../domain/models/fund_bonus_model.dart';
+import '../domain/models/wallet_filter_body_model.dart';
+import '../domain/services/wallet_service_interface.dart';
 
 class WalletController extends GetxController implements GetxService {
   final WalletServiceInterface walletServiceInterface;

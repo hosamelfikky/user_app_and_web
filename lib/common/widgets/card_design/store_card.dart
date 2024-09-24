@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/new_tag.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/store/screens/store_screen.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../features/favourite/controllers/favourite_controller.dart';
+import '../../../features/language/controllers/language_controller.dart';
+import '../../../features/splash/controllers/splash_controller.dart';
+import '../../../features/store/controllers/store_controller.dart';
+import '../../../features/store/domain/models/store_model.dart';
+import '../../../features/store/screens/store_screen.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../models/module_model.dart';
+import '../custom_image.dart';
+import '../custom_ink_well.dart';
+import '../custom_snackbar.dart';
+import '../new_tag.dart';
+import '../rating_bar.dart';
 
 class StoreCard extends StatelessWidget {
   final Store store;

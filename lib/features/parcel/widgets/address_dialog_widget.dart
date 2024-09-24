@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/address_widget.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/no_data_screen.dart';
+
+import '../../../common/widgets/address_widget.dart';
+import '../../../common/widgets/no_data_screen.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../address/controllers/address_controller.dart';
+import '../../address/domain/models/address_model.dart';
+import '../controllers/parcel_controller.dart';
 
 class AddressDialogWidget extends StatelessWidget {
   final Function(AddressModel address) onTap;

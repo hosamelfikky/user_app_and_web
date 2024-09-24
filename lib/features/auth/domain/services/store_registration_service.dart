@@ -1,12 +1,13 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_data_model.dart';
-import 'package:user_app_web/features/auth/domain/models/store_body_model.dart';
-import 'package:user_app_web/features/auth/domain/reposotories/deliveryman_registration_repository_interface.dart';
-import 'package:user_app_web/features/auth/domain/reposotories/store_registration_repository_interface.dart';
-import 'package:user_app_web/features/auth/domain/services/store_registration_service_interface.dart';
+
+import '../../../../common/models/module_model.dart';
+import '../../../business/domain/models/package_model.dart';
+import '../../../location/domain/models/zone_data_model.dart';
+import '../models/store_body_model.dart';
+import '../reposotories/deliveryman_registration_repository_interface.dart';
+import '../reposotories/store_registration_repository_interface.dart';
+import 'store_registration_service_interface.dart';
 
 class StoreRegistrationService implements StoreRegistrationServiceInterface {
   final StoreRegistrationRepositoryInterface storeRegistrationRepoInterface;

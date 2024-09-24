@@ -5,20 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/location/domain/models/prediction_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/features/location/domain/repositories/location_repository_interface.dart';
-import 'package:user_app_web/features/location/domain/services/location_service_interface.dart';
-import 'package:user_app_web/features/location/screens/pick_map_screen.dart';
-import 'package:user_app_web/features/location/widgets/permission_dialog_widget.dart';
-import 'package:user_app_web/features/parcel/domain/models/place_details_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/address_helper.dart';
+import '../../../../helper/responsive_helper.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../address/domain/models/address_model.dart';
+import '../../../parcel/domain/models/place_details_model.dart';
+import '../../../splash/controllers/splash_controller.dart';
+import '../../screens/pick_map_screen.dart';
+import '../../widgets/permission_dialog_widget.dart';
+import '../models/prediction_model.dart';
+import '../models/zone_response_model.dart';
+import '../repositories/location_repository_interface.dart';
+import 'location_service_interface.dart';
 
 class LocationService implements LocationServiceInterface {
   final LocationRepositoryInterface locationRepoInterface;

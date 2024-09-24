@@ -1,7 +1,7 @@
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
-import 'package:user_app_web/features/item/domain/models/common_condition_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
+import '../../../cart/domain/models/cart_model.dart';
+import '../models/basic_medicine_model.dart';
+import '../models/common_condition_model.dart';
+import '../models/item_model.dart';
 
 abstract class ItemServiceInterface {
   Future<List<Item>?> getPopularItemList(String type);

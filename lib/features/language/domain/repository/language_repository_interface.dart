@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+
+import '../../../../interfaces/repository_interface.dart';
+import '../../../address/domain/models/address_model.dart';
 
 abstract class LanguageRepositoryInterface extends RepositoryInterface {
   AddressModel? getAddressFormSharedPref();

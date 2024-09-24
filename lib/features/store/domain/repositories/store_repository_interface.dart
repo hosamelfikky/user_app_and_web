@@ -1,5 +1,5 @@
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../common/models/module_model.dart';
+import '../../../../interfaces/repository_interface.dart';
 
 abstract class StoreRepositoryInterface extends RepositoryInterface {
   @override

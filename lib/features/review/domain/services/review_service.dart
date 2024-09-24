@@ -1,8 +1,8 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/review/domain/models/review_body_model.dart';
-import 'package:user_app_web/features/review/domain/models/review_model.dart';
-import 'package:user_app_web/features/review/domain/repositories/review_repository_interface.dart';
-import 'package:user_app_web/features/review/domain/services/review_service_interface.dart';
+import '../../../../common/models/response_model.dart';
+import '../models/review_body_model.dart';
+import '../models/review_model.dart';
+import '../repositories/review_repository_interface.dart';
+import 'review_service_interface.dart';
 
 class ReviewService implements ReviewServiceInterface {
   final ReviewRepositoryInterface reviewRepositoryInterface;

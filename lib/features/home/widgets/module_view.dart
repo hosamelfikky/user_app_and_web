@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/address_widget.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/common/widgets/custom_loader.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/banner/controllers/banner_controller.dart';
-import 'package:user_app_web/features/home/widgets/banner_view.dart';
-import 'package:user_app_web/features/home/widgets/popular_store_view.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/address_widget.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../common/widgets/custom_loader.dart';
+import '../../../common/widgets/title_widget.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../address/controllers/address_controller.dart';
+import '../../address/domain/models/address_model.dart';
+import '../../banner/controllers/banner_controller.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import 'banner_view.dart';
+import 'popular_store_view.dart';
 
 class ModuleView extends StatelessWidget {
   final SplashController splashController;

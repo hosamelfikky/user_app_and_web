@@ -1,6 +1,6 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/review/domain/models/review_body_model.dart';
-import 'package:user_app_web/features/review/domain/models/review_model.dart';
+import '../../../../common/models/response_model.dart';
+import '../models/review_body_model.dart';
+import '../models/review_model.dart';
 
 abstract class ReviewServiceInterface {
   Future<List<ReviewModel>?> getStoreReviewList(String? storeID);

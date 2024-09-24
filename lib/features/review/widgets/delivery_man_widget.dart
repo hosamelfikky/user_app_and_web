@@ -1,10 +1,11 @@
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/rating_bar.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../order/domain/models/order_model.dart';
 
 class DeliveryManWidget extends StatelessWidget {
   final DeliveryMan? deliveryMan;

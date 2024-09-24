@@ -1,7 +1,8 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
+
+import 'custom_image.dart';
 
 class ImagePickerWidget extends StatelessWidget {
   final Uint8List? rawFile;

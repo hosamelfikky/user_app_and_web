@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/parcel/widgets/deliver_item_card_widget.dart';
+
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../parcel/domain/models/parcel_category_model.dart';
+import '../../parcel/widgets/deliver_item_card_widget.dart';
 
 class ParcelBottomSheetWidget extends StatelessWidget {
   final List<ParcelCategoryModel>? parcelCategoryList;

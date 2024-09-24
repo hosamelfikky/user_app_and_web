@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/validate_check.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/validate_check.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/checkout_controller.dart';
 
 class GuestCreateAccount extends StatelessWidget {
   final TextEditingController guestPasswordController;

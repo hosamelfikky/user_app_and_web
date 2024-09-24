@@ -3,19 +3,20 @@ import 'dart:developer';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/cart_widget.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/veg_filter_widget.dart';
-import 'package:user_app_web/common/widgets/web_menu_bar.dart';
-import 'package:user_app_web/features/category/controllers/category_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/cart_widget.dart';
+import '../../../common/widgets/item_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/veg_filter_widget.dart';
+import '../../../common/widgets/web_menu_bar.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../item/domain/models/item_model.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/domain/models/store_model.dart';
+import '../controllers/category_controller.dart';
 
 class CategoryItemScreen extends StatefulWidget {
   final String? categoryID;

@@ -1,9 +1,10 @@
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/util/app_constants.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/util/html_type.dart';
-import 'package:user_app_web/features/html/domain/repositories/html_repository_interface.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../../../util/html_type.dart';
+import '../../../language/controllers/language_controller.dart';
+import 'html_repository_interface.dart';
 
 class HtmlRepository implements HtmlRepositoryInterface {
   final ApiClient apiClient;

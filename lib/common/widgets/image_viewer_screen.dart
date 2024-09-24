@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
+
+import '../../features/item/controllers/item_controller.dart';
+import '../../features/item/domain/models/item_model.dart';
+import 'custom_app_bar.dart';
 
 class ImageViewerScreen extends StatelessWidget {
   final Item item;

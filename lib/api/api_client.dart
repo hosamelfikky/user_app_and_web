@@ -7,12 +7,13 @@ import 'package:get/get_connect/http/src/request/request.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_checker.dart';
-import 'package:user_app_web/common/models/error_response.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../common/models/error_response.dart';
+import '../common/models/module_model.dart';
+import '../features/address/domain/models/address_model.dart';
+import '../helper/responsive_helper.dart';
+import '../util/app_constants.dart';
+import 'api_checker.dart';
 
 class ApiClient extends GetxService {
   final String appBaseUrl;

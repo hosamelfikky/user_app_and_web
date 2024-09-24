@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/language/domain/models/language_model.dart';
+
+import '../models/language_model.dart';
 
 abstract class LanguageServiceInterface {
   bool setLTR(Locale locale);

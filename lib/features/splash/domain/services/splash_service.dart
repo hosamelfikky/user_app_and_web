@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/splash/domain/models/landing_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/splash/domain/repositories/splash_repository_interface.dart';
-import 'package:user_app_web/features/splash/domain/services/splash_service_interface.dart';
+
+import '../../../../common/models/module_model.dart';
+import '../../../../common/models/response_model.dart';
+import '../models/landing_model.dart';
+import '../repositories/splash_repository_interface.dart';
+import 'splash_service_interface.dart';
 
 class SplashService implements SplashServiceInterface {
   final SplashRepositoryInterface splashRepositoryInterface;

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/checkout/widgets/coupon_bottom_sheet.dart';
+
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../coupon/controllers/coupon_controller.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../store/controllers/store_controller.dart';
+import '../controllers/checkout_controller.dart';
+import 'coupon_bottom_sheet.dart';
 
 class CouponSection extends StatelessWidget {
   final int? storeId;

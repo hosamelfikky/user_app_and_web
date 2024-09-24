@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../order/controllers/order_controller.dart';
+import '../../order/domain/models/order_model.dart';
 
 class OfflineSuccessDialog extends StatelessWidget {
   final int? orderId;

@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/flash_sale/widgets/flash_sale_view_widget.dart';
-import 'package:user_app_web/features/home/widgets/bad_weather_widget.dart';
-import 'package:user_app_web/features/home/widgets/banner_view.dart';
-import 'package:user_app_web/features/home/widgets/brands_view_widget.dart';
-import 'package:user_app_web/features/home/widgets/highlight_widget.dart';
-import 'package:user_app_web/features/home/widgets/views/category_view.dart';
-import 'package:user_app_web/features/home/widgets/views/featured_categories_view.dart';
-import 'package:user_app_web/features/home/widgets/views/item_that_you_love_view.dart';
-import 'package:user_app_web/features/home/widgets/views/just_for_you_view.dart';
-import 'package:user_app_web/features/home/widgets/views/middle_section_banner_view.dart';
-import 'package:user_app_web/features/home/widgets/views/most_popular_item_view.dart';
-import 'package:user_app_web/features/home/widgets/views/new_on_mart_view.dart';
-import 'package:user_app_web/features/home/widgets/views/popular_store_view.dart';
-import 'package:user_app_web/features/home/widgets/views/product_with_categories_view.dart';
-import 'package:user_app_web/features/home/widgets/views/promotional_banner_view.dart';
-import 'package:user_app_web/features/home/widgets/views/special_offer_view.dart';
-import 'package:user_app_web/features/home/widgets/views/visit_again_view.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/util/images.dart';
+
+import '../../../../helper/auth_helper.dart';
+import '../../../../util/images.dart';
+import '../../../flash_sale/widgets/flash_sale_view_widget.dart';
+import '../../widgets/bad_weather_widget.dart';
+import '../../widgets/banner_view.dart';
+import '../../widgets/brands_view_widget.dart';
+import '../../widgets/highlight_widget.dart';
+import '../../widgets/views/category_view.dart';
+import '../../widgets/views/featured_categories_view.dart';
+import '../../widgets/views/item_that_you_love_view.dart';
+import '../../widgets/views/just_for_you_view.dart';
+import '../../widgets/views/middle_section_banner_view.dart';
+import '../../widgets/views/most_popular_item_view.dart';
+import '../../widgets/views/new_on_mart_view.dart';
+import '../../widgets/views/popular_store_view.dart';
+import '../../widgets/views/product_with_categories_view.dart';
+import '../../widgets/views/promotional_banner_view.dart';
+import '../../widgets/views/special_offer_view.dart';
+import '../../widgets/views/visit_again_view.dart';
 
 class ShopHomeScreen extends StatelessWidget {
   const ShopHomeScreen({super.key});

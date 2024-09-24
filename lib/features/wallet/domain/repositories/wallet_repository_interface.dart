@@ -1,4 +1,4 @@
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../interfaces/repository_interface.dart';
 
 abstract class WalletRepositoryInterface extends RepositoryInterface {
   Future<dynamic> addFundToWallet(double amount, String paymentMethod);

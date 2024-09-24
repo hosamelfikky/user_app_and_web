@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/category/domain/models/category_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/features/category/domain/reposotories/category_repository_interface.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../language/controllers/language_controller.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../models/category_model.dart';
+import 'category_repository_interface.dart';
 
 class CategoryRepository implements CategoryRepositoryInterface {
   final ApiClient apiClient;

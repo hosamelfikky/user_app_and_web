@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/home/widgets/components/review_item_card_widget.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/basic_medicine_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../components/review_item_card_widget.dart';
 
 class FeaturedCategoriesView extends StatelessWidget {
   const FeaturedCategoriesView({super.key});

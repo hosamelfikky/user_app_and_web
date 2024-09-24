@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/payment/domain/models/offline_method_model.dart';
+import '../models/offline_method_model.dart';
 
 abstract class PaymentServiceInterface {
   Future<List<OfflineMethodModel>?> getOfflineMethodList();

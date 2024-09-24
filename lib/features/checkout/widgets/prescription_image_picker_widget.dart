@@ -1,16 +1,18 @@
 import 'dart:io';
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
-import 'package:user_app_web/common/widgets/custom_tool_tip_widget.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/features/checkout/widgets/prescription_view_dialog_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/widgets/camera_button_sheet_widget.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_tool_tip_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/widgets/camera_button_sheet_widget.dart';
+import '../controllers/checkout_controller.dart';
+import 'prescription_view_dialog_widget.dart';
 
 class PrescriptionImagePickerWidget extends StatelessWidget {
   final CheckoutController checkoutController;

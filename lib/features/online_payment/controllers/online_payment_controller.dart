@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/online_payment/domain/services/online_payment_service_interface.dart';
+
+import '../domain/services/online_payment_service_interface.dart';
 
 class OnlinePaymentController extends GetxController implements GetxService {
   final OnlinePaymentServiceInterface onlinePaymentServiceInterface;

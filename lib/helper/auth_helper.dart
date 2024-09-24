@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
+
+import '../features/auth/controllers/auth_controller.dart';
 
 class AuthHelper {
   static bool isGuestLoggedIn() {

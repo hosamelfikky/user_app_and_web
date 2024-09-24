@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/brands/domain/models/brands_model.dart';
-import 'package:user_app_web/features/brands/domain/repositories/brands_repository_interface.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../models/brands_model.dart';
+import 'brands_repository_interface.dart';
 
 class BrandsRepository implements BrandsRepositoryInterface {
   final ApiClient apiClient;

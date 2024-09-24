@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/address_widget.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_loader.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/location/screens/pick_map_screen.dart';
+
+import '../../../common/widgets/address_widget.dart';
+import '../../../common/widgets/custom_loader.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../address/controllers/address_controller.dart';
+import '../../address/domain/models/address_model.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../location/domain/models/zone_response_model.dart';
+import '../../location/screens/pick_map_screen.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class AddressBottomSheetWidget extends StatelessWidget {
   final bool fromDialog;

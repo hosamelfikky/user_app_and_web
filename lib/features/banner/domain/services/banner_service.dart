@@ -1,10 +1,10 @@
-import 'package:user_app_web/features/banner/domain/models/banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/others_banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/promotional_banner_model.dart';
-import 'package:user_app_web/features/banner/domain/repositories/banner_repository_interface.dart';
-import 'package:user_app_web/features/banner/domain/services/banner_service_interface.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/helper/address_helper.dart';
+import '../../../../helper/address_helper.dart';
+import '../../../location/domain/models/zone_response_model.dart';
+import '../models/banner_model.dart';
+import '../models/others_banner_model.dart';
+import '../models/promotional_banner_model.dart';
+import '../repositories/banner_repository_interface.dart';
+import 'banner_service_interface.dart';
 
 class BannerService implements BannerServiceInterface {
   final BannerRepositoryInterface bannerRepositoryInterface;

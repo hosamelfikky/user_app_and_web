@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
-import 'package:user_app_web/features/loyalty/controllers/loyalty_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/loyalty_controller.dart';
 
 class LoyaltyBottomSheetWidget extends StatefulWidget {
   final String amount;

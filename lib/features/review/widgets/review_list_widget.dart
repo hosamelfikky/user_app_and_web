@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:user_app_web/features/review/controllers/review_controller.dart';
-import 'package:user_app_web/features/review/widgets/review_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../controllers/review_controller.dart';
+import 'review_widget.dart';
 
 class ReviewListWidget extends StatelessWidget {
   final ReviewController reviewController;

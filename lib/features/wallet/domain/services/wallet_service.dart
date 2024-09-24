@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
-import 'package:user_app_web/features/wallet/domain/models/fund_bonus_model.dart';
-import 'package:user_app_web/features/wallet/domain/repositories/wallet_repository_interface.dart';
-import 'package:user_app_web/features/wallet/domain/services/wallet_service_interface.dart';
+
+import '../../../../common/models/transaction_model.dart';
+import '../models/fund_bonus_model.dart';
+import '../repositories/wallet_repository_interface.dart';
+import 'wallet_service_interface.dart';
 
 class WalletService implements WalletServiceInterface {
   final WalletRepositoryInterface walletRepositoryInterface;

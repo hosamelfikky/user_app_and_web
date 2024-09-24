@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/route_helper.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../controllers/auth_controller.dart';
 
 class GuestButtonWidget extends StatelessWidget {
   const GuestButtonWidget({super.key});

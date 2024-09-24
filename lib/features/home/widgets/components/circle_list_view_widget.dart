@@ -4,13 +4,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/features/home/widgets/components/custom_circle_list_view_package.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/title_widget.dart';
+import '../../../../util/dimensions.dart';
+import '../../../item/controllers/campaign_controller.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/item_model.dart';
+import 'custom_circle_list_view_package.dart';
 
 class CircleListView extends StatefulWidget {
   const CircleListView({super.key});

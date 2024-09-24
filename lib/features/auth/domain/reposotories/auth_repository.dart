@@ -6,15 +6,16 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get_connect/connect.dart';
 import 'package:get/get_utils/src/platform/platform.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/auth/domain/models/signup_body_model.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
-import 'package:user_app_web/features/auth/domain/reposotories/auth_repository_interface.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/module_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../helper/address_helper.dart';
+import '../../../../helper/module_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../address/domain/models/address_model.dart';
+import '../models/signup_body_model.dart';
+import '../models/social_log_in_body.dart';
+import 'auth_repository_interface.dart';
 
 class AuthRepository implements AuthRepositoryInterface {
   final ApiClient apiClient;

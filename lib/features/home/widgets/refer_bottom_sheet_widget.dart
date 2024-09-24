@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
 
 class ReferBottomSheetWidget extends StatelessWidget {
   const ReferBottomSheetWidget({super.key});

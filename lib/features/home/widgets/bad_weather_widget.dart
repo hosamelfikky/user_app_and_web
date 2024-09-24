@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/address_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../location/domain/models/zone_response_model.dart';
 
 class BadWeatherWidget extends StatefulWidget {
   final bool inParcel;

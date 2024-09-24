@@ -1,22 +1,24 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/features/payment/controllers/payment_controller.dart';
-import 'package:user_app_web/features/payment/domain/models/offline_method_model.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../checkout/controllers/checkout_controller.dart';
+import '../../checkout/domain/models/place_order_body_model.dart';
+import '../../parcel/controllers/parcel_controller.dart';
+import '../controllers/payment_controller.dart';
+import '../domain/models/offline_method_model.dart';
 
 class OfflinePaymentScreen extends StatefulWidget {
   final PlaceOrderBodyModel placeOrderBody;

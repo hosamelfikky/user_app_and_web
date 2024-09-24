@@ -1,30 +1,32 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
+
 import 'package:dotted_border/dotted_border.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
-import 'package:user_app_web/features/checkout/widgets/guest_create_account.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/common/models/config_model.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_dropdown.dart';
-import 'package:user_app_web/features/cart/widgets/delivery_option_button_widget.dart';
-import 'package:user_app_web/features/checkout/widgets/coupon_section.dart';
-import 'package:user_app_web/features/checkout/widgets/delivery_instruction_view.dart';
-import 'package:user_app_web/features/checkout/widgets/delivery_section.dart';
-import 'package:user_app_web/features/checkout/widgets/deliveryman_tips_section.dart';
-import 'package:user_app_web/features/checkout/widgets/partial_pay_view.dart';
-import 'package:user_app_web/features/checkout/widgets/payment_section.dart';
-import 'package:user_app_web/features/checkout/widgets/time_slot_section.dart';
-import 'package:user_app_web/features/checkout/widgets/web_delivery_instruction_view.dart';
-import 'package:user_app_web/features/store/widgets/camera_button_sheet_widget.dart';
-import 'dart:io';
+
+import '../../../common/models/config_model.dart';
+import '../../../common/widgets/custom_dropdown.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../address/domain/models/address_model.dart';
+import '../../cart/domain/models/cart_model.dart';
+import '../../cart/widgets/delivery_option_button_widget.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/widgets/camera_button_sheet_widget.dart';
+import '../controllers/checkout_controller.dart';
+import 'coupon_section.dart';
+import 'delivery_instruction_view.dart';
+import 'delivery_section.dart';
+import 'deliveryman_tips_section.dart';
+import 'guest_create_account.dart';
+import 'partial_pay_view.dart';
+import 'payment_section.dart';
+import 'time_slot_section.dart';
+import 'web_delivery_instruction_view.dart';
 
 class TopSection extends StatelessWidget {
   final CheckoutController checkoutController;

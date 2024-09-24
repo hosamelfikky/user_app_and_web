@@ -1,13 +1,14 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/auth/domain/models/signup_body_model.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
-import 'package:user_app_web/features/auth/domain/reposotories/auth_repository_interface.dart';
-import 'package:user_app_web/features/auth/domain/services/auth_service_interface.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
+
+import '../../../../common/models/response_model.dart';
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../splash/controllers/splash_controller.dart';
+import '../../controllers/auth_controller.dart';
+import '../models/signup_body_model.dart';
+import '../models/social_log_in_body.dart';
+import '../reposotories/auth_repository_interface.dart';
+import 'auth_service_interface.dart';
 
 class AuthService implements AuthServiceInterface {
   final AuthRepositoryInterface authRepositoryInterface;

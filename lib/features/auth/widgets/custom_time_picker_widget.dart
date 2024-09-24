@@ -2,12 +2,13 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/auth/controllers/store_registration_controller.dart';
-import 'package:user_app_web/features/auth/widgets/min_max_time_picker_widget.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/store_registration_controller.dart';
+import 'min_max_time_picker_widget.dart';
 
 class CustomTimePickerWidget extends StatelessWidget {
   const CustomTimePickerWidget({super.key});

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/banner/controllers/banner_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../util/dimensions.dart';
+import '../../../banner/controllers/banner_controller.dart';
 
 class PromotionalBannerView extends StatelessWidget {
   const PromotionalBannerView({super.key});

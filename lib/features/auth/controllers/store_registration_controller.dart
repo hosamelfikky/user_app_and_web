@@ -1,17 +1,18 @@
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/auth/domain/models/store_body_model.dart';
-import 'package:user_app_web/features/auth/domain/services/store_registration_service_interface.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/location/domain/models/zone_data_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/features/location/domain/services/location_service_interface.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
+
+import '../../../common/models/module_model.dart';
+import '../../../helper/route_helper.dart';
+import '../../business/domain/models/package_model.dart';
+import '../../home/controllers/home_controller.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../location/domain/models/zone_data_model.dart';
+import '../../location/domain/models/zone_response_model.dart';
+import '../../location/domain/services/location_service_interface.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/store_body_model.dart';
+import '../domain/services/store_registration_service_interface.dart';
 
 class StoreRegistrationController extends GetxController implements GetxService {
   final StoreRegistrationServiceInterface storeRegistrationServiceInterface;

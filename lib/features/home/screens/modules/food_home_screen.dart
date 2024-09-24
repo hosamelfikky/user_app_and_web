@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/features/home/widgets/bad_weather_widget.dart';
-import 'package:user_app_web/features/home/widgets/banner_view.dart';
-import 'package:user_app_web/features/home/widgets/highlight_widget.dart';
-import 'package:user_app_web/features/home/widgets/views/best_reviewed_item_view.dart';
-import 'package:user_app_web/features/home/widgets/views/best_store_nearby_view.dart';
-import 'package:user_app_web/features/home/widgets/views/category_view.dart';
-import 'package:user_app_web/features/home/widgets/views/item_that_you_love_view.dart';
-import 'package:user_app_web/features/home/widgets/views/just_for_you_view.dart';
-import 'package:user_app_web/features/home/widgets/views/most_popular_item_view.dart';
-import 'package:user_app_web/features/home/widgets/views/new_on_mart_view.dart';
-import 'package:user_app_web/features/home/widgets/views/special_offer_view.dart';
-import 'package:user_app_web/features/home/widgets/views/visit_again_view.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/util/images.dart';
+
+import '../../../../common/controllers/theme_controller.dart';
+import '../../../../helper/auth_helper.dart';
+import '../../../../util/images.dart';
+import '../../widgets/bad_weather_widget.dart';
+import '../../widgets/banner_view.dart';
+import '../../widgets/highlight_widget.dart';
+import '../../widgets/views/best_reviewed_item_view.dart';
+import '../../widgets/views/best_store_nearby_view.dart';
+import '../../widgets/views/category_view.dart';
+import '../../widgets/views/item_that_you_love_view.dart';
+import '../../widgets/views/just_for_you_view.dart';
+import '../../widgets/views/most_popular_item_view.dart';
+import '../../widgets/views/new_on_mart_view.dart';
+import '../../widgets/views/special_offer_view.dart';
+import '../../widgets/views/visit_again_view.dart';
 
 class FoodHomeScreen extends StatelessWidget {
   const FoodHomeScreen({super.key});

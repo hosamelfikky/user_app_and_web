@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../language/controllers/language_controller.dart';
+import '../controllers/parcel_controller.dart';
 
 class ServiceInfoListWidget extends StatelessWidget {
   final ParcelController parcelController;

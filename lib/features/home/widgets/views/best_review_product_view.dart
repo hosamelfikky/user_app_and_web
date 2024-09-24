@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/home/widgets/components/review_item_card_widget.dart';
-import 'package:user_app_web/features/home/widgets/web/widgets/sorting_text_button.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../components/review_item_card_widget.dart';
+import '../web/widgets/sorting_text_button.dart';
 
 class BestReviewedProductView extends StatelessWidget {
   const BestReviewedProductView({super.key});

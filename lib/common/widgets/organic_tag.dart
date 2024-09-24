@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/item/domain/models/item_model.dart';
+import '../../helper/responsive_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
 
 class OrganicTag extends StatelessWidget {
   final double? fontSize;

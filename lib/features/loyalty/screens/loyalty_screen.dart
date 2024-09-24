@@ -5,20 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/loyalty/controllers/loyalty_controller.dart';
-import 'package:user_app_web/features/loyalty/widgets/loyalty_bottom_sheet_widget.dart';
-import 'package:user_app_web/features/loyalty/widgets/loyalty_card_widget.dart';
-import 'package:user_app_web/features/loyalty/widgets/loyalty_history_widget.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/not_logged_in_screen.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../controllers/loyalty_controller.dart';
+import '../widgets/loyalty_bottom_sheet_widget.dart';
+import '../widgets/loyalty_card_widget.dart';
+import '../widgets/loyalty_history_widget.dart';
 
 class LoyaltyScreen extends StatefulWidget {
   const LoyaltyScreen({super.key});

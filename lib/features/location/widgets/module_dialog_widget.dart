@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class ModuleDialogWidget extends StatelessWidget {
   final Function callback;

@@ -1,10 +1,11 @@
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/item_view.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../controllers/favourite_controller.dart';
 
 class FavItemViewWidget extends StatelessWidget {
   final bool isStore;

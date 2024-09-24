@@ -1,22 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/common/widgets/custom_dropdown.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/hover/text_hover.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/auth/screens/sign_in_screen.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/auth/controllers/auth_controller.dart';
+import '../../features/auth/screens/sign_in_screen.dart';
+import '../../features/cart/controllers/cart_controller.dart';
+import '../../features/language/controllers/language_controller.dart';
+import '../../features/location/controllers/location_controller.dart';
+import '../../helper/address_helper.dart';
+import '../../helper/auth_helper.dart';
+import '../../helper/route_helper.dart';
+import '../../util/app_constants.dart';
+import '../../util/dimensions.dart';
+import '../../util/images.dart';
+import '../../util/styles.dart';
+import '../controllers/theme_controller.dart';
+import 'custom_dropdown.dart';
+import 'custom_snackbar.dart';
+import 'hover/text_hover.dart';
 
 class WebMenuBar extends StatelessWidget implements PreferredSizeWidget {
   const WebMenuBar({super.key});

@@ -2,15 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/auth/domain/models/signup_body_model.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
-import 'package:user_app_web/features/auth/domain/services/auth_service_interface.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/route_helper.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/signup_body_model.dart';
+import '../domain/models/social_log_in_body.dart';
+import '../domain/services/auth_service_interface.dart';
 
 class AuthController extends GetxController implements GetxService {
   final AuthServiceInterface authServiceInterface;

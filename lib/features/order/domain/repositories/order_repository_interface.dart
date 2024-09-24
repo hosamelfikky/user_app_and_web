@@ -1,6 +1,7 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+
+import '../../../../interfaces/repository_interface.dart';
 
 abstract class OrderRepositoryInterface extends RepositoryInterface {
   @override

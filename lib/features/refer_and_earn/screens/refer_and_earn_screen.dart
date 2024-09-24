@@ -1,25 +1,26 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:expandable_bottom_sheet/expandable_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:dotted_border/dotted_border.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:user_app_web/features/refer_and_earn/widgets/bottom_sheet_view_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/not_logged_in_screen.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../widgets/bottom_sheet_view_widget.dart';
 
 class ReferAndEarnScreen extends StatefulWidget {
   const ReferAndEarnScreen({super.key});

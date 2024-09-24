@@ -1,16 +1,17 @@
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/review/controllers/review_controller.dart';
-import 'package:user_app_web/features/review/widgets/rating_widget.dart';
-import 'package:user_app_web/features/review/widgets/review_list_widget.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/no_data_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/no_data_screen.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../store/domain/models/store_model.dart';
+import '../controllers/review_controller.dart';
+import '../widgets/rating_widget.dart';
+import '../widgets/review_list_widget.dart';
 
 class ReviewScreen extends StatefulWidget {
   final String? storeName;

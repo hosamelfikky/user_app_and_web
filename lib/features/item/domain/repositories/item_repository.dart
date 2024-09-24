@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
-import 'package:user_app_web/features/item/domain/models/common_condition_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/item/domain/repositories/item_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../models/basic_medicine_model.dart';
+import '../models/common_condition_model.dart';
+import '../models/item_model.dart';
+import 'item_repository_interface.dart';
 
 class ItemRepository implements ItemRepositoryInterface {
   final ApiClient apiClient;

@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../common/widgets/custom_ink_well.dart';
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/price_converter.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/images.dart';
+import '../../../../util/styles.dart';
+import '../../../coupon/controllers/coupon_controller.dart';
 
 class PromoCodeBannerView extends StatefulWidget {
   const PromoCodeBannerView({super.key});

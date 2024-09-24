@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/store/domain/models/store_model.dart';
+import '../../helper/date_converter.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
 
 class NotAvailableWidget extends StatelessWidget {
   final double fontSize;

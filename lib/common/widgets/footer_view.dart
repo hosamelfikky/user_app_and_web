@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:user_app_web/common/models/config_model.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/hover/text_hover.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../helper/responsive_helper.dart';
+import '../../helper/route_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/images.dart';
+import '../../util/styles.dart';
+import '../models/config_model.dart';
+import 'custom_snackbar.dart';
+import 'hover/text_hover.dart';
 
 class FooterView extends StatefulWidget {
   final Widget child;

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/home/widgets/components/flash_sale_card_widget.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/flash_sale/widgets/flash_sale_timer_view_widget.dart';
+
+import '../../../../helper/price_converter.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../flash_sale/controllers/flash_sale_controller.dart';
+import '../../../flash_sale/widgets/flash_sale_timer_view_widget.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../components/flash_sale_card_widget.dart';
 
 class WebFlashSaleViewWidget extends StatefulWidget {
   const WebFlashSaleViewWidget({super.key});

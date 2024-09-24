@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/language/domain/models/language_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/language/domain/repository/language_repository_interface.dart';
-import 'package:user_app_web/features/language/domain/service/language_service_interface.dart';
+
+import '../../../address/domain/models/address_model.dart';
+import '../models/language_model.dart';
+import '../repository/language_repository_interface.dart';
+import 'language_service_interface.dart';
 
 class LanguageService implements LanguageServiceInterface {
   final LanguageRepositoryInterface languageRepositoryInterface;

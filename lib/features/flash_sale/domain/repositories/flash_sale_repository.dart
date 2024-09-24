@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/flash_sale/domain/models/flash_sale_model.dart';
-import 'package:user_app_web/features/flash_sale/domain/models/product_flash_sale.dart';
-import 'package:user_app_web/features/flash_sale/domain/repositories/flash_sale_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../models/flash_sale_model.dart';
+import '../models/product_flash_sale.dart';
+import 'flash_sale_repository_interface.dart';
 
 class FlashSaleRepository implements FlashSaleRepositoryInterface {
   final ApiClient apiClient;

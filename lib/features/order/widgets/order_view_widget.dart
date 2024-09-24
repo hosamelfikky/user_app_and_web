@@ -1,20 +1,21 @@
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/order/widgets/order_shimmer_widget.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/no_data_screen.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
-import 'package:user_app_web/features/order/screens/order_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/no_data_screen.dart';
+import '../../../common/widgets/paginated_list_view.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../controllers/order_controller.dart';
+import '../domain/models/order_model.dart';
+import '../screens/order_details_screen.dart';
+import 'order_shimmer_widget.dart';
 
 class OrderViewWidget extends StatelessWidget {
   final bool isRunning;

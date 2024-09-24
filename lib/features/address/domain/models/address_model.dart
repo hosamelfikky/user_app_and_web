@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
+import '../../../location/domain/models/zone_response_model.dart';
 
 class AddressModel {
   int? id;

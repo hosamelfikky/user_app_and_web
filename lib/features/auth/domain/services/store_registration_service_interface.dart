@@ -1,9 +1,10 @@
 import 'package:get/get_connect.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_data_model.dart';
-import 'package:user_app_web/features/auth/domain/models/store_body_model.dart';
+
+import '../../../../common/models/module_model.dart';
+import '../../../business/domain/models/package_model.dart';
+import '../../../location/domain/models/zone_data_model.dart';
+import '../models/store_body_model.dart';
 
 abstract class StoreRegistrationServiceInterface {
   Future<List<ZoneDataModel>?> getZoneList();

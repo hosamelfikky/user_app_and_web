@@ -5,7 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
+
+import '../features/splash/controllers/splash_controller.dart';
 
 class NetworkInfo {
   static final Connectivity _connectivity = Connectivity();
@@ -16,23 +17,28 @@ class NetworkInfo {
   }
 
   static void checkConnectivity(BuildContext context) {
-    _connectivity.onConnectivityChanged.listen((List<ConnectivityResult> result) {
-      if (Get.find<SplashController>().firstTimeConnectionCheck) {
-        Get.find<SplashController>().setFirstTimeConnectionCheck(false);
-      } else {
-        bool isNotConnected = result.contains(ConnectivityResult.none);
-        if (!context.mounted) return;
-        if (!isNotConnected) ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          backgroundColor: isNotConnected ? Colors.red : Colors.green,
-          duration: Duration(seconds: isNotConnected ? 6000 : 3),
-          content: Text(
-            isNotConnected ? 'no_connection'.tr : 'connected'.tr,
-            textAlign: TextAlign.center,
-          ),
-        ));
-      }
-    });
+    _connectivity.onConnectivityChanged.listen(
+      (List<ConnectivityResult> result) {
+        if (Get.find<SplashController>().firstTimeConnectionCheck) {
+          Get.find<SplashController>().setFirstTimeConnectionCheck(false);
+        } else {
+          bool isConnected = !result.contains(ConnectivityResult.none);
+          if (!context.mounted) return;
+          if (isConnected) {
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            return;
+          }
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: !isConnected ? Colors.red : Colors.green,
+            duration: Duration(seconds: !isConnected ? 6000 : 3),
+            content: Text(
+              !isConnected ? 'no_connection'.tr : 'connected'.tr,
+              textAlign: TextAlign.center,
+            ),
+          ));
+        }
+      },
+    );
   }
 
   static Future<XFile> compressImage(XFile file) async {

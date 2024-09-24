@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/item_widget.dart';
+
+import '../../../common/widgets/item_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../item/domain/models/item_model.dart';
+import '../../store/controllers/store_controller.dart';
+import '../controllers/cart_controller.dart';
+import '../domain/models/cart_model.dart';
 
 class WebSuggestedItemViewWidget extends StatelessWidget {
   final List<CartModel> cartList;

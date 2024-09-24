@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../util/dimensions.dart';
 
 class CustomLoaderWidget extends StatelessWidget {
   const CustomLoaderWidget({super.key});

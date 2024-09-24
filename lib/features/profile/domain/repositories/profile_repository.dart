@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/profile/domain/models/userinfo_model.dart';
-import 'package:user_app_web/features/profile/domain/repositories/profile_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../util/app_constants.dart';
+import '../models/userinfo_model.dart';
+import 'profile_repository_interface.dart';
 
 class ProfileRepository implements ProfileRepositoryInterface {
   final ApiClient apiClient;

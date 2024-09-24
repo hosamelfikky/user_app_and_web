@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/common/widgets/custom_favourite_widget.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/discount_tag.dart';
-import 'package:user_app_web/common/widgets/hover/on_hover.dart';
-import 'package:user_app_web/common/widgets/not_available_widget.dart';
-import 'package:user_app_web/common/widgets/organic_tag.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/store/screens/store_screen.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/favourite/controllers/favourite_controller.dart';
+import '../../features/item/controllers/item_controller.dart';
+import '../../features/item/domain/models/item_model.dart';
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../features/store/domain/models/store_model.dart';
+import '../../features/store/screens/store_screen.dart';
+import '../../helper/date_converter.dart';
+import '../../helper/price_converter.dart';
+import '../../helper/responsive_helper.dart';
+import '../../helper/route_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/images.dart';
+import '../../util/styles.dart';
+import '../models/module_model.dart';
+import 'custom_favourite_widget.dart';
+import 'custom_image.dart';
+import 'discount_tag.dart';
+import 'hover/on_hover.dart';
+import 'not_available_widget.dart';
+import 'organic_tag.dart';
+import 'rating_bar.dart';
 
 class WebItemWidget extends StatelessWidget {
   final Item? item;

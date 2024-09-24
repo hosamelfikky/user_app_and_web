@@ -1,7 +1,9 @@
 import 'dart:async';
+
 import 'package:get/get.dart';
-import 'package:user_app_web/features/home/domain/models/cashback_model.dart';
-import 'package:user_app_web/features/home/domain/services/home_service_interface.dart';
+
+import '../domain/models/cashback_model.dart';
+import '../domain/services/home_service_interface.dart';
 
 class HomeController extends GetxController implements GetxService {
   final HomeServiceInterface homeServiceInterface;

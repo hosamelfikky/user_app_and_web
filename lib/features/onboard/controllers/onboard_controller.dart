@@ -1,6 +1,7 @@
-import 'package:user_app_web/features/onboard/domain/models/onboarding_model.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/onboard/domain/service/onboard_service_interface.dart';
+
+import '../domain/models/onboarding_model.dart';
+import '../domain/service/onboard_service_interface.dart';
 
 class OnBoardingController extends GetxController implements GetxService {
   final OnboardServiceInterface onboardServiceInterface;

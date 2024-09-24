@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/business/domain/models/business_plan_body.dart';
-import 'package:user_app_web/features/business/domain/services/business_service_interface.dart';
+
+import '../domain/models/business_plan_body.dart';
+import '../domain/services/business_service_interface.dart';
 
 class BusinessController extends GetxController implements GetxService {
   final BusinessServiceInterface businessServiceInterface;

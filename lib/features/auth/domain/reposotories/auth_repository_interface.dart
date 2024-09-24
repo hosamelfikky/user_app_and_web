@@ -1,8 +1,9 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/auth/domain/models/signup_body_model.dart';
-import 'package:user_app_web/features/auth/domain/models/social_log_in_body.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+
+import '../../../../common/models/response_model.dart';
+import '../../../../interfaces/repository_interface.dart';
+import '../models/signup_body_model.dart';
+import '../models/social_log_in_body.dart';
 
 abstract class AuthRepositoryInterface extends RepositoryInterface {
   bool isSharedPrefNotificationActive();

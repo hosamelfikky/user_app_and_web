@@ -1,9 +1,10 @@
 import 'package:flutter/gestures.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../helper/route_helper.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class CheckoutCondition extends StatelessWidget {
   final bool isParcel;

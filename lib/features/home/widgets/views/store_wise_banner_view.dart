@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/images.dart';
 
 class StoreWiseBannerView extends StatelessWidget {
   const StoreWiseBannerView({super.key});

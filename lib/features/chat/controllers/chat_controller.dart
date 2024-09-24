@@ -1,17 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/chat/domain/models/chat_model.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
-import 'package:user_app_web/features/chat/domain/services/chat_service_interface.dart';
-import 'package:user_app_web/features/chat/enums/user_type_enum.dart';
-import 'package:user_app_web/features/notification/domain/models/notification_body_model.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
+
+import '../../../api/api_client.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../notification/domain/models/notification_body_model.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/chat_model.dart';
+import '../domain/models/conversation_model.dart';
+import '../domain/services/chat_service_interface.dart';
+import '../enums/user_type_enum.dart';
 
 class ChatController extends GetxController implements GetxService {
   final ChatServiceInterface chatServiceInterface;

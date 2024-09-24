@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/flash_sale/domain/models/product_flash_sale.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/add_favourite_view.dart';
-import 'package:user_app_web/common/widgets/cart_count_view.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/discount_tag.dart';
-import 'package:user_app_web/common/widgets/organic_tag.dart';
+
+import '../../../common/widgets/add_favourite_view.dart';
+import '../../../common/widgets/cart_count_view.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../common/widgets/discount_tag.dart';
+import '../../../common/widgets/organic_tag.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../item/controllers/item_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/product_flash_sale.dart';
 
 class FlashProductCardWidget extends StatelessWidget {
   final Products product;

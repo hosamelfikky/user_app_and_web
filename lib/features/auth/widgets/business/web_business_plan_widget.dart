@@ -1,13 +1,14 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/auth/controllers/store_registration_controller.dart';
-import 'package:user_app_web/features/auth/widgets/business/base_card_widget.dart';
-import 'package:user_app_web/features/business/widgets/package_card_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../util/dimensions.dart';
+import '../../../../util/images.dart';
+import '../../../../util/styles.dart';
+import '../../../business/widgets/package_card_widget.dart';
+import '../../../splash/controllers/splash_controller.dart';
+import '../../controllers/store_registration_controller.dart';
+import 'base_card_widget.dart';
 
 class WebBusinessPlanWidget extends StatelessWidget {
   const WebBusinessPlanWidget({super.key});

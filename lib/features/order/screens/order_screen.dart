@@ -1,14 +1,15 @@
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/features/order/widgets/guest_track_order_input_view_widget.dart';
-import 'package:user_app_web/features/order/widgets/order_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/order_controller.dart';
+import '../widgets/guest_track_order_input_view_widget.dart';
+import '../widgets/order_view_widget.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});

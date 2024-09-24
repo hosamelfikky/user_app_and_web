@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../helper/route_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
+import 'custom_button.dart';
 
 class DemoResetDialogWidget extends StatefulWidget {
   const DemoResetDialogWidget({super.key});

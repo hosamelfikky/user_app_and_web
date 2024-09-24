@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/category/domain/models/category_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
+
+import '../../../item/domain/models/item_model.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../models/category_model.dart';
 
 abstract class CategoryServiceInterface {
   Future<List<CategoryModel>?> getCategoryList(bool allCategory);

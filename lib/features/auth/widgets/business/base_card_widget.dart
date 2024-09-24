@@ -1,8 +1,9 @@
-import 'package:user_app_web/features/auth/controllers/store_registration_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../helper/responsive_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../controllers/store_registration_controller.dart';
 
 class BaseCardWidget extends StatelessWidget {
   final StoreRegistrationController storeRegistrationController;

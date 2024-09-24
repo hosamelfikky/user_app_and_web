@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/add_favourite_view.dart';
-import 'package:user_app_web/common/widgets/cart_count_view.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/discount_tag.dart';
-import 'package:user_app_web/common/widgets/hover/on_hover.dart';
-import 'package:user_app_web/common/widgets/not_available_widget.dart';
+
+import '../../../../common/widgets/add_favourite_view.dart';
+import '../../../../common/widgets/cart_count_view.dart';
+import '../../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/custom_ink_well.dart';
+import '../../../../common/widgets/discount_tag.dart';
+import '../../../../common/widgets/hover/on_hover.dart';
+import '../../../../common/widgets/not_available_widget.dart';
+import '../../../../helper/price_converter.dart';
+import '../../../../helper/responsive_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/images.dart';
+import '../../../../util/styles.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../language/controllers/language_controller.dart';
+import '../../../splash/controllers/splash_controller.dart';
 
 class ItemThatYouLoveCard extends StatelessWidget {
   final Item item;

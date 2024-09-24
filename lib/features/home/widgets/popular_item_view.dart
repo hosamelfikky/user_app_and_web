@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/common/widgets/corner_banner/banner.dart';
-import 'package:user_app_web/common/widgets/corner_banner/corner_discount_tag.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/not_available_widget.dart';
-import 'package:user_app_web/common/widgets/organic_tag.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/controllers/theme_controller.dart';
+import '../../../common/widgets/corner_banner/banner.dart';
+import '../../../common/widgets/corner_banner/corner_discount_tag.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/not_available_widget.dart';
+import '../../../common/widgets/organic_tag.dart';
+import '../../../common/widgets/rating_bar.dart';
+import '../../../common/widgets/title_widget.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../item/controllers/item_controller.dart';
+import '../../item/domain/models/item_model.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class PopularItemView extends StatelessWidget {
   final bool isPopular;

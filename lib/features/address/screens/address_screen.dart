@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/address_widget.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/no_data_screen.dart';
-import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/address/widgets/address_confirmation_dialogue.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/address_widget.dart';
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/no_data_screen.dart';
+import '../../../common/widgets/not_logged_in_screen.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../controllers/address_controller.dart';
+import '../widgets/address_confirmation_dialogue.dart';
 
 class AddressScreen extends StatefulWidget {
   final bool fromDashboard;

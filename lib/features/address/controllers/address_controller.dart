@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/address/domain/services/address_service_interface.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../checkout/controllers/checkout_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/address_model.dart';
+import '../domain/services/address_service_interface.dart';
 
 class AddressController extends GetxController implements GetxService {
   final AddressServiceInterface addressServiceInterface;

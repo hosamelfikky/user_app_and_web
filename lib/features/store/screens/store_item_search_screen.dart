@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
-import 'package:user_app_web/common/widgets/veg_filter_widget.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/store/widgets/bottom_cart_widget.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/item_view.dart';
+import '../../../common/widgets/paginated_list_view.dart';
+import '../../../common/widgets/veg_filter_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../controllers/store_controller.dart';
+import '../widgets/bottom_cart_widget.dart';
 
 class StoreItemSearchScreen extends StatefulWidget {
   final String? storeID;

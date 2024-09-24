@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
+
+import '../../features/favourite/controllers/favourite_controller.dart';
+import '../../features/item/domain/models/item_model.dart';
+import '../../helper/auth_helper.dart';
+import 'custom_snackbar.dart';
 
 class AddFavouriteView extends StatelessWidget {
   final Item item;

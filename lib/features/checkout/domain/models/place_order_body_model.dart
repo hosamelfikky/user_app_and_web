@@ -1,6 +1,7 @@
 import 'dart:convert';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
+
+import '../../../address/domain/models/address_model.dart';
+import '../../../item/domain/models/item_model.dart';
 
 class PlaceOrderBodyModel {
   List<OnlineCart>? _cart;

@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/verification/domein/services/verification_service_interface.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../domein/services/verification_service_interface.dart';
 
 class VerificationController extends GetxController implements GetxService {
   final VerificationServiceInterface verificationServiceInterface;

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../helper/date_converter.dart';
+import '../../helper/price_converter.dart';
+import '../../util/dimensions.dart';
+import '../../util/images.dart';
+import '../../util/styles.dart';
+import '../models/transaction_model.dart';
 
 class HistoryItemWidget extends StatelessWidget {
   final int index;

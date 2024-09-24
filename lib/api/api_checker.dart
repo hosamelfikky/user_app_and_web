@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
+
+import '../common/widgets/custom_snackbar.dart';
+import '../features/auth/controllers/auth_controller.dart';
+import '../features/favourite/controllers/favourite_controller.dart';
+import '../helper/route_helper.dart';
 
 class ApiChecker {
   static void checkApi(Response response, {bool getXSnackBar = false}) {

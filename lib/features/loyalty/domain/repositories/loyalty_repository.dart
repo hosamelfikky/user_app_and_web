@@ -1,8 +1,9 @@
 import 'package:get/get_connect.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/loyalty/domain/repositories/loyalty_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/transaction_model.dart';
+import '../../../../util/app_constants.dart';
+import 'loyalty_repository_interface.dart';
 
 class LoyaltyRepository implements LoyaltyRepositoryInterface {
   final ApiClient apiClient;

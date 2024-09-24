@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
+import 'item_model.dart';
 
 class BasicMedicineModel {
   int? totalSize;

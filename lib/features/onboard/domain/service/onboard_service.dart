@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/onboard/domain/repository/onboard_repository_interface.dart';
-import 'package:user_app_web/features/onboard/domain/service/onboard_service_interface.dart';
+
+import '../repository/onboard_repository_interface.dart';
+import 'onboard_service_interface.dart';
 
 class OnboardService implements OnboardServiceInterface {
   final OnboardRepositoryInterface onboardRepositoryInterface;

@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/onboard/domain/repository/onboard_repository_interface.dart';
-import 'package:user_app_web/features/onboard/domain/models/onboarding_model.dart';
-import 'package:user_app_web/util/images.dart';
+
+import '../../../../util/images.dart';
+import '../models/onboarding_model.dart';
+import 'onboard_repository_interface.dart';
 
 class OnboardRepository implements OnboardRepositoryInterface {
   @override

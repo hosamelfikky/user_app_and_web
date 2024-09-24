@@ -1,7 +1,8 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
-import 'package:user_app_web/features/loyalty/domain/repositories/loyalty_repository_interface.dart';
-import 'package:user_app_web/features/loyalty/domain/services/loyalty_service_interface.dart';
+
+import '../../../../common/models/transaction_model.dart';
+import '../repositories/loyalty_repository_interface.dart';
+import 'loyalty_service_interface.dart';
 
 class LoyaltyService implements LoyaltyServiceInterface {
   final LoyaltyRepositoryInterface loyaltyRepositoryInterface;

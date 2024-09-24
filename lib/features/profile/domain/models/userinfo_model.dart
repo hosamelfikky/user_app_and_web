@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
+import '../../../chat/domain/models/conversation_model.dart';
 
 class UserInfoModel {
   int? id;

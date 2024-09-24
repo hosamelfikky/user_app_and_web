@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/chat/controllers/chat_controller.dart';
-import 'package:user_app_web/features/chat/enums/user_type_enum.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/notification/domain/models/notification_body_model.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
-import 'package:user_app_web/common/widgets/web_search_field.dart';
-import 'package:user_app_web/features/chat/widgets/chatting_shimmer.dart';
-import 'package:user_app_web/features/chat/widgets/message_bubble_widget.dart';
-import 'package:user_app_web/features/chat/widgets/web_conversation_list_view_widget.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/not_logged_in_screen.dart';
+import '../../../common/widgets/paginated_list_view.dart';
+import '../../../common/widgets/web_search_field.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../notification/domain/models/notification_body_model.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/chat_controller.dart';
+import '../domain/models/conversation_model.dart';
+import '../enums/user_type_enum.dart';
+import 'chatting_shimmer.dart';
+import 'message_bubble_widget.dart';
+import 'web_conversation_list_view_widget.dart';
 
 class WebChatViewWidget extends StatefulWidget {
   final ScrollController scrollController;

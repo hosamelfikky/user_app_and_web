@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/payment/domain/models/offline_method_model.dart';
-import 'package:user_app_web/features/payment/domain/repositories/payment_repository_interface.dart';
-import 'package:user_app_web/features/payment/domain/services/payment_service_interface.dart';
+import '../models/offline_method_model.dart';
+import '../repositories/payment_repository_interface.dart';
+import 'payment_service_interface.dart';
 
 class PaymentService implements PaymentServiceInterface {
   final PaymentRepositoryInterface paymentRepositoryInterface;

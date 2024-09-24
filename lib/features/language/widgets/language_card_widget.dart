@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/language/domain/models/language_model.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/language_controller.dart';
+import '../domain/models/language_model.dart';
 
 class LanguageCardWidget extends StatelessWidget {
   final LanguageModel languageModel;

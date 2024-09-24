@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/features/store/screens/store_screen.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/custom_ink_well.dart';
+import '../../../../helper/responsive_helper.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../../../store/screens/store_screen.dart';
 
 class PopularStoreCard extends StatelessWidget {
   final Store store;

@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/favourite/domain/repositories/favourite_repository_interface.dart';
-import 'package:user_app_web/features/favourite/domain/services/favourite_service_interface.dart';
-import 'package:user_app_web/helper/address_helper.dart';
+
+import '../../../../common/models/response_model.dart';
+import '../../../../helper/address_helper.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../repositories/favourite_repository_interface.dart';
+import 'favourite_service_interface.dart';
 
 class FavouriteService implements FavouriteServiceInterface {
   final FavouriteRepositoryInterface favouriteRepositoryInterface;

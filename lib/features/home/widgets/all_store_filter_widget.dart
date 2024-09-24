@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/home/widgets/filter_view.dart';
-import 'package:user_app_web/features/home/widgets/store_filter_button_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/controllers/store_controller.dart';
+import 'filter_view.dart';
+import 'store_filter_button_widget.dart';
 
 class AllStoreFilterWidget extends StatelessWidget {
   const AllStoreFilterWidget({

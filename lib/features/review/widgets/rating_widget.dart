@@ -1,10 +1,11 @@
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/features/review/widgets/rating_progress_widget.dart';
-import 'package:user_app_web/features/review/widgets/total_rating_review_view_widget.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
 import 'package:flutter/material.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/rating_bar.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import 'rating_progress_widget.dart';
+import 'total_rating_review_view_widget.dart';
 
 class RatingWidget extends StatelessWidget {
   final double? averageRating;

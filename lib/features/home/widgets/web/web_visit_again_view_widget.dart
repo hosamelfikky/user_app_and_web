@@ -2,14 +2,15 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/card_design/visit_again_card.dart';
-import 'package:user_app_web/features/home/widgets/components/custom_triangle_shape.dart';
-import 'package:user_app_web/features/home/widgets/web/widgets/arrow_icon_button.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../common/widgets/card_design/visit_again_card.dart';
+import '../../../../util/app_constants.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../store/controllers/store_controller.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../components/custom_triangle_shape.dart';
+import 'widgets/arrow_icon_button.dart';
 
 class WebVisitAgainView extends StatefulWidget {
   final bool fromFood;

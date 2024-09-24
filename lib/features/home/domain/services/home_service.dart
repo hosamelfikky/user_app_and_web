@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/home/domain/models/cashback_model.dart';
-import 'package:user_app_web/features/home/domain/repositories/home_repository_interface.dart';
-import 'package:user_app_web/features/home/domain/services/home_service_interface.dart';
+import '../models/cashback_model.dart';
+import '../repositories/home_repository_interface.dart';
+import 'home_service_interface.dart';
 
 class HomeService implements HomeServiceInterface {
   final HomeRepositoryInterface homeRepositoryInterface;

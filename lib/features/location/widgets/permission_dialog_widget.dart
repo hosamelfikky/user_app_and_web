@@ -1,9 +1,10 @@
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class PermissionDialogWidget extends StatelessWidget {
   const PermissionDialogWidget({super.key});

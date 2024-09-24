@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/banner/domain/models/banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/others_banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/promotional_banner_model.dart';
+import '../models/banner_model.dart';
+import '../models/others_banner_model.dart';
+import '../models/promotional_banner_model.dart';
 
 abstract class BannerServiceInterface {
   Future<BannerModel?> getBannerList();

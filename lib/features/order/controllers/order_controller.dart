@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_cancellation_body.dart';
-import 'package:user_app_web/features/order/domain/models/order_details_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/order/domain/services/order_service_interface.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../../helper/auth_helper.dart';
+import '../domain/models/order_cancellation_body.dart';
+import '../domain/models/order_details_model.dart';
+import '../domain/models/order_model.dart';
+import '../domain/services/order_service_interface.dart';
 
 class OrderController extends GetxController implements GetxService {
   final OrderServiceInterface orderServiceInterface;

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../common/widgets/title_widget.dart';
+import '../../../util/dimensions.dart';
 
 class BrandViewShimmer extends StatelessWidget {
   const BrandViewShimmer({super.key});

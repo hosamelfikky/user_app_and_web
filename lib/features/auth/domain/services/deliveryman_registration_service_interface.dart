@@ -1,9 +1,10 @@
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_data_model.dart';
-import 'package:user_app_web/features/auth/domain/models/delivery_man_body.dart';
-import 'package:user_app_web/features/auth/domain/models/delivery_man_vehicles_model.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/module_model.dart';
+import '../../../location/domain/models/zone_data_model.dart';
+import '../models/delivery_man_body.dart';
+import '../models/delivery_man_vehicles_model.dart';
 
 abstract class DeliverymanRegistrationServiceInterface {
   Future<List<ZoneDataModel>?> getZoneList();

@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
+
+import '../../../../api/api_client.dart';
+import '../models/conversation_model.dart';
 
 abstract class ChatServiceInterface {
   Future<ConversationsModel?> getConversationList(int offset, String type);

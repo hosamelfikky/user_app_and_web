@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/wallet/controllers/wallet_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/wallet_controller.dart';
 
 class AddFundDialogueWidget extends StatefulWidget {
   final ScrollController cardScrollController;

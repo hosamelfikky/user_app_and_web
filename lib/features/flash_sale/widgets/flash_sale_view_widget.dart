@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/home/widgets/components/flash_sale_card_widget.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/features/flash_sale/widgets/timer_widget.dart';
-import 'package:user_app_web/features/flash_sale/widgets/flash_sale_timer_view_widget.dart';
+
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../home/widgets/components/flash_sale_card_widget.dart';
+import '../../item/controllers/item_controller.dart';
+import '../../item/domain/models/item_model.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/flash_sale_controller.dart';
+import 'flash_sale_timer_view_widget.dart';
+import 'timer_widget.dart';
 
 class FlashSaleViewWidget extends StatefulWidget {
   const FlashSaleViewWidget({super.key});

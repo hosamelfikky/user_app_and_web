@@ -1,11 +1,12 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/location/domain/models/zone_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/features/location/domain/repositories/location_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../util/app_constants.dart';
+import '../models/zone_model.dart';
+import '../models/zone_response_model.dart';
+import 'location_repository_interface.dart';
 
 class LocationRepository implements LocationRepositoryInterface {
   final ApiClient apiClient;

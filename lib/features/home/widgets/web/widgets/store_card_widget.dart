@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/discount_tag.dart';
-import 'package:user_app_web/common/widgets/hover/on_hover.dart';
-import 'package:user_app_web/common/widgets/not_available_widget.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/features/store/screens/store_screen.dart';
+
+import '../../../../../common/models/module_model.dart';
+import '../../../../../common/widgets/custom_image.dart';
+import '../../../../../common/widgets/custom_ink_well.dart';
+import '../../../../../common/widgets/custom_snackbar.dart';
+import '../../../../../common/widgets/discount_tag.dart';
+import '../../../../../common/widgets/hover/on_hover.dart';
+import '../../../../../common/widgets/not_available_widget.dart';
+import '../../../../../common/widgets/rating_bar.dart';
+import '../../../../../helper/auth_helper.dart';
+import '../../../../../helper/responsive_helper.dart';
+import '../../../../../helper/route_helper.dart';
+import '../../../../../util/dimensions.dart';
+import '../../../../../util/images.dart';
+import '../../../../../util/styles.dart';
+import '../../../../favourite/controllers/favourite_controller.dart';
+import '../../../../language/controllers/language_controller.dart';
+import '../../../../splash/controllers/splash_controller.dart';
+import '../../../../store/domain/models/store_model.dart';
+import '../../../../store/screens/store_screen.dart';
 
 class StoreCardWidget extends StatelessWidget {
   final Store? store;

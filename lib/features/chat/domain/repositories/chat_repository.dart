@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
-import 'package:user_app_web/features/chat/domain/repositories/chat_repository_interface.dart';
-import 'package:user_app_web/features/chat/enums/user_type_enum.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../enums/user_type_enum.dart';
+import '../models/conversation_model.dart';
+import 'chat_repository_interface.dart';
 
 class ChatRepository implements ChatRepositoryInterface {
   final ApiClient apiClient;

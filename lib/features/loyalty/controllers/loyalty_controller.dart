@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/loyalty/domain/services/loyalty_service_interface.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
+
+import '../../../common/models/transaction_model.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../domain/services/loyalty_service_interface.dart';
 
 class LoyaltyController extends GetxController implements GetxService {
   final LoyaltyServiceInterface loyaltyServiceInterface;

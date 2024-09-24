@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/item/domain/models/basic_campaign_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
+import '../../../item/domain/models/basic_campaign_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../store/domain/models/store_model.dart';
 
 class BannerModel {
   List<BasicCampaignModel>? campaigns;

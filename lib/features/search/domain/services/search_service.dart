@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/search/domain/models/popular_categories_model.dart';
-import 'package:user_app_web/features/search/domain/models/search_suggestion_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/search/domain/repositories/search_repository_interface.dart';
-import 'package:user_app_web/features/search/domain/services/search_service_interface.dart';
-import 'package:user_app_web/helper/date_converter.dart';
+
+import '../../../../helper/date_converter.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../models/popular_categories_model.dart';
+import '../models/search_suggestion_model.dart';
+import '../repositories/search_repository_interface.dart';
+import 'search_service_interface.dart';
 
 class SearchService implements SearchServiceInterface {
   final SearchRepositoryInterface searchRepositoryInterface;

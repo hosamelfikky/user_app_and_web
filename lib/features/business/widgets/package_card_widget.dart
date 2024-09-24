@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
-import 'package:user_app_web/features/business/widgets/curve_clipper_widget.dart';
-import 'package:user_app_web/features/business/widgets/package_widget.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../helper/price_converter.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../domain/models/package_model.dart';
+import 'curve_clipper_widget.dart';
+import 'package_widget.dart';
 
 class PackageCardWidget extends StatelessWidget {
   final bool canSelect;

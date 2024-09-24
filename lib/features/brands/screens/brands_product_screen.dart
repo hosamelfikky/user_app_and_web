@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/brands/controllers/brands_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/item_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../controllers/brands_controller.dart';
 
 class BrandsItemScreen extends StatefulWidget {
   final int brandId;

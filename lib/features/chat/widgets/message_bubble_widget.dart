@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
-import 'package:user_app_web/features/chat/domain/models/chat_model.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/features/chat/widgets/image_dialog_widget.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../domain/models/chat_model.dart';
+import '../domain/models/conversation_model.dart';
+import 'image_dialog_widget.dart';
 
 class MessageBubbleWidget extends StatelessWidget {
   final Message message;

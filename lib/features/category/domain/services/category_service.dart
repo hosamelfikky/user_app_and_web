@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/category/domain/models/category_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/category/domain/reposotories/category_repository_interface.dart';
-import 'package:user_app_web/features/category/domain/services/category_service_interface.dart';
+
+import '../../../item/domain/models/item_model.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../models/category_model.dart';
+import '../reposotories/category_repository_interface.dart';
+import 'category_service_interface.dart';
 
 class CategoryService implements CategoryServiceInterface {
   final CategoryRepositoryInterface categoryRepositoryInterface;

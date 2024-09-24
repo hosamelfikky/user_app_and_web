@@ -1,5 +1,5 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
+import '../../../../common/models/response_model.dart';
+import '../models/address_model.dart';
 
 abstract class AddressServiceInterface {
   Future<List<AddressModel>?> getAllAddress();

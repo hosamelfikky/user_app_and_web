@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/confirmation_dialog.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/auth/screens/sign_in_screen.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/language/widgets/language_bottom_sheet_widget.dart';
-import 'package:user_app_web/features/menu/widgets/portion_widget.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/confirmation_dialog.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../auth/controllers/auth_controller.dart';
+import '../../auth/screens/sign_in_screen.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../../favourite/controllers/favourite_controller.dart';
+import '../../home/controllers/home_controller.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../language/widgets/language_bottom_sheet_widget.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../widgets/portion_widget.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});

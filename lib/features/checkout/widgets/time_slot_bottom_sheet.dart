@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/common/models/config_model.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/features/checkout/widgets/slot_widget.dart';
+
+import '../../../common/models/config_model.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/controllers/store_controller.dart';
+import '../controllers/checkout_controller.dart';
+import 'slot_widget.dart';
 
 class TimeSlotBottomSheet extends StatefulWidget {
   final bool tomorrowClosed;

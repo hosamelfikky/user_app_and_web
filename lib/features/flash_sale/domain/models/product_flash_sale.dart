@@ -1,5 +1,5 @@
-import 'package:user_app_web/features/flash_sale/domain/models/flash_sale_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import 'flash_sale_model.dart';
 
 class ProductFlashSale {
   int? totalSize;

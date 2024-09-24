@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/chat/domain/models/chat_model.dart';
+import 'chat_model.dart';
 
 class ConversationsModel {
   int? totalSize;

@@ -1,7 +1,8 @@
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class ProfileCardWidget extends StatelessWidget {
   final String image;

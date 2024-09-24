@@ -1,6 +1,6 @@
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/auth/domain/models/delivery_man_body.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../api/api_client.dart';
+import '../../../../interfaces/repository_interface.dart';
+import '../models/delivery_man_body.dart';
 
 abstract class DeliverymanRegistrationRepositoryInterface extends RepositoryInterface {
   @override

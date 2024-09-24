@@ -1,6 +1,7 @@
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class PaymentButtonNew extends StatelessWidget {
   final String icon;

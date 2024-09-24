@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/web_constrained_box.dart';
-import 'package:user_app_web/features/cart/widgets/cart_item_widget.dart';
-import 'package:user_app_web/features/store/screens/store_screen.dart';
+
+import '../../../common/widgets/web_constrained_box.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../store/domain/models/store_model.dart';
+import '../../store/screens/store_screen.dart';
+import '../controllers/cart_controller.dart';
+import '../domain/models/cart_model.dart';
+import 'cart_item_widget.dart';
 
 class WebCardItemsWidget extends StatelessWidget {
   final List<CartModel> cartList;

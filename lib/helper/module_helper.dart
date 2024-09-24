@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/config_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
+
+import '../common/models/config_model.dart';
+import '../common/models/module_model.dart';
+import '../features/splash/controllers/splash_controller.dart';
 
 class ModuleHelper {
   static ModuleModel? getModule() {

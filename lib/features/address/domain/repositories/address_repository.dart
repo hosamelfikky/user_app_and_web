@@ -1,10 +1,11 @@
 import 'package:get/get_connect/connect.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/address/domain/repositories/address_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../util/app_constants.dart';
+import '../models/address_model.dart';
+import 'address_repository_interface.dart';
 
 class AddressRepository implements AddressRepositoryInterface<AddressModel> {
   final ApiClient apiClient;

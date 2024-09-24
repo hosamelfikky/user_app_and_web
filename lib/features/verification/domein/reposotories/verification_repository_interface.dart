@@ -1,5 +1,5 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../interfaces/repository_interface.dart';
 
 abstract class VerificationRepositoryInterface<T> extends RepositoryInterface<T> {
   Future<ResponseModel> forgetPassword(String? phone);

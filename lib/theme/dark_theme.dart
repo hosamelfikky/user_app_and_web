@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../util/app_constants.dart';
 
 ThemeData dark({Color color = const Color(0xFF54b46b)}) => ThemeData(
       fontFamily: AppConstants.fontFamily,

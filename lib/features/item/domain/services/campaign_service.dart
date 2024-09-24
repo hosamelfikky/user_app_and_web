@@ -1,7 +1,7 @@
-import 'package:user_app_web/features/item/domain/models/basic_campaign_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/item/domain/repositories/campaign_repository_interface.dart';
-import 'package:user_app_web/features/item/domain/services/campaign_service_interface.dart';
+import '../models/basic_campaign_model.dart';
+import '../models/item_model.dart';
+import '../repositories/campaign_repository_interface.dart';
+import 'campaign_service_interface.dart';
 
 class CampaignService implements CampaignServiceInterface {
   final CampaignRepositoryInterface campaignRepositoryInterface;

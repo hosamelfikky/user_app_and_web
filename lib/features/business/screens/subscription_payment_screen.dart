@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/confirmation_dialog.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/auth/widgets/web_registration_stepper_widget.dart';
-import 'package:user_app_web/features/business/controllers/business_controller.dart';
-import 'package:user_app_web/features/business/widgets/payment_cart_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/confirmation_dialog.dart';
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../auth/widgets/web_registration_stepper_widget.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/business_controller.dart';
+import '../widgets/payment_cart_widget.dart';
 
 class SubscriptionPaymentScreen extends StatefulWidget {
   final int storeId;

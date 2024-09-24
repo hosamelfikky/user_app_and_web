@@ -1,8 +1,8 @@
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/cart/domain/models/online_cart_model.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
+import '../../../../common/models/module_model.dart';
+import '../../../checkout/domain/models/place_order_body_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../models/cart_model.dart';
+import '../models/online_cart_model.dart';
 
 abstract class CartServiceInterface {
   int availableSelectedIndex(int selectedIndex, int index);

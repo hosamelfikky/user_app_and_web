@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/util/html_type.dart';
-import 'package:user_app_web/features/html/domain/services/html_service_interface.dart';
+
+import '../../../util/html_type.dart';
+import '../domain/services/html_service_interface.dart';
 
 class HtmlController extends GetxController implements GetxService {
   final HtmlServiceInterface htmlServiceInterface;

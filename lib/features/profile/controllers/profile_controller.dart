@@ -1,15 +1,17 @@
 import 'dart:typed_data';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/profile/domain/models/userinfo_model.dart';
+
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/helper/network_info.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/profile/domain/services/profile_service_interface.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/network_info.dart';
+import '../../../helper/route_helper.dart';
+import '../../auth/controllers/auth_controller.dart';
+import '../../chat/domain/models/conversation_model.dart';
+import '../../favourite/controllers/favourite_controller.dart';
+import '../domain/models/userinfo_model.dart';
+import '../domain/services/profile_service_interface.dart';
 
 class ProfileController extends GetxController implements GetxService {
   final ProfileServiceInterface profileServiceInterface;

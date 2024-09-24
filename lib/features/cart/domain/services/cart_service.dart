@@ -1,15 +1,16 @@
 import 'package:get/get_utils/get_utils.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/cart/domain/models/online_cart_model.dart';
-import 'package:user_app_web/features/cart/domain/repositories/cart_repository_interface.dart';
-import 'package:user_app_web/features/cart/domain/services/cart_service_interface.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/helper/module_helper.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart' as item_variation;
+
+import '../../../../common/models/module_model.dart';
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/module_helper.dart';
+import '../../../../helper/price_converter.dart';
+import '../../../checkout/domain/models/place_order_body_model.dart';
+import '../../../item/domain/models/item_model.dart' as item_variation;
+import '../../../item/domain/models/item_model.dart';
+import '../models/cart_model.dart';
+import '../models/online_cart_model.dart';
+import '../repositories/cart_repository_interface.dart';
+import 'cart_service_interface.dart';
 
 class CartService implements CartServiceInterface {
   final CartRepositoryInterface cartRepositoryInterface;

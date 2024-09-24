@@ -1,5 +1,5 @@
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/online_payment/domain/repositories/online_payment_repo_interface.dart';
+import '../../../../api/api_client.dart';
+import 'online_payment_repo_interface.dart';
 
 class OnlinePaymentRepo implements OnlinePaymentRepoInterface {
   final ApiClient apiClient;

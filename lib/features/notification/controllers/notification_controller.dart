@@ -1,7 +1,8 @@
-import 'package:user_app_web/features/notification/domain/models/notification_model.dart';
-import 'package:user_app_web/helper/date_converter.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/notification/domain/service/notification_service_interface.dart';
+
+import '../../../helper/date_converter.dart';
+import '../domain/models/notification_model.dart';
+import '../domain/service/notification_service_interface.dart';
 
 class NotificationController extends GetxController implements GetxService {
   final NotificationServiceInterface notificationServiceInterface;

@@ -1,7 +1,7 @@
-import 'package:user_app_web/features/brands/domain/models/brands_model.dart';
-import 'package:user_app_web/features/brands/domain/repositories/brands_repository_interface.dart';
-import 'package:user_app_web/features/brands/domain/services/brands_service_interface.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../models/brands_model.dart';
+import '../repositories/brands_repository_interface.dart';
+import 'brands_service_interface.dart';
 
 class BrandsService implements BrandsServiceInterface {
   final BrandsRepositoryInterface brandsRepositoryInterface;

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
+
+import '../../../splash/controllers/splash_controller.dart';
+import 'basic_medicine_model.dart';
 
 class ItemModel {
   int? totalSize;

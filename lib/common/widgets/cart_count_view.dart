@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/cart/controllers/cart_controller.dart';
+import '../../features/item/controllers/item_controller.dart';
+import '../../features/item/domain/models/item_model.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
 
 class CartCountView extends StatelessWidget {
   final Item item;

@@ -1,14 +1,15 @@
 import 'package:get/get_connect/connect.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/order/domain/models/order_cancellation_body.dart';
-import 'package:user_app_web/features/order/domain/models/order_details_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/order/domain/models/refund_model.dart';
-import 'package:user_app_web/features/order/domain/repositories/order_repository_interface.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/auth_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../models/order_cancellation_body.dart';
+import '../models/order_details_model.dart';
+import '../models/order_model.dart';
+import '../models/refund_model.dart';
+import 'order_repository_interface.dart';
 
 class OrderRepository implements OrderRepositoryInterface {
   final ApiClient apiClient;

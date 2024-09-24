@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/location/screens/pick_map_screen.dart';
-import 'package:user_app_web/features/location/widgets/serach_location_widget.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/my_text_field.dart';
-import 'package:user_app_web/common/widgets/text_field_shadow.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/my_text_field.dart';
+import '../../../common/widgets/text_field_shadow.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../address/controllers/address_controller.dart';
+import '../../address/domain/models/address_model.dart';
+import '../../location/screens/pick_map_screen.dart';
+import '../../location/widgets/serach_location_widget.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../controllers/parcel_controller.dart';
 
 class ReceiverViewWidget extends StatefulWidget {
   const ReceiverViewWidget({super.key});

@@ -1,22 +1,23 @@
+import 'dart:collection';
+import 'dart:ui';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/marker_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
 
-import 'dart:collection';
-import 'dart:ui';
+import '../../../common/controllers/theme_controller.dart';
+import '../../../helper/marker_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../address/domain/models/address_model.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/domain/models/store_model.dart';
+import '../domain/models/order_model.dart';
 
 class TrackingMapWidget extends StatefulWidget {
   final OrderModel? track;

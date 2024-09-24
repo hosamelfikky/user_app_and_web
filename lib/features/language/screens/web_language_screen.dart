@@ -1,16 +1,17 @@
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/features/language/widgets/language_card_widget.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../controllers/language_controller.dart';
+import '../widgets/language_card_widget.dart';
 
 class WebLanguageScreen extends StatelessWidget {
   const WebLanguageScreen({super.key});

@@ -2,48 +2,48 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
-import 'package:user_app_web/common/widgets/web_menu_bar.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
-import 'package:user_app_web/features/banner/controllers/banner_controller.dart';
-import 'package:user_app_web/features/brands/controllers/brands_controller.dart';
-import 'package:user_app_web/features/category/controllers/category_controller.dart';
-import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
-import 'package:user_app_web/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:user_app_web/features/home/controllers/advertisement_controller.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/home/screens/modules/food_home_screen.dart';
-import 'package:user_app_web/features/home/screens/modules/grocery_home_screen.dart';
-import 'package:user_app_web/features/home/screens/modules/pharmacy_home_screen.dart';
-import 'package:user_app_web/features/home/screens/modules/shop_home_screen.dart';
-import 'package:user_app_web/features/home/screens/web_new_home_screen.dart';
-import 'package:user_app_web/features/home/widgets/all_store_filter_widget.dart';
-import 'package:user_app_web/features/home/widgets/cashback_dialog_widget.dart';
-import 'package:user_app_web/features/home/widgets/cashback_logo_widget.dart';
-import 'package:user_app_web/features/home/widgets/module_view.dart';
-import 'package:user_app_web/features/home/widgets/refer_bottom_sheet_widget.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/notification/controllers/notification_controller.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/features/parcel/screens/parcel_category_screen.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
 
+import '../../../common/controllers/theme_controller.dart';
+import '../../../common/widgets/item_view.dart';
 import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/paginated_list_view.dart';
+import '../../../common/widgets/web_menu_bar.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../address/controllers/address_controller.dart';
+import '../../banner/controllers/banner_controller.dart';
+import '../../brands/controllers/brands_controller.dart';
+import '../../category/controllers/category_controller.dart';
+import '../../coupon/controllers/coupon_controller.dart';
+import '../../flash_sale/controllers/flash_sale_controller.dart';
+import '../../item/controllers/campaign_controller.dart';
+import '../../item/controllers/item_controller.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../notification/controllers/notification_controller.dart';
+import '../../parcel/controllers/parcel_controller.dart';
+import '../../parcel/screens/parcel_category_screen.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../../store/controllers/store_controller.dart';
+import '../controllers/advertisement_controller.dart';
+import '../controllers/home_controller.dart';
+import '../widgets/all_store_filter_widget.dart';
+import '../widgets/cashback_dialog_widget.dart';
+import '../widgets/cashback_logo_widget.dart';
+import '../widgets/module_view.dart';
+import '../widgets/refer_bottom_sheet_widget.dart';
+import 'modules/food_home_screen.dart';
+import 'modules/grocery_home_screen.dart';
+import 'modules/pharmacy_home_screen.dart';
+import 'modules/shop_home_screen.dart';
+import 'web_new_home_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -204,9 +204,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           if (Get.find<SplashController>().module != null) {
                             await Get.find<LocationController>().syncZoneData();
                             await Get.find<BannerController>().getBannerList(true);
-                            if (isGrocery) {
-                              await Get.find<FlashSaleController>().getFlashSale(true, true);
-                            }
+                            if (isGrocery) await Get.find<FlashSaleController>().getFlashSale(true, true);
                             await Get.find<BannerController>().getPromotionalBannerList(true);
                             await Get.find<ItemController>().getDiscountedItemList(true, false, 'all');
                             await Get.find<CategoryController>().getCategoryList(true);
@@ -235,9 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           } else {
                             await Get.find<BannerController>().getFeaturedBanner();
                             await Get.find<SplashController>().getModules();
-                            if (AuthHelper.isLoggedIn()) {
-                              await Get.find<AddressController>().getAddressList();
-                            }
+                            if (AuthHelper.isLoggedIn()) await Get.find<AddressController>().getAddressList();
                             await Get.find<StoreController>().getFeaturedStoreList();
                           }
                           splashController.setRefreshing(false);

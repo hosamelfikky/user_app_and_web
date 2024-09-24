@@ -1,8 +1,9 @@
-import 'package:user_app_web/features/coupon/domain/models/coupon_model.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/coupon/domain/services/coupon_service_interface.dart';
+
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../helper/price_converter.dart';
+import '../domain/models/coupon_model.dart';
+import '../domain/services/coupon_service_interface.dart';
 
 class CouponController extends GetxController implements GetxService {
   final CouponServiceInterface couponServiceInterface;

@@ -1,6 +1,6 @@
-import 'package:user_app_web/features/coupon/domain/models/coupon_model.dart';
-import 'package:user_app_web/features/coupon/domain/repositories/coupon_repository_interface.dart';
-import 'package:user_app_web/features/coupon/domain/services/coupon_service_interface.dart';
+import '../models/coupon_model.dart';
+import '../repositories/coupon_repository_interface.dart';
+import 'coupon_service_interface.dart';
 
 class CouponService implements CouponServiceInterface {
   final CouponRepositoryInterface couponRepositoryInterface;

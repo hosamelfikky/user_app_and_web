@@ -1,4 +1,4 @@
-import 'package:user_app_web/features/home/domain/models/cashback_model.dart';
+import '../models/cashback_model.dart';
 
 abstract class HomeServiceInterface {
   Future<List<CashBackModel>> getCashBackOfferList();

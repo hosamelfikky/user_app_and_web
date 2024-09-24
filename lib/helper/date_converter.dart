@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
+
+import '../features/splash/controllers/splash_controller.dart';
 
 class DateConverter {
   static String formatDate(DateTime dateTime) {

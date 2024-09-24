@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class PortionWidget extends StatelessWidget {
   final String icon;

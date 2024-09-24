@@ -1,15 +1,16 @@
-import 'package:user_app_web/features/review/domain/models/review_body_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/review/controllers/review_controller.dart';
-import 'package:user_app_web/features/review/widgets/delivery_man_widget.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/my_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/my_text_field.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../order/domain/models/order_model.dart';
+import '../controllers/review_controller.dart';
+import '../domain/models/review_body_model.dart';
+import 'delivery_man_widget.dart';
 
 class DeliveryManReviewWidget extends StatefulWidget {
   final DeliveryMan? deliveryMan;

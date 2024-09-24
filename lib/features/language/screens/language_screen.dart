@@ -1,19 +1,20 @@
-import 'package:user_app_web/common/widgets/custom_asset_image_widget.dart';
-import 'package:user_app_web/features/language/screens/web_language_screen.dart';
-import 'package:user_app_web/features/language/widgets/language_card_widget.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_asset_image_widget.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../controllers/language_controller.dart';
+import '../widgets/language_card_widget.dart';
+import 'web_language_screen.dart';
 
 class ChooseLanguageScreen extends StatefulWidget {
   final bool fromMenu;

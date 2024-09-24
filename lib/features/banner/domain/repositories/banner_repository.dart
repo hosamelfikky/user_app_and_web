@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/banner/domain/models/banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/others_banner_model.dart';
-import 'package:user_app_web/features/banner/domain/models/promotional_banner_model.dart';
-import 'package:user_app_web/features/banner/domain/repositories/banner_repository_interface.dart';
-import 'package:user_app_web/helper/header_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../helper/header_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../models/banner_model.dart';
+import '../models/others_banner_model.dart';
+import '../models/promotional_banner_model.dart';
+import 'banner_repository_interface.dart';
 
 class BannerRepository implements BannerRepositoryInterface {
   final ApiClient apiClient;

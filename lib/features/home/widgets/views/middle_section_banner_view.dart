@@ -2,12 +2,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../../util/dimensions.dart';
+import '../../../item/controllers/campaign_controller.dart';
+import '../../../splash/controllers/splash_controller.dart';
 
 class MiddleSectionBannerView extends StatefulWidget {
   const MiddleSectionBannerView({super.key});

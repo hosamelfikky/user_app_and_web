@@ -1,16 +1,17 @@
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/favourite/controllers/favourite_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
-import 'package:user_app_web/features/favourite/widgets/fav_item_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/not_logged_in_screen.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/favourite_controller.dart';
+import '../widgets/fav_item_view_widget.dart';
 
 class FavouriteScreen extends StatefulWidget {
   const FavouriteScreen({super.key});

@@ -2,10 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../util/dimensions.dart';
+import '../controllers/store_controller.dart';
 
 class StoreBannerWidget extends StatelessWidget {
   final StoreController storeController;

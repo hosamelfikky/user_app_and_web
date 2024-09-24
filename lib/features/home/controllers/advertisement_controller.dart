@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/home/domain/models/advertisement_model.dart';
-import 'package:user_app_web/features/home/domain/services/advertisement_service_interface.dart';
+
+import '../domain/models/advertisement_model.dart';
+import '../domain/services/advertisement_service_interface.dart';
 
 class AdvertisementController extends GetxController implements GetxService {
   final AdvertisementServiceInterface advertisementServiceInterface;

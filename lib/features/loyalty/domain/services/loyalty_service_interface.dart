@@ -1,5 +1,6 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:user_app_web/common/models/transaction_model.dart';
+
+import '../../../../common/models/transaction_model.dart';
 
 abstract class LoyaltyServiceInterface {
   Future<TransactionModel?> getLoyaltyTransactionList(String offset);

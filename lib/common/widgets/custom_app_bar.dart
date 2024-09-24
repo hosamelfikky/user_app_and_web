@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/cart_widget.dart';
-import 'package:user_app_web/common/widgets/veg_filter_widget.dart';
-import 'package:user_app_web/common/widgets/web_menu_bar.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../helper/responsive_helper.dart';
+import '../../helper/route_helper.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
+import 'cart_widget.dart';
+import 'veg_filter_widget.dart';
+import 'web_menu_bar.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;

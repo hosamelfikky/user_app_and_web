@@ -1,5 +1,6 @@
 import 'dart:convert';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
+
+import 'zone_response_model.dart';
 
 class ZoneModel {
   List<int>? zoneIds;

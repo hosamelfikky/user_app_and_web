@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/features/chat/controllers/chat_controller.dart';
-import 'package:user_app_web/features/chat/enums/user_type_enum.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/notification/domain/models/notification_body_model.dart';
-import 'package:user_app_web/features/chat/domain/models/conversation_model.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/custom_ink_well.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/custom_ink_well.dart';
+import '../../../common/widgets/paginated_list_view.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/date_converter.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../language/controllers/language_controller.dart';
+import '../../notification/domain/models/notification_body_model.dart';
+import '../../profile/controllers/profile_controller.dart';
+import '../controllers/chat_controller.dart';
+import '../domain/models/conversation_model.dart';
+import '../enums/user_type_enum.dart';
 
 class WebConversationListViewWidget extends StatefulWidget {
   final ScrollController scrollController;

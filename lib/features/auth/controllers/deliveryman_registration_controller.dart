@@ -1,15 +1,16 @@
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_data_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/features/auth/domain/models/delivery_man_body.dart';
-import 'package:user_app_web/features/auth/domain/models/delivery_man_vehicles_model.dart';
-import 'package:user_app_web/features/auth/domain/services/deliveryman_registration_service_interface.dart';
+
+import '../../../api/api_client.dart';
+import '../../../common/models/module_model.dart';
+import '../../location/controllers/location_controller.dart';
+import '../../location/domain/models/zone_data_model.dart';
+import '../../location/domain/models/zone_response_model.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/delivery_man_body.dart';
+import '../domain/models/delivery_man_vehicles_model.dart';
+import '../domain/services/deliveryman_registration_service_interface.dart';
 
 class DeliverymanRegistrationController extends GetxController implements GetxService {
   final DeliverymanRegistrationServiceInterface deliverymanRegistrationServiceInterface;

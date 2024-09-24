@@ -1,14 +1,15 @@
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/item_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/dimensions.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/item_controller.dart';
 
 class PopularItemScreen extends StatefulWidget {
   final bool isPopular;

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/home/widgets/components/popular_store_card_widget.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/common/widgets/title_widget.dart';
+
+import '../../../../common/widgets/title_widget.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../store/controllers/store_controller.dart';
+import '../../../store/domain/models/store_model.dart';
+import '../components/popular_store_card_widget.dart';
 import '../web/web_populer_store_view_widget.dart';
 
 class PopularStoreView extends StatelessWidget {

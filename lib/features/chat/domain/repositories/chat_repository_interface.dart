@@ -1,5 +1,5 @@
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/interfaces/repository_interface.dart';
+import '../../../../api/api_client.dart';
+import '../../../../interfaces/repository_interface.dart';
 
 abstract class ChatRepositoryInterface extends RepositoryInterface {
   @override

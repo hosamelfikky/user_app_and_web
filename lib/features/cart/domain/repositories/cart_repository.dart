@@ -2,14 +2,15 @@ import 'dart:convert';
 
 import 'package:get/get_connect.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/cart/domain/models/online_cart_model.dart';
-import 'package:user_app_web/features/cart/domain/repositories/cart_repository_interface.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/module_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../helper/auth_helper.dart';
+import '../../../../helper/module_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../checkout/domain/models/place_order_body_model.dart';
+import '../models/cart_model.dart';
+import '../models/online_cart_model.dart';
+import 'cart_repository_interface.dart';
 
 class CartRepository implements CartRepositoryInterface<OnlineCart> {
   final ApiClient apiClient;

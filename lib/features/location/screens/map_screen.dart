@@ -1,22 +1,23 @@
-import 'package:geolocator/geolocator.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/location/widgets/permission_dialog_widget.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/marker_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/features/order/widgets/address_details_widget.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../../../common/controllers/theme_controller.dart';
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../helper/address_helper.dart';
+import '../../../helper/marker_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../address/domain/models/address_model.dart';
+import '../../order/widgets/address_details_widget.dart';
+import '../controllers/location_controller.dart';
+import '../widgets/permission_dialog_widget.dart';
 
 class MapScreen extends StatefulWidget {
   final AddressModel address;

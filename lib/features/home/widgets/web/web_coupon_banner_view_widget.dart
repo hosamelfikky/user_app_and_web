@@ -3,13 +3,14 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
-import 'package:user_app_web/features/home/widgets/views/promo_code_banner_view.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/price_converter.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/images.dart';
+import '../../../../util/styles.dart';
+import '../../../coupon/controllers/coupon_controller.dart';
+import '../views/promo_code_banner_view.dart';
 
 class WebCouponBannerViewWidget extends StatefulWidget {
   const WebCouponBannerViewWidget({super.key});

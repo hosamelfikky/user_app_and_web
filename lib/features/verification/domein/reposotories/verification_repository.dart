@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/verification/domein/reposotories/verification_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../util/app_constants.dart';
+import '../../../auth/controllers/auth_controller.dart';
+import 'verification_repository_interface.dart';
 
 class VerificationRepository implements VerificationRepositoryInterface {
   final ApiClient apiClient;

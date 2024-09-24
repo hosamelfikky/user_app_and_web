@@ -1,8 +1,9 @@
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/profile/domain/models/userinfo_model.dart';
-import 'package:user_app_web/features/profile/domain/repositories/profile_repository_interface.dart';
-import 'package:user_app_web/features/profile/domain/services/profile_service_interface.dart';
+
+import '../../../../common/models/response_model.dart';
+import '../models/userinfo_model.dart';
+import '../repositories/profile_repository_interface.dart';
+import 'profile_service_interface.dart';
 
 class ProfileService implements ProfileServiceInterface {
   final ProfileRepositoryInterface profileRepositoryInterface;

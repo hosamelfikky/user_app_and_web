@@ -1,9 +1,10 @@
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/search/domain/models/popular_categories_model.dart';
-import 'package:user_app_web/features/search/domain/models/search_suggestion_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/search/domain/services/search_service_interface.dart';
+
+import '../../item/domain/models/item_model.dart';
+import '../../store/domain/models/store_model.dart';
+import '../domain/models/popular_categories_model.dart';
+import '../domain/models/search_suggestion_model.dart';
+import '../domain/services/search_service_interface.dart';
 
 class SearchController extends GetxController implements GetxService {
   final SearchServiceInterface searchServiceInterface;

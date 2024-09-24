@@ -1,25 +1,26 @@
-import 'package:user_app_web/features/cart/controllers/cart_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/item/domain/models/common_condition_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/module_helper.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/common/widgets/cart_snackbar.dart';
-import 'package:user_app_web/common/widgets/confirmation_dialog.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/item_bottom_sheet.dart';
-import 'package:user_app_web/features/item/screens/item_details_screen.dart';
-import 'package:user_app_web/features/item/domain/services/item_service_interface.dart';
+
+import '../../../common/widgets/cart_snackbar.dart';
+import '../../../common/widgets/confirmation_dialog.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/item_bottom_sheet.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/module_helper.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/app_constants.dart';
+import '../../../util/images.dart';
+import '../../cart/controllers/cart_controller.dart';
+import '../../cart/domain/models/cart_model.dart';
+import '../../checkout/domain/models/place_order_body_model.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../domain/models/basic_medicine_model.dart';
+import '../domain/models/common_condition_model.dart';
+import '../domain/models/item_model.dart';
+import '../domain/services/item_service_interface.dart';
+import '../screens/item_details_screen.dart';
 
 class ItemController extends GetxController implements GetxService {
   final ItemServiceInterface itemServiceInterface;

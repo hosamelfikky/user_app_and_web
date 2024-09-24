@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../address/domain/models/address_model.dart';
 
 class AddressDetailsWidget extends StatelessWidget {
   final AddressModel? addressDetails;

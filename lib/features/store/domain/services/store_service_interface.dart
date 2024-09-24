@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/location/domain/models/zone_response_model.dart';
-import 'package:user_app_web/features/store/domain/models/cart_suggested_item_model.dart';
-import 'package:user_app_web/features/store/domain/models/recommended_product_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_banner_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
+
+import '../../../../common/models/module_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../location/domain/models/zone_response_model.dart';
+import '../models/cart_suggested_item_model.dart';
+import '../models/recommended_product_model.dart';
+import '../models/store_banner_model.dart';
+import '../models/store_model.dart';
 
 abstract class StoreServiceInterface {
   Future<StoreModel?> getStoreList(int offset, String filterBy, String storeType);

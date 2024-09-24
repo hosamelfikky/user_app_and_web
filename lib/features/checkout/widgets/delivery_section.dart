@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/common/widgets/address_widget.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/checkout/controllers/checkout_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_dropdown.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
-import 'package:user_app_web/features/checkout/widgets/guest_delivery_address.dart';
+
+import '../../../common/widgets/address_widget.dart';
+import '../../../common/widgets/custom_dropdown.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../address/domain/models/address_model.dart';
+import '../controllers/checkout_controller.dart';
+import 'guest_delivery_address.dart';
 
 class DeliverySection extends StatelessWidget {
   final CheckoutController checkoutController;

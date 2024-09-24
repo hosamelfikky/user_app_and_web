@@ -1,14 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/splash/domain/models/landing_model.dart';
 import 'dart:convert';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/splash/domain/repositories/splash_repository_interface.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/module_model.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../../util/app_constants.dart';
+import '../../../address/domain/models/address_model.dart';
+import '../models/landing_model.dart';
+import 'splash_repository_interface.dart';
 
 class SplashRepository implements SplashRepositoryInterface {
   final ApiClient apiClient;

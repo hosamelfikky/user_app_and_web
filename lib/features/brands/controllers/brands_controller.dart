@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/features/brands/domain/models/brands_model.dart';
-import 'package:user_app_web/features/brands/domain/services/brands_service_interface.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
+
+import '../../item/domain/models/item_model.dart';
+import '../domain/models/brands_model.dart';
+import '../domain/services/brands_service_interface.dart';
 
 class BrandsController extends GetxController implements GetxService {
   final BrandsServiceInterface brandsServiceInterface;

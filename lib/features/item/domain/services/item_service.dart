@@ -1,12 +1,13 @@
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/features/item/domain/models/basic_medicine_model.dart';
-import 'package:user_app_web/features/item/domain/models/common_condition_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/cart/domain/models/cart_model.dart';
-import 'package:user_app_web/features/item/domain/repositories/item_repository_interface.dart';
-import 'package:user_app_web/features/item/domain/services/item_service_interface.dart';
-import 'package:user_app_web/helper/module_helper.dart';
+
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/module_helper.dart';
+import '../../../cart/domain/models/cart_model.dart';
+import '../models/basic_medicine_model.dart';
+import '../models/common_condition_model.dart';
+import '../models/item_model.dart';
+import '../repositories/item_repository_interface.dart';
+import 'item_service_interface.dart';
 
 class ItemService implements ItemServiceInterface {
   final ItemRepositoryInterface itemRepositoryInterface;

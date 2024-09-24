@@ -1,16 +1,18 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/flash_sale/domain/models/flash_sale_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/cart_count_view.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/discount_tag.dart';
-import 'package:user_app_web/common/widgets/organic_tag.dart';
+
+import '../../../../common/widgets/cart_count_view.dart';
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/discount_tag.dart';
+import '../../../../common/widgets/organic_tag.dart';
+import '../../../../helper/responsive_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../flash_sale/controllers/flash_sale_controller.dart';
+import '../../../flash_sale/domain/models/flash_sale_model.dart';
+import '../../../item/controllers/item_controller.dart';
 
 class FlashSaleCard extends StatefulWidget {
   final List<ActiveProducts> activeProducts;

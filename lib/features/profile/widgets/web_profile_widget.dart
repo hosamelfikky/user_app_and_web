@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/features/profile/widgets/notification_status_change_bottom_sheet.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/common/controllers/theme_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/confirmation_dialog.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/features/profile/widgets/profile_button_widget.dart';
-import 'package:user_app_web/features/profile/widgets/profile_card_widget.dart';
+
+import '../../../common/controllers/theme_controller.dart';
+import '../../../common/widgets/confirmation_dialog.dart';
+import '../../../common/widgets/custom_image.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/price_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../helper/route_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/images.dart';
+import '../../../util/styles.dart';
+import '../../auth/controllers/auth_controller.dart';
+import '../../splash/controllers/splash_controller.dart';
+import '../controllers/profile_controller.dart';
+import 'notification_status_change_bottom_sheet.dart';
+import 'profile_button_widget.dart';
+import 'profile_card_widget.dart';
 
 class WebProfileWidget extends StatelessWidget {
   const WebProfileWidget({super.key});

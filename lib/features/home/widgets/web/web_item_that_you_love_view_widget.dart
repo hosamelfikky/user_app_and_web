@@ -2,19 +2,20 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:user_app_web/common/widgets/add_favourite_view.dart';
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/discount_tag.dart';
-import 'package:user_app_web/common/widgets/hover/on_hover.dart';
-import 'package:user_app_web/features/home/widgets/components/item_that_you_love_card_widget.dart';
-import 'package:user_app_web/features/home/widgets/web/widgets/arrow_icon_button.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/helper/price_converter.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../common/widgets/add_favourite_view.dart';
+import '../../../../common/widgets/custom_image.dart';
+import '../../../../common/widgets/discount_tag.dart';
+import '../../../../common/widgets/hover/on_hover.dart';
+import '../../../../helper/price_converter.dart';
+import '../../../../util/app_constants.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../splash/controllers/splash_controller.dart';
+import '../components/item_that_you_love_card_widget.dart';
+import 'widgets/arrow_icon_button.dart';
 
 class WebItemThatYouLoveViewWidget extends StatefulWidget {
   const WebItemThatYouLoveViewWidget({super.key});

@@ -1,7 +1,8 @@
-import 'package:flutter/services.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
 
 class SearchFieldWidget extends StatefulWidget {
   final TextEditingController controller;

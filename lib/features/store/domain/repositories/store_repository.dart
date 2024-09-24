@@ -1,18 +1,19 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/domain/models/cart_suggested_item_model.dart';
-import 'package:user_app_web/features/store/domain/models/recommended_product_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_banner_model.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/features/store/domain/repositories/store_repository_interface.dart';
-import 'package:user_app_web/helper/address_helper.dart';
-import 'package:user_app_web/helper/header_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../common/models/module_model.dart';
+import '../../../../helper/address_helper.dart';
+import '../../../../helper/header_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../address/domain/models/address_model.dart';
+import '../../../item/domain/models/item_model.dart';
+import '../../../splash/controllers/splash_controller.dart';
+import '../models/cart_suggested_item_model.dart';
+import '../models/recommended_product_model.dart';
+import '../models/store_banner_model.dart';
+import '../models/store_model.dart';
+import 'store_repository_interface.dart';
 
 class StoreRepository implements StoreRepositoryInterface {
   final ApiClient apiClient;

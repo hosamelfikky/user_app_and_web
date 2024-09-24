@@ -1,11 +1,12 @@
 import 'package:get/get_connect/connect.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:user_app_web/features/parcel/domain/models/parcel_instruction_model.dart';
-import 'package:user_app_web/features/parcel/domain/models/video_content_model.dart';
-import 'package:user_app_web/features/parcel/domain/models/why_choose_model.dart';
-import 'package:user_app_web/features/parcel/domain/repositories/parcel_repository_interface.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../models/parcel_category_model.dart';
+import '../models/parcel_instruction_model.dart';
+import '../models/video_content_model.dart';
+import '../models/why_choose_model.dart';
+import 'parcel_repository_interface.dart';
 
 class ParcelRepository implements ParcelRepositoryInterface {
   final ApiClient apiClient;

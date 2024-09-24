@@ -2,9 +2,10 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:user_app_web/common/models/module_model.dart';
-import 'package:user_app_web/features/address/domain/models/address_model.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../common/models/module_model.dart';
+import '../features/address/domain/models/address_model.dart';
+import '../util/app_constants.dart';
 
 class HeaderHelper {
   static Map<String, String> featuredHeader() {

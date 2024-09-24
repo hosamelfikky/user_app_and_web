@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/features/auth/screens/sign_in_screen.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/images.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/auth/screens/sign_in_screen.dart';
+import '../../features/order/controllers/order_controller.dart';
+import '../../helper/responsive_helper.dart';
+import '../../helper/route_helper.dart';
+import '../../util/images.dart';
+import '../../util/styles.dart';
+import 'custom_button.dart';
+import 'footer_view.dart';
 
 class NotLoggedInScreen extends StatelessWidget {
   final Function(bool success) callBack;

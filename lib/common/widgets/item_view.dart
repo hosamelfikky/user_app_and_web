@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/widgets/card_design/store_card_with_distance.dart';
-import 'package:user_app_web/common/widgets/item_shimmer.dart';
-import 'package:user_app_web/common/widgets/item_widget.dart';
-import 'package:user_app_web/common/widgets/no_data_screen.dart';
-import 'package:user_app_web/features/home/widgets/web/widgets/store_card_widget.dart';
-import 'package:user_app_web/features/item/domain/models/item_model.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/store/domain/models/store_model.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../features/home/widgets/web/widgets/store_card_widget.dart';
+import '../../features/item/domain/models/item_model.dart';
+import '../../features/splash/controllers/splash_controller.dart';
+import '../../features/store/domain/models/store_model.dart';
+import '../../helper/responsive_helper.dart';
+import '../../util/dimensions.dart';
+import 'card_design/store_card_with_distance.dart';
+import 'item_shimmer.dart';
+import 'item_widget.dart';
+import 'no_data_screen.dart';
 
 class ItemsView extends StatefulWidget {
   final List<Item?>? items;

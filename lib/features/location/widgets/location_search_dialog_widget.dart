@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/location/domain/models/prediction_model.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
+
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../parcel/controllers/parcel_controller.dart';
+import '../controllers/location_controller.dart';
+import '../domain/models/prediction_model.dart';
 
 class LocationSearchDialogWidget extends StatelessWidget {
   final GoogleMapController? mapController;

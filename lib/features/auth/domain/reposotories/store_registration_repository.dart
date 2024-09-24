@@ -1,10 +1,11 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/api/api_client.dart';
-import 'package:user_app_web/features/auth/domain/models/store_body_model.dart';
-import 'package:user_app_web/features/auth/domain/reposotories/store_registration_repository_interface.dart';
-import 'package:user_app_web/features/business/domain/models/package_model.dart';
-import 'package:user_app_web/util/app_constants.dart';
+
+import '../../../../api/api_client.dart';
+import '../../../../util/app_constants.dart';
+import '../../../business/domain/models/package_model.dart';
+import '../models/store_body_model.dart';
+import 'store_registration_repository_interface.dart';
 
 class StoreRegistrationRepository implements StoreRegistrationRepositoryInterface {
   final ApiClient apiClient;

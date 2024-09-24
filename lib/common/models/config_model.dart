@@ -1,4 +1,4 @@
-import 'package:user_app_web/common/models/module_model.dart';
+import 'module_model.dart';
 
 class ConfigModel {
   String? businessName;

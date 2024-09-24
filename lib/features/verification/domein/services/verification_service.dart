@@ -1,7 +1,7 @@
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/auth/domain/reposotories/auth_repository_interface.dart';
-import 'package:user_app_web/features/verification/domein/reposotories/verification_repository_interface.dart';
-import 'package:user_app_web/features/verification/domein/services/verification_service_interface.dart';
+import '../../../../common/models/response_model.dart';
+import '../../../auth/domain/reposotories/auth_repository_interface.dart';
+import '../reposotories/verification_repository_interface.dart';
+import 'verification_service_interface.dart';
 
 class VerificationService implements VerificationServiceInterface {
   final VerificationRepositoryInterface verificationRepoInterface;

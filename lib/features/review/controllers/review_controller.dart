@@ -1,10 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/review/domain/models/review_body_model.dart';
-import 'package:user_app_web/features/review/domain/models/review_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_details_model.dart';
-import 'package:user_app_web/features/review/domain/services/review_service_interface.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../order/domain/models/order_details_model.dart';
+import '../domain/models/review_body_model.dart';
+import '../domain/models/review_model.dart';
+import '../domain/services/review_service_interface.dart';
 
 class ReviewController extends GetxController implements GetxService {
   final ReviewServiceInterface reviewServiceInterface;

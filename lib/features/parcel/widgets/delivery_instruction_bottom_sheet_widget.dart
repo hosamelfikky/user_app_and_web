@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_text_field.dart';
+
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_text_field.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../controllers/parcel_controller.dart';
 
 class DeliveryInstructionBottomSheetWidget extends StatefulWidget {
   const DeliveryInstructionBottomSheetWidget({super.key});

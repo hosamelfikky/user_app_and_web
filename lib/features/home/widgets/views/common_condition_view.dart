@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:user_app_web/features/home/widgets/web/web_basic_medicine_nearby_view_widget.dart';
-import 'package:user_app_web/features/home/widgets/web/widgets/medicine_item_card.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../../helper/responsive_helper.dart';
+import '../../../../util/dimensions.dart';
+import '../../../../util/styles.dart';
+import '../../../item/controllers/item_controller.dart';
+import '../../../language/controllers/language_controller.dart';
+import '../web/web_basic_medicine_nearby_view_widget.dart';
+import '../web/widgets/medicine_item_card.dart';
 
 class CommonConditionView extends StatelessWidget {
   const CommonConditionView({super.key});

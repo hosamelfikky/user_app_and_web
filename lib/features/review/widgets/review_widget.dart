@@ -1,14 +1,15 @@
-import 'package:user_app_web/common/widgets/custom_image.dart';
-import 'package:user_app_web/common/widgets/rating_bar.dart';
-import 'package:user_app_web/common/widgets/readmore_widget.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/review/domain/models/review_model.dart';
-import 'package:user_app_web/helper/date_converter.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/widgets/custom_image.dart';
+import '../../../common/widgets/rating_bar.dart';
+import '../../../common/widgets/readmore_widget.dart';
+import '../../../helper/date_converter.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../item/controllers/item_controller.dart';
+import '../domain/models/review_model.dart';
 
 class ReviewWidget extends StatelessWidget {
   final ReviewModel review;

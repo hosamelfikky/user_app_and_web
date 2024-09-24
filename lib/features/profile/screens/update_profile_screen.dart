@@ -1,22 +1,23 @@
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/common/models/response_model.dart';
-import 'package:user_app_web/features/profile/domain/models/userinfo_model.dart';
-import 'package:user_app_web/features/auth/controllers/auth_controller.dart';
-import 'package:user_app_web/helper/auth_helper.dart';
-import 'package:user_app_web/helper/responsive_helper.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/custom_button.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/image_picker_widget.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/my_text_field.dart';
-import 'package:user_app_web/common/widgets/not_logged_in_screen.dart';
-import 'package:user_app_web/common/widgets/web_menu_bar.dart';
-import 'package:user_app_web/features/profile/widgets/profile_bg_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../common/models/response_model.dart';
+import '../../../common/widgets/custom_button.dart';
+import '../../../common/widgets/custom_snackbar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/image_picker_widget.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/my_text_field.dart';
+import '../../../common/widgets/not_logged_in_screen.dart';
+import '../../../common/widgets/web_menu_bar.dart';
+import '../../../helper/auth_helper.dart';
+import '../../../helper/responsive_helper.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/styles.dart';
+import '../../auth/controllers/auth_controller.dart';
+import '../controllers/profile_controller.dart';
+import '../domain/models/userinfo_model.dart';
+import '../widgets/profile_bg_widget.dart';
 
 class UpdateProfileScreen extends StatefulWidget {
   const UpdateProfileScreen({super.key});

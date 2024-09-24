@@ -1,15 +1,16 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/order/domain/models/order_cancellation_body.dart';
-import 'package:user_app_web/features/order/domain/models/order_details_model.dart';
-import 'package:user_app_web/features/order/domain/models/order_model.dart';
-import 'package:user_app_web/features/order/domain/repositories/order_repository_interface.dart';
-import 'package:user_app_web/features/order/domain/services/order_service_interface.dart';
-import 'package:user_app_web/helper/route_helper.dart';
-import 'package:user_app_web/util/app_constants.dart';
-import 'package:user_app_web/common/widgets/custom_snackbar.dart';
+
+import '../../../../common/widgets/custom_snackbar.dart';
+import '../../../../helper/route_helper.dart';
+import '../../../../util/app_constants.dart';
+import '../../../home/controllers/home_controller.dart';
+import '../models/order_cancellation_body.dart';
+import '../models/order_details_model.dart';
+import '../models/order_model.dart';
+import '../repositories/order_repository_interface.dart';
+import 'order_service_interface.dart';
 
 class OrderService implements OrderServiceInterface {
   final OrderRepositoryInterface orderRepositoryInterface;

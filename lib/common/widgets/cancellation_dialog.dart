@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
-import 'package:user_app_web/features/order/controllers/order_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../features/order/controllers/order_controller.dart';
+import '../../util/dimensions.dart';
+import '../../util/styles.dart';
 
 class CancellationDialog extends StatelessWidget {
   final String icon;

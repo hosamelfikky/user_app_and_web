@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:user_app_web/common/widgets/custom_app_bar.dart';
-import 'package:user_app_web/common/widgets/footer_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/web_page_title_widget.dart';
-import 'package:user_app_web/features/html/controllers/html_controller.dart';
-import 'package:user_app_web/util/dimensions.dart';
-import 'package:user_app_web/util/html_type.dart';
-import 'package:user_app_web/util/styles.dart';
+
+import '../../../common/widgets/custom_app_bar.dart';
+import '../../../common/widgets/footer_view.dart';
+import '../../../common/widgets/menu_drawer.dart';
+import '../../../common/widgets/web_page_title_widget.dart';
+import '../../../util/dimensions.dart';
+import '../../../util/html_type.dart';
+import '../../../util/styles.dart';
+import '../controllers/html_controller.dart';
 
 class HtmlViewerScreen extends StatefulWidget {
   final HtmlType htmlType;
