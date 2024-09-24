@@ -40,32 +40,35 @@ class _BadWeatherWidgetState extends State<BadWeatherWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return _showAlert && _message != null && _message!.isNotEmpty
-        ? Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
-              color: Theme.of(context).primaryColor.withOpacity(0.7),
+    if (_showAlert && _message != null && _message!.isNotEmpty) {
+      return Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
+          color: Theme.of(context).primaryColor.withOpacity(0.7),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: Dimensions.paddingSizeSmall),
+        margin: EdgeInsets.symmetric(
+          horizontal: ResponsiveHelper.isDesktop(context)
+              ? 0
+              : widget.inParcel
+                  ? 0
+                  : Dimensions.paddingSizeDefault,
+          vertical: Dimensions.paddingSizeLarge,
+        ),
+        child: Row(
+          children: [
+            Image.asset(Images.weather, height: 50, width: 50),
+            const SizedBox(width: Dimensions.paddingSizeSmall),
+            Expanded(
+              child: Text(
+                _message!,
+                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Colors.white),
+              ),
             ),
-            padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: Dimensions.paddingSizeSmall),
-            margin: EdgeInsets.symmetric(
-                horizontal: ResponsiveHelper.isDesktop(context)
-                    ? 0
-                    : widget.inParcel
-                        ? 0
-                        : Dimensions.paddingSizeDefault,
-                vertical: Dimensions.paddingSizeLarge),
-            child: Row(
-              children: [
-                Image.asset(Images.weather, height: 50, width: 50),
-                const SizedBox(width: Dimensions.paddingSizeSmall),
-                Expanded(
-                    child: Text(
-                  _message!,
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Colors.white),
-                )),
-              ],
-            ),
-          )
-        : const SizedBox();
+          ],
+        ),
+      );
+    }
+    return const SizedBox.shrink();
   }
 }

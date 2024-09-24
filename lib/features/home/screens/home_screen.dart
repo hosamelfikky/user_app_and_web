@@ -1,31 +1,39 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 import 'package:user_app_web/common/controllers/theme_controller.dart';
+import 'package:user_app_web/common/widgets/item_view.dart';
+import 'package:user_app_web/common/widgets/paginated_list_view.dart';
+import 'package:user_app_web/common/widgets/web_menu_bar.dart';
+import 'package:user_app_web/features/address/controllers/address_controller.dart';
 import 'package:user_app_web/features/banner/controllers/banner_controller.dart';
 import 'package:user_app_web/features/brands/controllers/brands_controller.dart';
-import 'package:user_app_web/features/home/controllers/advertisement_controller.dart';
-import 'package:user_app_web/features/home/controllers/home_controller.dart';
-import 'package:user_app_web/features/home/widgets/all_store_filter_widget.dart';
-import 'package:user_app_web/features/home/widgets/cashback_logo_widget.dart';
-import 'package:user_app_web/features/home/widgets/cashback_dialog_widget.dart';
-import 'package:user_app_web/features/home/widgets/refer_bottom_sheet_widget.dart';
-import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
 import 'package:user_app_web/features/category/controllers/category_controller.dart';
 import 'package:user_app_web/features/coupon/controllers/coupon_controller.dart';
 import 'package:user_app_web/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:user_app_web/features/language/controllers/language_controller.dart';
-import 'package:user_app_web/features/location/controllers/location_controller.dart';
-import 'package:user_app_web/features/notification/controllers/notification_controller.dart';
-import 'package:user_app_web/features/item/controllers/item_controller.dart';
-import 'package:user_app_web/features/store/controllers/store_controller.dart';
-import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
-import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
-import 'package:user_app_web/features/address/controllers/address_controller.dart';
+import 'package:user_app_web/features/home/controllers/advertisement_controller.dart';
+import 'package:user_app_web/features/home/controllers/home_controller.dart';
 import 'package:user_app_web/features/home/screens/modules/food_home_screen.dart';
 import 'package:user_app_web/features/home/screens/modules/grocery_home_screen.dart';
 import 'package:user_app_web/features/home/screens/modules/pharmacy_home_screen.dart';
 import 'package:user_app_web/features/home/screens/modules/shop_home_screen.dart';
+import 'package:user_app_web/features/home/screens/web_new_home_screen.dart';
+import 'package:user_app_web/features/home/widgets/all_store_filter_widget.dart';
+import 'package:user_app_web/features/home/widgets/cashback_dialog_widget.dart';
+import 'package:user_app_web/features/home/widgets/cashback_logo_widget.dart';
+import 'package:user_app_web/features/home/widgets/module_view.dart';
+import 'package:user_app_web/features/home/widgets/refer_bottom_sheet_widget.dart';
+import 'package:user_app_web/features/item/controllers/campaign_controller.dart';
+import 'package:user_app_web/features/item/controllers/item_controller.dart';
+import 'package:user_app_web/features/language/controllers/language_controller.dart';
+import 'package:user_app_web/features/location/controllers/location_controller.dart';
+import 'package:user_app_web/features/notification/controllers/notification_controller.dart';
 import 'package:user_app_web/features/parcel/controllers/parcel_controller.dart';
+import 'package:user_app_web/features/parcel/screens/parcel_category_screen.dart';
+import 'package:user_app_web/features/profile/controllers/profile_controller.dart';
+import 'package:user_app_web/features/splash/controllers/splash_controller.dart';
+import 'package:user_app_web/features/store/controllers/store_controller.dart';
 import 'package:user_app_web/helper/address_helper.dart';
 import 'package:user_app_web/helper/auth_helper.dart';
 import 'package:user_app_web/helper/responsive_helper.dart';
@@ -34,15 +42,8 @@ import 'package:user_app_web/util/app_constants.dart';
 import 'package:user_app_web/util/dimensions.dart';
 import 'package:user_app_web/util/images.dart';
 import 'package:user_app_web/util/styles.dart';
-import 'package:user_app_web/common/widgets/item_view.dart';
-import 'package:user_app_web/common/widgets/menu_drawer.dart';
-import 'package:user_app_web/common/widgets/paginated_list_view.dart';
-import 'package:user_app_web/common/widgets/web_menu_bar.dart';
-import 'package:user_app_web/features/home/screens/web_new_home_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:user_app_web/features/home/widgets/module_view.dart';
-import 'package:user_app_web/features/parcel/screens/parcel_category_screen.dart';
+
+import '../../../common/widgets/menu_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -178,168 +179,189 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<SplashController>(builder: (splashController) {
-      bool showMobileModule = !ResponsiveHelper.isDesktop(context) && splashController.module == null && splashController.configModel!.module == null;
-      bool isParcel = splashController.module != null && splashController.configModel!.moduleConfig!.module!.isParcel!;
-      bool isPharmacy = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.pharmacy;
-      bool isFood = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.food;
-      bool isShop = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.ecommerce;
-      bool isGrocery = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.grocery;
+    return GetBuilder<SplashController>(
+      builder: (splashController) {
+        bool showMobileModule = !ResponsiveHelper.isDesktop(context) && splashController.module == null && splashController.configModel!.module == null;
+        bool isParcel = splashController.module != null && splashController.configModel!.moduleConfig!.module!.isParcel!;
+        bool isPharmacy = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.pharmacy;
+        bool isFood = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.food;
+        bool isShop = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.ecommerce;
+        bool isGrocery = splashController.module != null && splashController.module!.moduleType.toString() == AppConstants.grocery;
 
-      return GetBuilder<HomeController>(builder: (homeController) {
-        return Scaffold(
-          appBar: ResponsiveHelper.isDesktop(context) ? const WebMenuBar() : null,
-          endDrawer: const MenuDrawer(),
-          endDrawerEnableOpenDragGesture: false,
-          backgroundColor: Theme.of(context).colorScheme.surface,
-          body: isParcel
-              ? const ParcelCategoryScreen()
-              : SafeArea(
-                  child: RefreshIndicator(
-                    onRefresh: () async {
-                      splashController.setRefreshing(true);
-                      if (Get.find<SplashController>().module != null) {
-                        await Get.find<LocationController>().syncZoneData();
-                        await Get.find<BannerController>().getBannerList(true);
-                        if (isGrocery) {
-                          await Get.find<FlashSaleController>().getFlashSale(true, true);
-                        }
-                        await Get.find<BannerController>().getPromotionalBannerList(true);
-                        await Get.find<ItemController>().getDiscountedItemList(true, false, 'all');
-                        await Get.find<CategoryController>().getCategoryList(true);
-                        await Get.find<StoreController>().getPopularStoreList(true, 'all', false);
-                        await Get.find<CampaignController>().getItemCampaignList(true);
-                        Get.find<CampaignController>().getBasicCampaignList(true);
-                        await Get.find<ItemController>().getPopularItemList(true, 'all', false);
-                        await Get.find<StoreController>().getLatestStoreList(true, 'all', false);
-                        await Get.find<ItemController>().getReviewedItemList(true, 'all', false);
-                        await Get.find<StoreController>().getStoreList(1, true);
-                        Get.find<AdvertisementController>().getAdvertisementList();
-                        if (AuthHelper.isLoggedIn()) {
-                          await Get.find<ProfileController>().getUserInfo();
-                          await Get.find<NotificationController>().getNotificationList(true);
-                          Get.find<CouponController>().getCouponList();
-                        }
-                        if (isPharmacy) {
-                          Get.find<ItemController>().getBasicMedicine(true, true);
-                          Get.find<ItemController>().getCommonConditions(true);
-                        }
-                        if (isShop) {
-                          await Get.find<FlashSaleController>().getFlashSale(true, true);
-                          Get.find<ItemController>().getFeaturedCategoriesItemList(true, true);
-                          Get.find<BrandsController>().getBrandList();
-                        }
-                      } else {
-                        await Get.find<BannerController>().getFeaturedBanner();
-                        await Get.find<SplashController>().getModules();
-                        if (AuthHelper.isLoggedIn()) {
-                          await Get.find<AddressController>().getAddressList();
-                        }
-                        await Get.find<StoreController>().getFeaturedStoreList();
-                      }
-                      splashController.setRefreshing(false);
-                    },
-                    child: ResponsiveHelper.isDesktop(context)
-                        ? WebNewHomeScreen(
-                            scrollController: _scrollController,
-                          )
-                        : CustomScrollView(
-                            controller: _scrollController,
-                            physics: const AlwaysScrollableScrollPhysics(),
-                            slivers: [
-                              /// App Bar
-                              SliverAppBar(
-                                floating: true,
-                                elevation: 0,
-                                automaticallyImplyLeading: false,
-                                surfaceTintColor: Theme.of(context).colorScheme.surface,
-                                backgroundColor: ResponsiveHelper.isDesktop(context) ? Colors.transparent : Theme.of(context).colorScheme.surface,
-                                title: Center(
-                                    child: Container(
-                                  width: Dimensions.webMaxWidth,
-                                  height: Get.find<LocalizationController>().isLtr ? 60 : 70,
-                                  color: Theme.of(context).colorScheme.surface,
-                                  child: Row(children: [
-                                    (splashController.module != null && splashController.configModel!.module == null)
-                                        ? InkWell(
-                                            onTap: () {
-                                              splashController.removeModule();
-                                              Get.find<StoreController>().resetStoreData();
-                                            },
-                                            child: Image.asset(Images.moduleIcon, height: 25, width: 25, color: Theme.of(context).textTheme.bodyLarge!.color),
-                                          )
-                                        : const SizedBox(),
-                                    SizedBox(
-                                        width: (splashController.module != null && splashController.configModel!.module == null)
-                                            ? Dimensions.paddingSizeSmall
-                                            : 0),
-                                    Expanded(
-                                        child: InkWell(
-                                      onTap: () => Get.find<LocationController>().navigateToLocationScreen('home'),
-                                      child: Padding(
-                                        padding: EdgeInsets.symmetric(
-                                          vertical: Dimensions.paddingSizeSmall,
-                                          horizontal: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeSmall : 0,
-                                        ),
-                                        child: GetBuilder<LocationController>(builder: (locationController) {
-                                          return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                            Text(
-                                              AuthHelper.isLoggedIn() ? AddressHelper.getUserAddressFromSharedPref()!.addressType!.tr : 'your_location'.tr,
-                                              style: robotoMedium.copyWith(
-                                                  color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeDefault),
-                                              maxLines: 1,
-                                              overflow: TextOverflow.ellipsis,
+        return GetBuilder<HomeController>(
+          builder: (homeController) {
+            return Scaffold(
+              appBar: ResponsiveHelper.isDesktop(context) ? const WebMenuBar() : null,
+              endDrawer: const MenuDrawer(),
+              endDrawerEnableOpenDragGesture: false,
+              backgroundColor: Theme.of(context).colorScheme.surface,
+              body: isParcel
+                  ? const ParcelCategoryScreen()
+                  : SafeArea(
+                      child: RefreshIndicator(
+                        onRefresh: () async {
+                          splashController.setRefreshing(true);
+                          if (Get.find<SplashController>().module != null) {
+                            await Get.find<LocationController>().syncZoneData();
+                            await Get.find<BannerController>().getBannerList(true);
+                            if (isGrocery) {
+                              await Get.find<FlashSaleController>().getFlashSale(true, true);
+                            }
+                            await Get.find<BannerController>().getPromotionalBannerList(true);
+                            await Get.find<ItemController>().getDiscountedItemList(true, false, 'all');
+                            await Get.find<CategoryController>().getCategoryList(true);
+                            await Get.find<StoreController>().getPopularStoreList(true, 'all', false);
+                            await Get.find<CampaignController>().getItemCampaignList(true);
+                            Get.find<CampaignController>().getBasicCampaignList(true);
+                            await Get.find<ItemController>().getPopularItemList(true, 'all', false);
+                            await Get.find<StoreController>().getLatestStoreList(true, 'all', false);
+                            await Get.find<ItemController>().getReviewedItemList(true, 'all', false);
+                            await Get.find<StoreController>().getStoreList(1, true);
+                            Get.find<AdvertisementController>().getAdvertisementList();
+                            if (AuthHelper.isLoggedIn()) {
+                              await Get.find<ProfileController>().getUserInfo();
+                              await Get.find<NotificationController>().getNotificationList(true);
+                              Get.find<CouponController>().getCouponList();
+                            }
+                            if (isPharmacy) {
+                              Get.find<ItemController>().getBasicMedicine(true, true);
+                              Get.find<ItemController>().getCommonConditions(true);
+                            }
+                            if (isShop) {
+                              await Get.find<FlashSaleController>().getFlashSale(true, true);
+                              Get.find<ItemController>().getFeaturedCategoriesItemList(true, true);
+                              Get.find<BrandsController>().getBrandList();
+                            }
+                          } else {
+                            await Get.find<BannerController>().getFeaturedBanner();
+                            await Get.find<SplashController>().getModules();
+                            if (AuthHelper.isLoggedIn()) {
+                              await Get.find<AddressController>().getAddressList();
+                            }
+                            await Get.find<StoreController>().getFeaturedStoreList();
+                          }
+                          splashController.setRefreshing(false);
+                        },
+                        child: ResponsiveHelper.isDesktop(context)
+                            ? WebNewHomeScreen(
+                                scrollController: _scrollController,
+                              )
+                            : CustomScrollView(
+                                controller: _scrollController,
+                                physics: const AlwaysScrollableScrollPhysics(),
+                                slivers: [
+                                  /// App Bar
+                                  SliverAppBar(
+                                    floating: true,
+                                    elevation: 0,
+                                    automaticallyImplyLeading: false,
+                                    surfaceTintColor: Theme.of(context).colorScheme.surface,
+                                    backgroundColor: ResponsiveHelper.isDesktop(context) ? Colors.transparent : Theme.of(context).colorScheme.surface,
+                                    title: Center(
+                                      child: Container(
+                                        width: Dimensions.webMaxWidth,
+                                        height: Get.find<LocalizationController>().isLtr ? 60 : 70,
+                                        color: Theme.of(context).colorScheme.surface,
+                                        child: Row(
+                                          children: [
+                                            (splashController.module != null && splashController.configModel!.module == null)
+                                                ? InkWell(
+                                                    onTap: () {
+                                                      splashController.removeModule();
+                                                      Get.find<StoreController>().resetStoreData();
+                                                    },
+                                                    child: Image.asset(Images.moduleIcon,
+                                                        height: 25, width: 25, color: Theme.of(context).textTheme.bodyLarge!.color),
+                                                  )
+                                                : const SizedBox(),
+                                            SizedBox(
+                                              width: (splashController.module != null && splashController.configModel!.module == null)
+                                                  ? Dimensions.paddingSizeSmall
+                                                  : 0,
                                             ),
-                                            Row(children: [
-                                              Flexible(
-                                                child: Text(
-                                                  AddressHelper.getUserAddressFromSharedPref()!.address!,
-                                                  style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
-                                                  maxLines: 1,
-                                                  overflow: TextOverflow.ellipsis,
+                                            Expanded(
+                                                child: InkWell(
+                                              onTap: () => Get.find<LocationController>().navigateToLocationScreen('home'),
+                                              child: Padding(
+                                                padding: EdgeInsets.symmetric(
+                                                  vertical: Dimensions.paddingSizeSmall,
+                                                  horizontal: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeSmall : 0,
+                                                ),
+                                                child: GetBuilder<LocationController>(
+                                                  builder: (locationController) {
+                                                    return Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Text(
+                                                          AuthHelper.isLoggedIn()
+                                                              ? AddressHelper.getUserAddressFromSharedPref()!.addressType!.tr
+                                                              : 'your_location'.tr,
+                                                          style: robotoMedium.copyWith(
+                                                              color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeDefault),
+                                                          maxLines: 1,
+                                                          overflow: TextOverflow.ellipsis,
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            Flexible(
+                                                              child: Text(
+                                                                AddressHelper.getUserAddressFromSharedPref()!.address!,
+                                                                style: robotoRegular.copyWith(
+                                                                    color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
+                                                                maxLines: 1,
+                                                                overflow: TextOverflow.ellipsis,
+                                                              ),
+                                                            ),
+                                                            Icon(Icons.expand_more, color: Theme.of(context).disabledColor, size: 18),
+                                                          ],
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
                                                 ),
                                               ),
-                                              Icon(Icons.expand_more, color: Theme.of(context).disabledColor, size: 18),
-                                            ]),
-                                          ]);
-                                        }),
+                                            )),
+                                            InkWell(
+                                              child: GetBuilder<NotificationController>(
+                                                builder: (notificationController) {
+                                                  return Stack(
+                                                    children: [
+                                                      Icon(CupertinoIcons.bell, size: 25, color: Theme.of(context).textTheme.bodyLarge!.color),
+                                                      if (notificationController.hasNotification)
+                                                        Positioned(
+                                                          top: 0,
+                                                          right: 0,
+                                                          child: Container(
+                                                            height: 10,
+                                                            width: 10,
+                                                            decoration: BoxDecoration(
+                                                              color: Theme.of(context).primaryColor,
+                                                              shape: BoxShape.circle,
+                                                              border: Border.all(width: 1, color: Theme.of(context).cardColor),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                    ],
+                                                  );
+                                                },
+                                              ),
+                                              onTap: () => Get.toNamed(RouteHelper.getNotificationRoute()),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    )),
-                                    InkWell(
-                                      child: GetBuilder<NotificationController>(builder: (notificationController) {
-                                        return Stack(children: [
-                                          Icon(CupertinoIcons.bell, size: 25, color: Theme.of(context).textTheme.bodyLarge!.color),
-                                          notificationController.hasNotification
-                                              ? Positioned(
-                                                  top: 0,
-                                                  right: 0,
-                                                  child: Container(
-                                                    height: 10,
-                                                    width: 10,
-                                                    decoration: BoxDecoration(
-                                                      color: Theme.of(context).primaryColor,
-                                                      shape: BoxShape.circle,
-                                                      border: Border.all(width: 1, color: Theme.of(context).cardColor),
-                                                    ),
-                                                  ))
-                                              : const SizedBox(),
-                                        ]);
-                                      }),
-                                      onTap: () => Get.toNamed(RouteHelper.getNotificationRoute()),
                                     ),
-                                  ]),
-                                )),
-                                actions: const [SizedBox()],
-                              ),
+                                    actions: const [SizedBox()],
+                                  ),
 
-                              /// Search Button
-                              !showMobileModule
-                                  ? SliverPersistentHeader(
+                                  /// Search Button
+                                  if (!showMobileModule) ...[
+                                    SliverPersistentHeader(
                                       pinned: true,
                                       delegate: SliverDelegate(
-                                          callback: (val) {},
-                                          child: Center(
-                                              child: Container(
+                                        callback: (val) {},
+                                        child: Center(
+                                          child: Container(
                                             height: 50,
                                             width: Dimensions.webMaxWidth,
                                             color: searchBgShow
@@ -359,68 +381,71 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius: BorderRadius.circular(25),
                                                   boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5, spreadRadius: 1)],
                                                 ),
-                                                child: Row(children: [
-                                                  Icon(
-                                                    CupertinoIcons.search,
-                                                    size: 25,
-                                                    color: Theme.of(context).primaryColor,
-                                                  ),
-                                                  const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                                                  Expanded(
-                                                      child: Text(
-                                                    Get.find<SplashController>().configModel!.moduleConfig!.module!.showRestaurantText!
-                                                        ? 'search_food_or_restaurant'.tr
-                                                        : 'search_item_or_store'.tr,
-                                                    style: robotoRegular.copyWith(
-                                                      fontSize: Dimensions.fontSizeSmall,
-                                                      color: Theme.of(context).hintColor,
+                                                child: Row(
+                                                  children: [
+                                                    Icon(
+                                                      CupertinoIcons.search,
+                                                      size: 25,
+                                                      color: Theme.of(context).primaryColor,
                                                     ),
-                                                  )),
-                                                ]),
+                                                    const SizedBox(width: Dimensions.paddingSizeExtraSmall),
+                                                    Expanded(
+                                                      child: Text(
+                                                        Get.find<SplashController>().configModel!.moduleConfig!.module!.showRestaurantText!
+                                                            ? 'search_food_or_restaurant'.tr
+                                                            : 'search_item_or_store'.tr,
+                                                        style: robotoRegular.copyWith(
+                                                          fontSize: Dimensions.fontSizeSmall,
+                                                          color: Theme.of(context).hintColor,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                             ),
-                                          ))),
-                                    )
-                                  : const SliverToBoxAdapter(),
-
-                              SliverToBoxAdapter(
-                                child: Center(
-                                    child: SizedBox(
-                                  width: Dimensions.webMaxWidth,
-                                  child: !showMobileModule
-                                      ? Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                          isGrocery
-                                              ? const GroceryHomeScreen()
-                                              : isPharmacy
-                                                  ? const PharmacyHomeScreen()
-                                                  : isFood
-                                                      ? const FoodHomeScreen()
-                                                      : isShop
-                                                          ? const ShopHomeScreen()
-                                                          : const SizedBox(),
-                                        ])
-                                      : ModuleView(splashController: splashController),
-                                )),
-                              ),
-
-                              !showMobileModule
-                                  ? SliverPersistentHeader(
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                  SliverToBoxAdapter(
+                                    child: Center(
+                                      child: SizedBox(
+                                        width: Dimensions.webMaxWidth,
+                                        child: !showMobileModule
+                                            ? Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  isGrocery
+                                                      ? const GroceryHomeScreen()
+                                                      : isPharmacy
+                                                          ? const PharmacyHomeScreen()
+                                                          : isFood
+                                                              ? const FoodHomeScreen()
+                                                              : isShop
+                                                                  ? const ShopHomeScreen()
+                                                                  : const SizedBox(),
+                                                ],
+                                              )
+                                            : ModuleView(splashController: splashController),
+                                      ),
+                                    ),
+                                  ),
+                                  if (!showMobileModule) ...[
+                                    SliverPersistentHeader(
                                       key: _headerKey,
                                       pinned: true,
                                       delegate: SliverDelegate(
                                         height: 85,
-                                        callback: (val) {
-                                          searchBgShow = val;
-                                        },
+                                        callback: (val) => searchBgShow = val,
                                         child: const AllStoreFilterWidget(),
                                       ),
-                                    )
-                                  : const SliverToBoxAdapter(),
-
-                              SliverToBoxAdapter(
-                                  child: !showMobileModule
-                                      ? Center(
-                                          child: GetBuilder<StoreController>(builder: (storeController) {
+                                    ),
+                                    SliverToBoxAdapter(
+                                      child: Center(
+                                        child: GetBuilder<StoreController>(
+                                          builder: (storeController) {
                                             return Padding(
                                               padding: EdgeInsets.only(bottom: ResponsiveHelper.isDesktop(context) ? 0 : 100),
                                               child: PaginatedListView(
@@ -442,27 +467,31 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                             );
-                                          }),
-                                        )
-                                      : const SizedBox()),
-                            ],
-                          ),
-                  ),
-                ),
-          floatingActionButton: AuthHelper.isLoggedIn() && homeController.cashBackOfferList != null && homeController.cashBackOfferList!.isNotEmpty
-              ? homeController.showFavButton
-                  ? Padding(
-                      padding: EdgeInsets.only(bottom: 50.0, right: ResponsiveHelper.isDesktop(context) ? 50 : 0),
-                      child: InkWell(
-                        onTap: () => Get.dialog(const CashBackDialogWidget()),
-                        child: const CashBackLogoWidget(),
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ],
+                              ),
                       ),
-                    )
-                  : null
-              : null,
+                    ),
+              floatingActionButton: AuthHelper.isLoggedIn() && homeController.cashBackOfferList != null && homeController.cashBackOfferList!.isNotEmpty
+                  ? homeController.showFavButton
+                      ? Padding(
+                          padding: EdgeInsets.only(bottom: 50.0, right: ResponsiveHelper.isDesktop(context) ? 50 : 0),
+                          child: InkWell(
+                            onTap: () => Get.dialog(const CashBackDialogWidget()),
+                            child: const CashBackLogoWidget(),
+                          ),
+                        )
+                      : null
+                  : null,
+            );
+          },
         );
-      });
-    });
+      },
+    );
   }
 }
 

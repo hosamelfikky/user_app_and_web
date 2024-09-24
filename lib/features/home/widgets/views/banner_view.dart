@@ -74,7 +74,8 @@ class BannerView extends StatelessWidget {
                                     BasicCampaignModel campaign = bannerDataList[index];
                                     Get.toNamed(RouteHelper.getBasicCampaignRoute(campaign));
                                   } else {
-                                    String url = bannerDataList[index];
+                                    String? url = bannerDataList[index];
+                                    if (url == null) return;
                                     if (await canLaunchUrlString(url)) {
                                       await launchUrlString(url, mode: LaunchMode.externalApplication);
                                     } else {
@@ -90,12 +91,14 @@ class BannerView extends StatelessWidget {
                                   ),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(Dimensions.radiusLarge),
-                                    child: GetBuilder<SplashController>(builder: (splashController) {
-                                      return CustomImage(
-                                        image: '${bannerList[index]}',
-                                        fit: BoxFit.cover,
-                                      );
-                                    }),
+                                    child: GetBuilder<SplashController>(
+                                      builder: (splashController) {
+                                        return CustomImage(
+                                          image: '${bannerList[index]}',
+                                          fit: BoxFit.cover,
+                                        );
+                                      },
+                                    ),
                                   ),
                                 ),
                               );

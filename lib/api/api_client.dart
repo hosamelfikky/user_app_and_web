@@ -38,13 +38,27 @@ class ApiClient extends GetxService {
         moduleID = ModuleModel.fromJson(jsonDecode(sharedPreferences.getString(AppConstants.moduleId)!)).id;
       } catch (_) {}
     }
-    updateHeader(token, addressModel?.zoneIds, addressModel?.areaIds, sharedPreferences.getString(AppConstants.languageCode), moduleID, addressModel?.latitude,
-        addressModel?.longitude);
+    updateHeader(
+      token,
+      addressModel?.zoneIds,
+      addressModel?.areaIds,
+      sharedPreferences.getString(AppConstants.languageCode),
+      moduleID,
+      addressModel?.latitude,
+      addressModel?.longitude,
+    );
   }
 
   Map<String, String> updateHeader(
-      String? token, List<int>? zoneIDs, List<int>? operationIds, String? languageCode, int? moduleID, String? latitude, String? longitude,
-      {bool setHeader = true}) {
+    String? token,
+    List<int>? zoneIDs,
+    List<int>? operationIds,
+    String? languageCode,
+    int? moduleID,
+    String? latitude,
+    String? longitude, {
+    bool setHeader = true,
+  }) {
     Map<String, String> header = {};
 
     if (moduleID != null || sharedPreferences.getString(AppConstants.cacheModuleId) != null) {
@@ -72,12 +86,7 @@ class ApiClient extends GetxService {
       if (kDebugMode) {
         log('====> API Call: $uri\nHeader: ${headers ?? _mainHeaders}');
       }
-      http.Response response = await http
-          .get(
-            Uri.parse(appBaseUrl + uri),
-            headers: headers ?? _mainHeaders,
-          )
-          .timeout(Duration(seconds: timeoutInSeconds));
+      http.Response response = await http.get(Uri.parse(appBaseUrl + uri), headers: headers ?? _mainHeaders).timeout(Duration(seconds: timeoutInSeconds));
       return handleResponse(response, uri, handleError);
     } catch (e) {
       if (kDebugMode) {
