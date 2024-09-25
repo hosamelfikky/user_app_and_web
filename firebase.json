@@ -3,26 +3,24 @@
     "platforms": {
       "android": {
         "default": {
-          "projectId": "tytan-user-a162c",
-          "appId": "1:33106762135:android:71a1216e79550c54268cd2",
+          "projectId": "ti-tan",
+          "appId": "1:903314051019:android:be12c5e6a543ef3025f04e",
           "fileOutput": "android/app/google-services.json"
         }
       },
       "ios": {
         "default": {
-          "projectId": "tytan-user-a162c",
-          "appId": "1:33106762135:ios:75b3fca325574424268cd2",
+          "projectId": "ti-tan",
+          "appId": "1:903314051019:ios:95711c564b65649225f04e",
           "uploadDebugSymbols": true,
           "fileOutput": "ios/Runner/GoogleService-Info.plist"
         }
       },
       "dart": {
         "lib/firebase_options.dart": {
-          "projectId": "tytan-user-a162c",
+          "projectId": "ti-tan",
           "configurations": {
-            "android": "1:33106762135:android:71a1216e79550c54268cd2",
-            "ios": "1:33106762135:ios:75b3fca325574424268cd2",
-            "web": "1:33106762135:web:134107f39a2b4d05268cd2"
+            "web": "1:903314051019:web:70c9626022b40fb825f04e"
           }
         }
       }

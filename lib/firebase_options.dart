@@ -47,29 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAvjgKcScnASxGHDx4Q_78bCdJRPi5Y5xQ',
-    appId: '1:33106762135:web:134107f39a2b4d05268cd2',
-    messagingSenderId: '33106762135',
-    projectId: 'tytan-user-a162c',
-    authDomain: 'tytan-user-a162c.firebaseapp.com',
-    storageBucket: 'tytan-user-a162c.appspot.com',
-    measurementId: 'G-2XR4FHLYS4',
+    apiKey: 'AIzaSyBcFEAqw12p-OfJegiKVyd_u8zs76Hh1OQ',
+    appId: '1:903314051019:web:70c9626022b40fb825f04e',
+    messagingSenderId: '903314051019',
+    projectId: 'ti-tan',
+    authDomain: 'ti-tan.firebaseapp.com',
+    storageBucket: 'ti-tan.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCK7Cy04VQLy3013bns7_C2FSgd-HID_Bk',
-    appId: '1:33106762135:android:71a1216e79550c54268cd2',
-    messagingSenderId: '33106762135',
-    projectId: 'tytan-user-a162c',
-    storageBucket: 'tytan-user-a162c.appspot.com',
+    apiKey: 'AIzaSyARCnpzN4wowUqwtZqmQw_b2YqnIApRgNQ',
+    appId: '1:903314051019:android:be12c5e6a543ef3025f04e',
+    messagingSenderId: '903314051019',
+    projectId: 'ti-tan',
+    storageBucket: 'ti-tan.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBbqZl8GlA21d0DNi3nosnjG5iuLH3_JNU',
-    appId: '1:33106762135:ios:75b3fca325574424268cd2',
-    messagingSenderId: '33106762135',
-    projectId: 'tytan-user-a162c',
-    storageBucket: 'tytan-user-a162c.appspot.com',
+    apiKey: 'AIzaSyAwxMU2noHhyj7uoHN2DjJObMp2FqMN9IE',
+    appId: '1:903314051019:ios:95711c564b65649225f04e',
+    messagingSenderId: '903314051019',
+    projectId: 'ti-tan',
+    storageBucket: 'ti-tan.appspot.com',
     iosBundleId: 'com.tytan.app.user',
   );
 

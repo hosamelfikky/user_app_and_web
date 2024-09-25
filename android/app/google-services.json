@@ -1,13 +1,32 @@
 {
   "project_info": {
-    "project_number": "33106762135",
-    "project_id": "tytan-user-a162c",
-    "storage_bucket": "tytan-user-a162c.appspot.com"
+    "project_number": "903314051019",
+    "project_id": "ti-tan",
+    "storage_bucket": "ti-tan.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:33106762135:android:71a1216e79550c54268cd2",
+        "mobilesdk_app_id": "1:903314051019:android:a6ae812a9f57d8de25f04e",
+        "android_client_info": {
+          "package_name": "com.tytan.app.delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARCnpzN4wowUqwtZqmQw_b2YqnIApRgNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903314051019:android:be12c5e6a543ef3025f04e",
         "android_client_info": {
           "package_name": "com.tytan.app.user"
         }
@@ -15,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCK7Cy04VQLy3013bns7_C2FSgd-HID_Bk"
+          "current_key": "AIzaSyARCnpzN4wowUqwtZqmQw_b2YqnIApRgNQ"
         }
       ],
       "services": {
